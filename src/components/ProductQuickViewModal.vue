@@ -59,15 +59,15 @@
                 {{ c }}
               </button>
             </div>
-            <p v-if="selectedColors.length > 0" class="text-center text-xs text-pikiitos-text-muted mt-2 font-poppins">{{ selectedColors.length }} talla(s) seleccionada(s)</p>
+            <p v-if="selectedColors.length > 0" class="text-center text-xs text-pikiitos-text-muted mt-2 font-roundo">{{ selectedColors.length }} talla(s) seleccionada(s)</p>
           </div>
 
           <div class="qv-observations">
           </div>
 
           <div class="qv-actions">
-            <p v-if="showSizeWarning" class="text-center text-xs text-red-400 mb-2 font-poppins animate-pulse">Selecciona al menos una talla antes de agregar</p>
-            <p v-else-if="product.status === 'available' && product.colors?.length && selectedColors.length === 0" class="text-center text-xs text-pikiitos-text-muted mb-2 font-poppins">Escoge tu(s) talla(s)</p>
+            <p v-if="showSizeWarning" class="text-center text-xs text-red-400 mb-2 font-roundo animate-pulse">Selecciona al menos una talla antes de agregar</p>
+            <p v-else-if="product.status === 'available' && product.colors?.length && selectedColors.length === 0" class="text-center text-xs text-pikiitos-text-muted mb-2 font-roundo">Escoge tu(s) talla(s)</p>
             <button
               type="button"
               class="qv-add"
@@ -341,7 +341,7 @@ onBeforeUnmount(() => {
 }
 
 .qv-title {
-  font-family: "Fredoka", sans-serif;
+  font-family: "Callisto MT", "Roundo", "Nunito", sans-serif;
   font-size: 1.6rem;
   font-weight: 700;
   color: #4A3728;
@@ -361,7 +361,7 @@ onBeforeUnmount(() => {
   margin-top: 4px;
   font-size: 0.82rem;
   color: #8B7355;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roundo", "Nunito", sans-serif;
 }
 
 .qv-price {
@@ -376,7 +376,7 @@ onBeforeUnmount(() => {
 }
 
 .qv-price-current {
-  font-family: "Fredoka", sans-serif;
+  font-family: "Callisto MT", "Roundo", "Nunito", sans-serif;
   font-size: 1.35rem;
   font-weight: 700;
   color: #4A3728;
@@ -393,7 +393,7 @@ onBeforeUnmount(() => {
   color: #6B5B4E;
   line-height: 1.6;
   font-size: 0.9rem;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roundo", "Nunito", sans-serif;
   white-space: pre-line;
 }
 
@@ -402,7 +402,7 @@ onBeforeUnmount(() => {
 }
 
 .qv-colors-title {
-  font-family: "Poppins", sans-serif;
+  font-family: "Roundo", "Nunito", sans-serif;
   font-size: 0.82rem;
   font-weight: 600;
   color: #4A3728;
@@ -424,7 +424,7 @@ onBeforeUnmount(() => {
   color: #4A3728;
   padding: 7px 14px;
   border-radius: 999px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roundo", "Nunito", sans-serif;
   font-size: 0.82rem;
   font-weight: 500;
 }
@@ -446,7 +446,7 @@ onBeforeUnmount(() => {
   border: 0;
   background: #4A3728;
   color: white;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roundo", "Nunito", sans-serif;
   font-weight: 700;
   font-size: 0.92rem;
   cursor: pointer;
@@ -473,7 +473,7 @@ onBeforeUnmount(() => {
 
 .qv-status {
   margin-top: 10px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roundo", "Nunito", sans-serif;
   font-size: 0.85rem;
   color: #8B7355;
   text-align: center;

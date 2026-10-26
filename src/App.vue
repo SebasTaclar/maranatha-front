@@ -1,6 +1,6 @@
 <template>
-  <div class="min-h-screen bg-pikiitos-cream">
-    <Navbar v-if="!isAdminRoute" />
+  <div class="min-h-screen overflow-x-hidden bg-pikiitos-cream">
+    <InstitutionalHeader v-if="!isAdminRoute" />
 
     <RouterView />
 
@@ -20,7 +20,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { RouterView, useRoute } from 'vue-router'
-import Navbar from '@/components/Navbar.vue'
+import InstitutionalHeader from '@/components/InstitutionalHeader.vue'
 import Footer_ from '@/components/Footer_.vue'
 import GlobalCart from '@/components/GlobalCart.vue'
 import SocialFloating from '@/components/SocialFloating.vue'
@@ -32,7 +32,11 @@ const isAdminRoute = computed(() => route.path.startsWith('/admin'))
 const isLoginRoute = computed(() => route.path === '/login')
 const showLayout = computed(() => !isAdminRoute.value && !isLoginRoute.value)
 
-const { isOpen: quickViewOpen, product: quickViewProduct, close: closeQuickView } = useProductQuickView()
+const {
+  isOpen: quickViewOpen,
+  product: quickViewProduct,
+  close: closeQuickView,
+} = useProductQuickView()
 
 defineOptions({ name: 'App' })
 </script>

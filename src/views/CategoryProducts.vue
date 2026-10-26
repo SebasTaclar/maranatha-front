@@ -6,7 +6,9 @@
 
         <div class="search-box">
           <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-            <path d="M10 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16zm8.707 17.293-4.387-4.387a9 9 0 1 0-1.414 1.414l4.387 4.387a1 1 0 0 0 1.414-1.414z"/>
+            <path
+              d="M10 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16zm8.707 17.293-4.387-4.387a9 9 0 1 0-1.414 1.414l4.387 4.387a1 1 0 0 0 1.414-1.414z"
+            />
           </svg>
           <input v-model="searchTerm" class="search-input" type="search" placeholder="Buscar..." />
         </div>
@@ -19,7 +21,7 @@
           </label>
         </div>
 
-        <h4 class="filter-label" style="margin-top: 1.1rem;">Estado</h4>
+        <h4 class="filter-label" style="margin-top: 1.1rem">Estado</h4>
         <div class="radio-list" role="radiogroup" aria-label="Estado del producto">
           <label class="radio-item">
             <input type="radio" name="status" value="all" v-model="selectedStatus" />
@@ -35,7 +37,7 @@
           </label>
         </div>
 
-        <label class="checkbox-item" style="margin-top: 1.1rem;">
+        <label class="checkbox-item" style="margin-top: 1.1rem">
           <input type="checkbox" v-model="showOnlyFavorites" />
           <span>Mis favoritos</span>
           <span v-if="favorites.size > 0" class="fav-count">{{ favorites.size }}</span>
@@ -49,7 +51,9 @@
           <div class="category-hero-text">
             <h1 class="category-title">{{ pageTitle }}</h1>
             <p v-if="pageDescription" class="category-description">{{ pageDescription }}</p>
-            <a href="#productos-grid" class="category-hero-btn" @click.prevent="scrollToProducts">Explorar</a>
+            <a href="#productos-grid" class="category-hero-btn" @click.prevent="scrollToProducts"
+              >Explorar</a
+            >
           </div>
           <div class="category-hero-image">
             <img :src="categoryImage" :alt="pageTitle" loading="lazy" decoding="async" />
@@ -60,14 +64,18 @@
           <div class="category-hero-text">
             <h1 class="category-title">{{ pageTitle }}</h1>
             <p v-if="pageDescription" class="category-description">{{ pageDescription }}</p>
-            <a href="#productos-grid" class="category-hero-btn" @click.prevent="scrollToProducts">Explorar</a>
+            <a href="#productos-grid" class="category-hero-btn" @click.prevent="scrollToProducts"
+              >Explorar</a
+            >
           </div>
         </header>
 
         <div class="topbar">
           <span class="meta-text">
             <span v-if="loading" class="animate-pulse">Cargando productos...</span>
-            <span v-else><strong>{{ filteredProducts.length }}</strong> productos</span>
+            <span v-else
+              ><strong>{{ filteredProducts.length }}</strong> productos</span
+            >
           </span>
           <div class="sort">
             <label class="sort-label" for="sort-select">Ordenar:</label>
@@ -104,7 +112,13 @@
             @keydown.enter.prevent="openQuickView(p)"
           >
             <div class="card-bg">
-              <img :src="p.images[0] || placeholderImage" :alt="p.name" loading="lazy" decoding="async" @error="handleImageError" />
+              <img
+                :src="p.images[0] || placeholderImage"
+                :alt="p.name"
+                loading="lazy"
+                decoding="async"
+                @error="handleImageError"
+              />
               <div class="card-overlay"></div>
               <div v-if="p.originalPrice && p.originalPrice > p.price" class="discount-badge">
                 -{{ Math.round(((p.originalPrice - p.price) / p.originalPrice) * 100) }}%
@@ -116,25 +130,42 @@
                 @click.stop="toggleFavorite(p.id)"
                 :aria-label="favorites.has(p.id) ? 'Quitar de favoritos' : 'Agregar a favoritos'"
               >
-                <svg width="18" height="18" viewBox="0 0 24 24" :fill="favorites.has(p.id) ? '#E88D92' : 'none'" :stroke="favorites.has(p.id) ? '#E88D92' : 'white'" stroke-width="2">
-                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  :fill="favorites.has(p.id) ? '#E88D92' : 'none'"
+                  :stroke="favorites.has(p.id) ? '#E88D92' : 'white'"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                  />
                 </svg>
               </button>
-              <span :class="['status-badge', statusClass(p.status)]">{{ getStatusText(p.status) }}</span>
+              <span :class="['status-badge', statusClass(p.status)]">{{
+                getStatusText(p.status)
+              }}</span>
               <div class="card-content">
                 <div class="cat-label">{{ categoryName(p.category) }}</div>
                 <h3 class="prod-name">{{ p.name }}</h3>
                 <div class="price-row">
                   <span class="price">${{ p.price.toLocaleString() }}</span>
-                  <span v-if="p.originalPrice && p.originalPrice > p.price" class="old-price">${{ p.originalPrice.toLocaleString() }}</span>
+                  <span v-if="p.originalPrice && p.originalPrice > p.price" class="old-price"
+                    >${{ p.originalPrice.toLocaleString() }}</span
+                  >
                 </div>
                 <button
                   v-if="p.status === 'available'"
                   class="add-btn"
                   type="button"
                   @click.stop="addProductToCart(p)"
-                >Agregar</button>
-                <button v-else disabled class="add-btn disabled">{{ p.status === 'out-of-stock' ? 'Agotado' : 'Proximamente' }}</button>
+                >
+                  Agregar
+                </button>
+                <button v-else disabled class="add-btn disabled">
+                  {{ p.status === 'out-of-stock' ? 'Agotado' : 'Proximamente' }}
+                </button>
               </div>
             </div>
           </article>
@@ -146,13 +177,20 @@
         </div>
 
         <div v-if="totalPages > 1" class="pagination">
-          <button class="page-btn" :disabled="currentPage <= 1" @click="currentPage--">&lsaquo;</button>
+          <button class="page-btn" :disabled="currentPage <= 1" @click="currentPage--">
+            &lsaquo;
+          </button>
           <button
-            v-for="pg in visiblePages" :key="pg"
+            v-for="pg in visiblePages"
+            :key="pg"
             :class="['page-btn', { active: pg === currentPage }]"
             @click="currentPage = pg"
-          >{{ pg }}</button>
-          <button class="page-btn" :disabled="currentPage >= totalPages" @click="currentPage++">&rsaquo;</button>
+          >
+            {{ pg }}
+          </button>
+          <button class="page-btn" :disabled="currentPage >= totalPages" @click="currentPage++">
+            &rsaquo;
+          </button>
         </div>
       </main>
     </div>
@@ -168,10 +206,16 @@
       leave-from-class="opacity-100"
       leave-to-class="opacity-0"
     >
-      <div v-if="showSizeModal" class="fixed inset-0 z-[2300] bg-black/40 backdrop-blur-sm flex items-center justify-center p-4" @click.self="showSizeModal = false; selectedSizes = []">
+      <div
+        v-if="showSizeModal"
+        class="fixed inset-0 z-[2300] bg-black/40 backdrop-blur-sm flex items-center justify-center p-4"
+        @click.self="resetSizeSelection"
+      >
         <div class="bg-white rounded-2xl p-5 w-full max-w-xs shadow-xl" @click.stop>
-          <h4 class="font-fredoka font-bold text-lg text-pikiitos-brown mb-1">Escoge tu talla</h4>
-          <p class="font-poppins text-xs text-pikiitos-text-muted mb-4">{{ selectedProduct?.name }}</p>
+          <h4 class="font-callisto font-bold text-lg text-pikiitos-brown mb-1">Escoge tu talla</h4>
+          <p class="font-roundo text-xs text-pikiitos-text-muted mb-4">
+            {{ selectedProduct?.name }}
+          </p>
           <div class="flex flex-wrap gap-2 mb-5">
             <button
               v-for="color in selectedProduct?.colors"
@@ -179,20 +223,37 @@
               type="button"
               @click="toggleSize(color)"
               :class="[
-                'px-4 py-2.5 rounded-xl border font-poppins text-sm font-semibold transition-all',
+                'px-4 py-2.5 rounded-xl border font-roundo text-sm font-semibold transition-all',
                 selectedSizes.includes(color)
                   ? 'bg-pikiitos-brown text-white border-pikiitos-brown'
-                  : 'bg-white text-pikiitos-brown border-pikiitos-cream/60 hover:bg-pikiitos-brown hover:text-white hover:border-pikiitos-brown'
+                  : 'bg-white text-pikiitos-brown border-pikiitos-cream/60 hover:bg-pikiitos-brown hover:text-white hover:border-pikiitos-brown',
               ]"
             >
               {{ color }}
             </button>
           </div>
-          <p v-if="selectedSizes.length > 0" class="font-poppins text-xs text-pikiitos-text-muted mb-3 text-center">{{ selectedSizes.length }} talla(s) seleccionada(s)</p>
-          <button @click="confirmAddToCart" :disabled="selectedSizes.length === 0" :class="['w-full py-2.5 rounded-xl font-poppins text-sm font-medium transition-all mb-2', selectedSizes.length > 0 ? 'bg-pikiitos-brown text-white hover:bg-pikiitos-yellow hover:text-pikiitos-brown' : 'bg-gray-200 text-gray-400 cursor-not-allowed']">
+          <p
+            v-if="selectedSizes.length > 0"
+            class="font-roundo text-xs text-pikiitos-text-muted mb-3 text-center"
+          >
+            {{ selectedSizes.length }} talla(s) seleccionada(s)
+          </p>
+          <button
+            @click="confirmAddToCart"
+            :disabled="selectedSizes.length === 0"
+            :class="[
+              'w-full py-2.5 rounded-xl font-roundo text-sm font-medium transition-all mb-2',
+              selectedSizes.length > 0
+                ? 'bg-pikiitos-brown text-white hover:bg-pikiitos-yellow hover:text-pikiitos-brown'
+                : 'bg-gray-200 text-gray-400 cursor-not-allowed',
+            ]"
+          >
             Agregar al carrito
           </button>
-          <button @click="showSizeModal = false; selectedSizes = []" class="w-full py-2.5 rounded-xl border border-pikiitos-cream/60 text-pikiitos-text-light font-poppins text-sm font-medium hover:bg-pikiitos-cream/30 transition-all">
+          <button
+            @click="resetSizeSelection"
+            class="w-full py-2.5 rounded-xl border border-pikiitos-cream/60 text-pikiitos-text-light font-roundo text-sm font-medium hover:bg-pikiitos-cream/30 transition-all"
+          >
             Cancelar
           </button>
         </div>
@@ -223,12 +284,19 @@ const selectedStatus = ref<'all' | 'available' | 'coming-soon'>('all')
 const showOnlyFavorites = ref(false)
 const currentPage = ref(1)
 const perPage = 12
-const favorites = ref<Set<string>>(new Set(JSON.parse(localStorage.getItem('pikiitos-favorites') || '[]')))
+const favorites = ref<Set<string>>(
+  new Set(JSON.parse(localStorage.getItem('pikiitos-favorites') || '[]')),
+)
 const showSizeModal = ref(false)
 const selectedProduct = ref<Product | null>(null)
 const selectedSizes = ref<string[]>([])
 
-const placeholderImage = 'https://placehold.co/400x300/f5f0e8/8B7355?text=Pikiitos'
+const resetSizeSelection = () => {
+  showSizeModal.value = false
+  selectedSizes.value = []
+}
+
+const placeholderImage = 'https://placehold.co/400x300/f5f0e8/003d1f?text=Maranatha+PHES'
 
 const priceOptions = [
   { value: 'all' as const, label: 'Todos' },
@@ -239,7 +307,14 @@ const priceOptions = [
 ]
 
 function slugify(value: string): string {
-  return value.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-')
+  return value
+    .trim()
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
 }
 
 const isShowAll = computed(() => props.slug === 'todos' || props.slug === 'all')
@@ -248,9 +323,9 @@ const isOfertas = computed(() => props.slug === 'ofertas')
 const currentCategoryId = computed(() => {
   if (isShowAll.value) return null
   const slug = props.slug
-  const direct = categories.value.find(c => slugify(c.name) === slug)
+  const direct = categories.value.find((c) => slugify(c.name) === slug)
   if (direct) return direct.id
-  const relaxed = categories.value.find(c => {
+  const relaxed = categories.value.find((c) => {
     const s = slugify(c.name)
     return s.includes(slug) || slug.includes(s)
   })
@@ -259,7 +334,7 @@ const currentCategoryId = computed(() => {
 
 const currentCategory = computed(() => {
   if (!currentCategoryId.value) return null
-  return categories.value.find(c => c.id === currentCategoryId.value) || null
+  return categories.value.find((c) => c.id === currentCategoryId.value) || null
 })
 
 const pageTitle = computed(() => {
@@ -274,7 +349,7 @@ const categoryImage = computed(() => {
     return currentCategory.value.imageUrls[0]
   }
   if (isShowAll.value) {
-    return 'https://res.cloudinary.com/dlwzazojt/image/upload/v1787460163/pikiitos-_skfi4d.jpg'
+    return 'https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes06.webp'
   }
   if (isOfertas.value) {
     return 'https://res.cloudinary.com/dlwzazojt/image/upload/v1787456615/Gemini_Generated_Image_k4dtm7k4dtm7k4dt_dlylxe.jpg'
@@ -284,20 +359,22 @@ const categoryImage = computed(() => {
 
 const pageDescription = computed(() => {
   if (currentCategory.value?.description) return currentCategory.value.description
-  if (isShowAll.value) return 'Descubre toda nuestra coleccion de ropa infantil. Prendas con disenos unicos, materiales suaves y la mejor calidad para que los mas pequenos vistan con comodidad y estilo en cada ocasion.'
-  if (isOfertas.value) return 'Aprovecha nuestras ofertas especiales de pikiitos. Descuentos exclusivos de alta calidad para que vistan a tus peques con estilo ahorrando. No te pierdas estas promociones por tiempo limitado.'
+  if (isShowAll.value)
+    return 'Descubre toda nuestra coleccion de ropa infantil. Prendas con disenos unicos, materiales suaves y la mejor calidad para que los mas pequenos vistan con comodidad y estilo en cada ocasion.'
+  if (isOfertas.value)
+    return 'Aprovecha nuestras ofertas especiales de pikiitos. Descuentos exclusivos de alta calidad para que vistan a tus peques con estilo ahorrando. No te pierdas estas promociones por tiempo limitado.'
   return ''
 })
 
 const allProductsForView = computed(() => {
-  const list = products.value.filter(p => p.status !== 'out-of-stock')
+  const list = products.value.filter((p) => p.status !== 'out-of-stock')
   if (isOfertas.value) {
-    return list.filter(p => p.originalPrice && p.originalPrice > p.price)
+    return list.filter((p) => p.originalPrice && p.originalPrice > p.price)
   }
   if (isShowAll.value) return list
   const id = currentCategoryId.value
   if (!id) return []
-  return list.filter(p => String(p.category) === String(id))
+  return list.filter((p) => String(p.category) === String(id))
 })
 
 const filteredProducts = computed(() => {
@@ -305,26 +382,33 @@ const filteredProducts = computed(() => {
   let list = allProductsForView.value
 
   if (q) {
-    list = list.filter(p => p.name.toLowerCase().includes(q) || (p.description || '').toLowerCase().includes(q))
+    list = list.filter(
+      (p) => p.name.toLowerCase().includes(q) || (p.description || '').toLowerCase().includes(q),
+    )
   }
 
-  list = list.filter(p => {
+  list = list.filter((p) => {
     const price = p.price
     switch (selectedPriceRange.value) {
-      case 'lt100': return price < 100000
-      case '100-300': return price >= 100000 && price <= 300000
-      case '300-500': return price > 300000 && price <= 500000
-      case 'gt500': return price > 500000
-      default: return true
+      case 'lt100':
+        return price < 100000
+      case '100-300':
+        return price >= 100000 && price <= 300000
+      case '300-500':
+        return price > 300000 && price <= 500000
+      case 'gt500':
+        return price > 500000
+      default:
+        return true
     }
   })
 
   if (selectedStatus.value !== 'all') {
-    list = list.filter(p => p.status === selectedStatus.value)
+    list = list.filter((p) => p.status === selectedStatus.value)
   }
 
   if (showOnlyFavorites.value) {
-    list = list.filter(p => favorites.value.has(p.id))
+    list = list.filter((p) => favorites.value.has(p.id))
   }
 
   if (sortBy.value === 'price-asc') return [...list].sort((a, b) => a.price - b.price)
@@ -351,7 +435,9 @@ const visiblePages = computed(() => {
 })
 
 function categoryName(categoryId: string): string {
-  return categories.value.find(c => String(c.id) === String(categoryId))?.name?.toUpperCase() || ''
+  return (
+    categories.value.find((c) => String(c.id) === String(categoryId))?.name?.toUpperCase() || ''
+  )
 }
 
 function addProductToCart(p: Product) {
@@ -360,12 +446,22 @@ function addProductToCart(p: Product) {
     selectedSizes.value = []
     showSizeModal.value = true
   } else {
-    addToQuotation({
-      id: p.id, name: p.name, sku: p.sku || 'N/A', brand: p.brand || 'N/A',
-      price: p.price, image: p.images?.[0] || '', category: String(p.category || ''),
-      categoryName: categoryName(p.category),
-      description: p.description, inStock: p.status === 'available', originalPrice: p.originalPrice,
-    }, 1)
+    addToQuotation(
+      {
+        id: p.id,
+        name: p.name,
+        sku: p.sku || 'N/A',
+        brand: p.brand || 'N/A',
+        price: p.price,
+        image: p.images?.[0] || '',
+        category: String(p.category || ''),
+        categoryName: categoryName(p.category),
+        description: p.description,
+        inStock: p.status === 'available',
+        originalPrice: p.originalPrice,
+      },
+      1,
+    )
     openDrawer()
   }
 }
@@ -380,12 +476,23 @@ function confirmAddToCart() {
   if (!selectedProduct.value) return
   const p = selectedProduct.value
   for (const size of selectedSizes.value) {
-    addToQuotation({
-      id: p.id, name: p.name, sku: p.sku || 'N/A', brand: p.brand || 'N/A',
-      price: p.price, image: p.images?.[0] || '', category: String(p.category || ''),
-      categoryName: categoryName(p.category),
-      description: p.description, inStock: p.status === 'available', originalPrice: p.originalPrice,
-    }, 1, size)
+    addToQuotation(
+      {
+        id: p.id,
+        name: p.name,
+        sku: p.sku || 'N/A',
+        brand: p.brand || 'N/A',
+        price: p.price,
+        image: p.images?.[0] || '',
+        category: String(p.category || ''),
+        categoryName: categoryName(p.category),
+        description: p.description,
+        inStock: p.status === 'available',
+        originalPrice: p.originalPrice,
+      },
+      1,
+      size,
+    )
   }
   showSizeModal.value = false
   selectedProduct.value = null
@@ -393,23 +500,33 @@ function confirmAddToCart() {
   openDrawer()
 }
 
-function openQuickView(p: Product) { quickView.open(p) }
+function openQuickView(p: Product) {
+  quickView.open(p)
+}
 
 function getStatusText(status: string) {
   switch (status) {
-    case 'available': return 'Disponible'
-    case 'coming-soon': return 'Proximamente'
-    case 'out-of-stock': return 'Agotado'
-    default: return 'No disponible'
+    case 'available':
+      return 'Disponible'
+    case 'coming-soon':
+      return 'Proximamente'
+    case 'out-of-stock':
+      return 'Agotado'
+    default:
+      return 'No disponible'
   }
 }
 
 function statusClass(status: string) {
   switch (status) {
-    case 'available': return 'st-available'
-    case 'coming-soon': return 'st-soon'
-    case 'out-of-stock': return 'st-out'
-    default: return ''
+    case 'available':
+      return 'st-available'
+    case 'coming-soon':
+      return 'st-soon'
+    case 'out-of-stock':
+      return 'st-out'
+    default:
+      return ''
   }
 }
 
@@ -441,9 +558,17 @@ function toggleFavorite(id: string) {
   localStorage.setItem('pikiitos-favorites', JSON.stringify([...favorites.value]))
 }
 
-watch([searchTerm, selectedPriceRange, selectedStatus, showOnlyFavorites, sortBy], () => { currentPage.value = 1 })
+watch([searchTerm, selectedPriceRange, selectedStatus, showOnlyFavorites, sortBy], () => {
+  currentPage.value = 1
+})
 
-watch(() => props.slug, () => { clearFilters(); error.value = null })
+watch(
+  () => props.slug,
+  () => {
+    clearFilters()
+    error.value = null
+  },
+)
 
 onMounted(async () => {
   loading.value = true
@@ -465,7 +590,7 @@ defineOptions({ name: 'CategoryProductsView' })
 .category-page {
   width: 100%;
   padding-top: 10px;
-  background: #FFF8E8;
+  background: #fff8e8;
   min-height: 100vh;
 }
 
@@ -479,7 +604,9 @@ defineOptions({ name: 'CategoryProductsView' })
 }
 
 @media (max-width: 1024px) {
-  .layout { grid-template-columns: 1fr; }
+  .layout {
+    grid-template-columns: 1fr;
+  }
 }
 
 .sidebar {
@@ -495,24 +622,27 @@ defineOptions({ name: 'CategoryProductsView' })
 
 .sidebar-title {
   margin: 0 0 1rem;
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Callisto MT', 'Roundo', 'Nunito', sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
-  color: #4A3728;
+  color: #4a3728;
 }
 
 .search-box {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background: #FFF8E8;
+  background: #fff8e8;
   border: 1px solid rgba(215, 172, 67, 0.2);
   border-radius: 999px;
   padding: 0.5rem 0.75rem;
   margin-bottom: 1.25rem;
 }
 
-.search-icon { color: #8B7355; flex-shrink: 0; }
+.search-icon {
+  color: #8b7355;
+  flex-shrink: 0;
+}
 
 .search-input {
   border: 0;
@@ -520,36 +650,42 @@ defineOptions({ name: 'CategoryProductsView' })
   width: 100%;
   font-size: 0.85rem;
   background: transparent;
-  color: #4A3728;
-  font-family: 'Poppins', sans-serif;
+  color: #4a3728;
+  font-family: 'Roundo', 'Nunito', sans-serif;
 }
 
-.search-input::placeholder { color: #8B7355; opacity: 0.6; }
+.search-input::placeholder {
+  color: #8b7355;
+  opacity: 0.6;
+}
 
 .filter-label {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
   font-size: 0.8rem;
   font-weight: 700;
-  color: #4A3728;
+  color: #4a3728;
   margin: 0 0 0.6rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
-.radio-list { display: grid; gap: 0.45rem; }
+.radio-list {
+  display: grid;
+  gap: 0.45rem;
+}
 
 .radio-item {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   font-size: 0.88rem;
-  color: #6B5B4E;
+  color: #6b5b4e;
   cursor: pointer;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
 }
 
-.radio-item input[type="radio"] {
-  accent-color: #D7AC43;
+.radio-item input[type='radio'] {
+  accent-color: #d7ac43;
   width: 15px;
   height: 15px;
 }
@@ -559,19 +695,19 @@ defineOptions({ name: 'CategoryProductsView' })
   align-items: center;
   gap: 0.5rem;
   font-size: 0.88rem;
-  color: #6B5B4E;
+  color: #6b5b4e;
   cursor: pointer;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
 }
 
-.checkbox-item input[type="checkbox"] {
-  accent-color: #D7AC43;
+.checkbox-item input[type='checkbox'] {
+  accent-color: #d7ac43;
   width: 15px;
   height: 15px;
 }
 
 .fav-count {
-  background: #E88D92;
+  background: #e88d92;
   color: white;
   font-size: 0.65rem;
   font-weight: 700;
@@ -588,8 +724,8 @@ defineOptions({ name: 'CategoryProductsView' })
   border-radius: 999px;
   background: white;
   border: 1px solid rgba(215, 172, 67, 0.3);
-  color: #4A3728;
-  font-family: 'Poppins', sans-serif;
+  color: #4a3728;
+  font-family: 'Roundo', 'Nunito', sans-serif;
   font-weight: 600;
   font-size: 0.85rem;
   cursor: pointer;
@@ -597,11 +733,13 @@ defineOptions({ name: 'CategoryProductsView' })
 }
 
 .clear-btn:hover {
-  background: #FFF8E8;
-  border-color: #D7AC43;
+  background: #fff8e8;
+  border-color: #d7ac43;
 }
 
-.content { min-width: 0; }
+.content {
+  min-width: 0;
+}
 
 .category-hero {
   display: grid;
@@ -618,7 +756,9 @@ defineOptions({ name: 'CategoryProductsView' })
 }
 
 @media (max-width: 768px) {
-  .category-hero { grid-template-columns: 1fr; }
+  .category-hero {
+    grid-template-columns: 1fr;
+  }
 }
 
 .category-hero--noimage {
@@ -627,17 +767,17 @@ defineOptions({ name: 'CategoryProductsView' })
 
 .category-title {
   margin: 0;
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Callisto MT', 'Roundo', 'Nunito', sans-serif;
   font-size: 1.8rem;
   font-weight: 700;
-  color: #4A3728;
+  color: #4a3728;
 }
 
 .category-description {
   margin: 0.9rem 5rem 1rem 0;
-  color: #6B5B4E;
+  color: #6b5b4e;
   line-height: 1.6;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
   font-size: 0.92rem;
   text-align: justify;
 }
@@ -648,10 +788,10 @@ defineOptions({ name: 'CategoryProductsView' })
   gap: 0.4rem;
   margin-top: 1rem;
   padding: 0.6rem 1.5rem;
-  background: #4A3728;
+  background: #4a3728;
   color: white;
   border-radius: 999px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
   font-weight: 700;
   font-size: 0.85rem;
   text-decoration: none;
@@ -660,7 +800,7 @@ defineOptions({ name: 'CategoryProductsView' })
 }
 
 .category-hero-btn:hover {
-  background: #D7AC43;
+  background: #d7ac43;
   transform: translateY(-1px);
 }
 
@@ -668,7 +808,7 @@ defineOptions({ name: 'CategoryProductsView' })
   width: 110%;
   border-radius: 14px;
   overflow: hidden;
-  background: #FFF8E8;
+  background: #fff8e8;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -691,23 +831,33 @@ defineOptions({ name: 'CategoryProductsView' })
 }
 
 @media (max-width: 640px) {
-  .topbar { flex-direction: column; align-items: stretch; }
+  .topbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
 
 .meta-text {
   font-size: 0.88rem;
-  color: #6B5B4E;
-  font-family: 'Poppins', sans-serif;
+  color: #6b5b4e;
+  font-family: 'Roundo', 'Nunito', sans-serif;
 }
 
-.meta-text strong { color: #4A3728; font-weight: 700; }
+.meta-text strong {
+  color: #4a3728;
+  font-weight: 700;
+}
 
-.sort { display: flex; align-items: center; gap: 0.5rem; }
+.sort {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 
 .sort-label {
   font-size: 0.85rem;
-  color: #6B5B4E;
-  font-family: 'Poppins', sans-serif;
+  color: #6b5b4e;
+  font-family: 'Roundo', 'Nunito', sans-serif;
 }
 
 .sort-select {
@@ -716,8 +866,8 @@ defineOptions({ name: 'CategoryProductsView' })
   border: 1px solid rgba(215, 172, 67, 0.2);
   padding: 0 0.9rem;
   background: white;
-  color: #4A3728;
-  font-family: 'Poppins', sans-serif;
+  color: #4a3728;
+  font-family: 'Roundo', 'Nunito', sans-serif;
   font-size: 0.85rem;
 }
 
@@ -728,7 +878,7 @@ defineOptions({ name: 'CategoryProductsView' })
   padding: 0.75rem 1rem;
   border-radius: 12px;
   margin-bottom: 1rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
   font-size: 0.88rem;
 }
 
@@ -738,9 +888,21 @@ defineOptions({ name: 'CategoryProductsView' })
   gap: 1.25rem;
 }
 
-@media (max-width: 1280px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-@media (max-width: 1024px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+@media (max-width: 1280px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 .card {
   position: relative;
@@ -770,12 +932,19 @@ defineOptions({ name: 'CategoryProductsView' })
   transition: transform 0.6s;
 }
 
-.card:hover .card-bg img { transform: scale(1.08); }
+.card:hover .card-bg img {
+  transform: scale(1.08);
+}
 
 .card-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(30, 20, 10, 0.75) 0%, rgba(30, 20, 10, 0.15) 50%, transparent 100%);
+  background: linear-gradient(
+    to top,
+    rgba(30, 20, 10, 0.75) 0%,
+    rgba(30, 20, 10, 0.15) 50%,
+    transparent 100%
+  );
 }
 
 .discount-badge {
@@ -783,12 +952,12 @@ defineOptions({ name: 'CategoryProductsView' })
   top: 0.7rem;
   left: 0.7rem;
   padding: 0.3rem 0.65rem;
-  background: linear-gradient(135deg, #E88D92, #D4738A);
+  background: linear-gradient(135deg, #e88d92, #d4738a);
   color: white;
   font-size: 0.75rem;
   font-weight: 700;
   border-radius: 8px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
   z-index: 2;
 }
 
@@ -800,18 +969,27 @@ defineOptions({ name: 'CategoryProductsView' })
   font-size: 0.7rem;
   font-weight: 700;
   border-radius: 8px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
   z-index: 2;
 }
 
-.st-available { background: #22c55e; color: white; }
-.st-out { background: #ef4444; color: white; }
-.st-soon { background: #f59e0b; color: white; }
+.st-available {
+  background: #22c55e;
+  color: white;
+}
+.st-out {
+  background: #ef4444;
+  color: white;
+}
+.st-soon {
+  background: #f59e0b;
+  color: white;
+}
 
 .heart-btn {
   position: absolute;
   top: 2.7rem;
-  right: 1.0rem;
+  right: 1rem;
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -845,11 +1023,11 @@ defineOptions({ name: 'CategoryProductsView' })
 }
 
 .cat-label {
-  font-size: 0.80rem;
+  font-size: 0.8rem;
   letter-spacing: 0.5px;
   font-weight: 800;
-  color: #FFE87A;
-  font-family: 'Poppins', sans-serif;
+  color: #ffe87a;
+  font-family: 'Roundo', 'Nunito', sans-serif;
 }
 
 .prod-name {
@@ -857,13 +1035,13 @@ defineOptions({ name: 'CategoryProductsView' })
   font-size: 1.35rem;
   font-weight: 700;
   color: white;
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Callisto MT', 'Roundo', 'Nunito', sans-serif;
   line-height: 1.3;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .price-row {
@@ -874,17 +1052,17 @@ defineOptions({ name: 'CategoryProductsView' })
 }
 
 .price {
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Callisto MT', 'Roundo', 'Nunito', sans-serif;
   font-weight: 700;
   font-size: 1.4rem;
   color: white;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .old-price {
   font-size: 0.8rem;
   text-decoration: line-through;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .add-btn {
@@ -893,9 +1071,9 @@ defineOptions({ name: 'CategoryProductsView' })
   height: 38px;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.95);
-  color: #4A3728;
+  color: #4a3728;
   border: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
   font-weight: 700;
   font-size: 0.85rem;
   cursor: pointer;
@@ -903,22 +1081,60 @@ defineOptions({ name: 'CategoryProductsView' })
   backdrop-filter: blur(4px);
 }
 
-.add-btn:hover { background: #D7AC43; color: white; }
-.add-btn:active { transform: scale(0.97); }
-.add-btn.disabled { background: rgba(255,255,255,0.4); color: rgba(255,255,255,0.7); cursor: not-allowed; }
+.add-btn:hover {
+  background: #d7ac43;
+  color: white;
+}
+.add-btn:active {
+  transform: scale(0.97);
+}
+.add-btn.disabled {
+  background: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.7);
+  cursor: not-allowed;
+}
 
-.skeleton { pointer-events: none; position: relative; }
-.skeleton-img { position: absolute; inset: 0; background: linear-gradient(90deg, #f5f0e8 25%, #ece5d8 50%, #f5f0e8 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; }
-.skeleton-line { height: 12px; border-radius: 999px; background: rgba(255,255,255,0.3); margin-bottom: 8px; }
-.w30 { width: 30%; } .w40 { width: 40%; } .w60 { width: 60%; }
+.skeleton {
+  pointer-events: none;
+  position: relative;
+}
+.skeleton-img {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #f5f0e8 25%, #ece5d8 50%, #f5f0e8 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+.skeleton-line {
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.3);
+  margin-bottom: 8px;
+}
+.w30 {
+  width: 30%;
+}
+.w40 {
+  width: 40%;
+}
+.w60 {
+  width: 60%;
+}
 
-@keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
 
 .empty {
   text-align: center;
   padding: 3rem 0;
-  color: #6B5B4E;
-  font-family: 'Poppins', sans-serif;
+  color: #6b5b4e;
+  font-family: 'Roundo', 'Nunito', sans-serif;
 }
 
 .pagination {
@@ -935,21 +1151,33 @@ defineOptions({ name: 'CategoryProductsView' })
   border-radius: 10px;
   border: 1px solid rgba(215, 172, 67, 0.2);
   background: white;
-  color: #6B5B4E;
-  font-family: 'Poppins', sans-serif;
+  color: #6b5b4e;
+  font-family: 'Roundo', 'Nunito', sans-serif;
   font-weight: 600;
   font-size: 0.85rem;
   cursor: pointer;
   transition: all 0.2s;
 }
 
-.page-btn:hover:not(:disabled) { background: #FFF8E8; border-color: #D7AC43; }
-.page-btn:disabled { opacity: 0.35; cursor: not-allowed; }
-.page-btn.active { background: #4A3728; color: white; border-color: #4A3728; }
+.page-btn:hover:not(:disabled) {
+  background: #fff8e8;
+  border-color: #d7ac43;
+}
+.page-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.page-btn.active {
+  background: #4a3728;
+  color: white;
+  border-color: #4a3728;
+}
 
 /* ===== MOBILE STYLES ===== */
 @media (max-width: 640px) {
-  .category-page { padding-top: 0; }
+  .category-page {
+    padding-top: 0;
+  }
 
   .layout {
     padding: 0.75rem 1rem 2rem;
@@ -962,13 +1190,24 @@ defineOptions({ name: 'CategoryProductsView' })
     position: static;
   }
 
-  .sidebar-title { font-size: 1rem; margin-bottom: 0.75rem; }
+  .sidebar-title {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
 
-  .search-box { margin-bottom: 1rem; padding: 0.4rem 0.65rem; }
+  .search-box {
+    margin-bottom: 1rem;
+    padding: 0.4rem 0.65rem;
+  }
 
-  .filter-label { font-size: 0.75rem; margin-bottom: 0.4rem; }
+  .filter-label {
+    font-size: 0.75rem;
+    margin-bottom: 0.4rem;
+  }
 
-  .radio-item { font-size: 0.82rem; }
+  .radio-item {
+    font-size: 0.82rem;
+  }
 
   .category-hero {
     grid-template-columns: 1fr;
@@ -1003,9 +1242,15 @@ defineOptions({ name: 'CategoryProductsView' })
     margin-bottom: 0.75rem;
   }
 
-  .meta-text { font-size: 0.8rem; }
+  .meta-text {
+    font-size: 0.8rem;
+  }
 
-  .sort-select { height: 36px; font-size: 0.8rem; padding: 0 0.7rem; }
+  .sort-select {
+    height: 36px;
+    font-size: 0.8rem;
+    padding: 0 0.7rem;
+  }
 
   .grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1021,16 +1266,22 @@ defineOptions({ name: 'CategoryProductsView' })
     padding: 0.6rem 0.75rem;
   }
 
-  .cat-label { font-size: 0.65rem; }
+  .cat-label {
+    font-size: 0.65rem;
+  }
 
   .prod-name {
     font-size: 0.95rem;
     -webkit-line-clamp: 1;
   }
 
-  .price { font-size: 1.05rem; }
+  .price {
+    font-size: 1.05rem;
+  }
 
-  .old-price { font-size: 0.7rem; }
+  .old-price {
+    font-size: 0.7rem;
+  }
 
   .add-btn {
     height: 30px;
@@ -1062,9 +1313,15 @@ defineOptions({ name: 'CategoryProductsView' })
     right: 0.6rem;
   }
 
-  .heart-btn svg { width: 14px; height: 14px; }
+  .heart-btn svg {
+    width: 14px;
+    height: 14px;
+  }
 
-  .pagination { gap: 0.25rem; margin-top: 1.5rem; }
+  .pagination {
+    gap: 0.25rem;
+    margin-top: 1.5rem;
+  }
 
   .page-btn {
     min-width: 32px;

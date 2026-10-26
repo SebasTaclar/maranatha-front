@@ -4,8 +4,16 @@
     <aside class="sidebar">
       <div class="sidebar-header">
         <router-link to="/" class="sidebar-logo">
-          <img src="https://res.cloudinary.com/dlwzazojt/image/upload/v1787367349/logo-pollito-removebg-preview_fhsilm.png" alt="Pollito" class="logo-pollito" />
-          <img src="https://res.cloudinary.com/dlwzazojt/image/upload/v1787349262/logo-pikiitos-texto-removebg-preview_bn2t7l.png" alt="Pikiitos" class="logo-img" />
+          <img
+            src="https://res.cloudinary.com/dlwzazojt/image/upload/v1787367349/logo-pollito-removebg-preview_fhsilm.png"
+            alt="Pollito"
+            class="logo-pollito"
+          />
+          <img
+            src="https://maranathaphes.org/wp-content/uploads/2024/01/Logo-fundacion-maranatha-phes-con-R.png"
+            alt="Fundación Maranatha PHES"
+            class="logo-img"
+          />
         </router-link>
         <p class="sidebar-subtitle">Panel de Administración</p>
       </div>
@@ -26,15 +34,24 @@
       <div class="sidebar-footer">
         <button class="nav-item logout" @click="handleLogout">
           <span class="nav-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
-              <polyline points="16 17 21 12 16 7"/>
-              <line x1="21" y1="12" x2="9" y2="12"/>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+              <polyline points="16 17 21 12 16 7" />
+              <line x1="21" y1="12" x2="9" y2="12" />
             </svg>
           </span>
           <span class="nav-label">Cerrar sesión</span>
         </button>
-        <p class="copyright">Pikiitos<br/>© 2026 Todos los derechos reservados.</p>
+        <p class="copyright">
+          Fundación Maranatha PHES<br />© 2026 Todos los derechos reservados.
+        </p>
       </div>
     </aside>
 
@@ -46,33 +63,66 @@
       <!-- Topbar -->
       <header class="topbar">
         <router-link to="/" class="home-btn" title="Volver al inicio">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-            <polyline points="9 22 9 12 15 12 15 22"/>
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
           </svg>
         </router-link>
         <button class="menu-toggle" @click="sidebarOpen = !sidebarOpen">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="3" y1="6" x2="21" y2="6"/>
-            <line x1="3" y1="12" x2="21" y2="12"/>
-            <line x1="3" y1="18" x2="21" y2="18"/>
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
           </svg>
         </button>
 
         <div class="topbar-search">
-          <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"/>
-            <path d="m21 21-4.35-4.35"/>
+          <svg
+            class="search-icon"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.35-4.35" />
           </svg>
-          <input type="text" placeholder="Buscar productos, pedidos, clientes..." class="search-input" />
+          <input
+            type="text"
+            placeholder="Buscar productos, pedidos, clientes..."
+            class="search-input"
+          />
         </div>
 
         <div class="topbar-actions">
           <div class="topbar-user">
             <div class="user-avatar">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                <circle cx="12" cy="7" r="4"/>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
               </svg>
             </div>
             <div class="user-info">
@@ -81,10 +131,17 @@
             </div>
           </div>
           <button class="logout-btn" title="Cerrar sesión" @click="handleLogout">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
-              <polyline points="16 17 21 12 16 7"/>
-              <line x1="21" y1="12" x2="9" y2="12"/>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+              <polyline points="16 17 21 12 16 7" />
+              <line x1="21" y1="12" x2="9" y2="12" />
             </svg>
           </button>
         </div>
@@ -125,7 +182,10 @@
                 <div v-for="cat in productsByCategory" :key="cat.name" class="bar-row">
                   <span class="bar-label">{{ cat.name }}</span>
                   <div class="bar-track">
-                    <div class="bar-fill" :style="{ width: cat.percent + '%', background: cat.color }"></div>
+                    <div
+                      class="bar-fill"
+                      :style="{ width: cat.percent + '%', background: cat.color }"
+                    ></div>
                   </div>
                   <span class="bar-value">{{ cat.count }}</span>
                 </div>
@@ -139,19 +199,49 @@
               </div>
               <div class="donut-chart-wrapper">
                 <svg viewBox="0 0 120 120" class="donut-svg">
-                  <circle cx="60" cy="60" r="50" fill="none" stroke="#E5E7EB" stroke-width="14"/>
-                  <circle cx="60" cy="60" r="50" fill="none" stroke="#FFD84D" stroke-width="14"
-                    :stroke-dasharray="productStatusData.availableArc + ' ' + productStatusData.totalArc"
-                    stroke-dashoffset="0" transform="rotate(-90 60 60)"/>
-                  <circle cx="60" cy="60" r="50" fill="none" stroke="#FF8E8E" stroke-width="14"
-                    :stroke-dasharray="productStatusData.unavailableArc + ' ' + productStatusData.totalArc"
-                    :stroke-dashoffset="'-' + productStatusData.availableArc" transform="rotate(-90 60 60)"/>
-                  <text x="60" y="56" text-anchor="middle" class="donut-total">{{ products.length }}</text>
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="#E5E7EB" stroke-width="14" />
+                  <circle
+                    cx="60"
+                    cy="60"
+                    r="50"
+                    fill="none"
+                    stroke="#FFD84D"
+                    stroke-width="14"
+                    :stroke-dasharray="
+                      productStatusData.availableArc + ' ' + productStatusData.totalArc
+                    "
+                    stroke-dashoffset="0"
+                    transform="rotate(-90 60 60)"
+                  />
+                  <circle
+                    cx="60"
+                    cy="60"
+                    r="50"
+                    fill="none"
+                    stroke="#FF8E8E"
+                    stroke-width="14"
+                    :stroke-dasharray="
+                      productStatusData.unavailableArc + ' ' + productStatusData.totalArc
+                    "
+                    :stroke-dashoffset="'-' + productStatusData.availableArc"
+                    transform="rotate(-90 60 60)"
+                  />
+                  <text x="60" y="56" text-anchor="middle" class="donut-total">
+                    {{ products.length }}
+                  </text>
                   <text x="60" y="70" text-anchor="middle" class="donut-subtitle">total</text>
                 </svg>
                 <div class="donut-legend">
-                  <span class="legend-item"><span class="legend-dot" style="background:#FFD84D"></span> Disponibles ({{ productStatusData.availableCount }})</span>
-                  <span class="legend-item"><span class="legend-dot" style="background:#FF8E8E"></span> Agotados ({{ productStatusData.unavailableCount }})</span>
+                  <span class="legend-item"
+                    ><span class="legend-dot" style="background: #ffd84d"></span> Disponibles ({{
+                      productStatusData.availableCount
+                    }})</span
+                  >
+                  <span class="legend-item"
+                    ><span class="legend-dot" style="background: #ff8e8e"></span> Agotados ({{
+                      productStatusData.unavailableCount
+                    }})</span
+                  >
                 </div>
               </div>
             </div>
@@ -165,7 +255,10 @@
                 <div v-for="range in productsByPrice" :key="range.label" class="bar-row">
                   <span class="bar-label">{{ range.label }}</span>
                   <div class="bar-track">
-                    <div class="bar-fill" :style="{ width: range.percent + '%', background: range.color }"></div>
+                    <div
+                      class="bar-fill"
+                      :style="{ width: range.percent + '%', background: range.color }"
+                    ></div>
                   </div>
                   <span class="bar-value">{{ range.count }}</span>
                 </div>
@@ -212,9 +305,16 @@
               <p class="page-subtitle">Gestiona y controla todos los productos de tu tienda.</p>
             </div>
             <button class="btn btn-primary" @click="showProductForm = true">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <line x1="12" y1="5" x2="12" y2="19"/>
-                <line x1="5" y1="12" x2="19" y2="12"/>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
               </svg>
               Agregar productos
             </button>
@@ -224,8 +324,17 @@
           <div class="cat-stats-row cat-stats-row-5">
             <div class="cat-stat-card">
               <div class="cat-stat-icon yellow">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                  />
                 </svg>
               </div>
               <div class="cat-stat-info">
@@ -235,52 +344,88 @@
             </div>
             <div class="cat-stat-card">
               <div class="cat-stat-icon green">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                  <polyline points="22 4 12 14.01 9 11.01"/>
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
                 </svg>
               </div>
               <div class="cat-stat-info">
-                <span class="cat-stat-value">{{ products.filter(p => p.status === 'available').length }}</span>
+                <span class="cat-stat-value">{{
+                  products.filter((p) => p.status === 'available').length
+                }}</span>
                 <span class="cat-stat-label">Productos Disponibles</span>
               </div>
             </div>
             <div class="cat-stat-card">
               <div class="cat-stat-icon red">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"/>
-                  <line x1="15" y1="9" x2="9" y2="15"/>
-                  <line x1="9" y1="9" x2="15" y2="15"/>
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="15" y1="9" x2="9" y2="15" />
+                  <line x1="9" y1="9" x2="15" y2="15" />
                 </svg>
               </div>
               <div class="cat-stat-info">
-                <span class="cat-stat-value">{{ products.filter(p => p.status === 'out-of-stock').length }}</span>
+                <span class="cat-stat-value">{{
+                  products.filter((p) => p.status === 'out-of-stock').length
+                }}</span>
                 <span class="cat-stat-label">Productos sin stock</span>
               </div>
             </div>
             <div class="cat-stat-card">
               <div class="cat-stat-icon blue">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="3" y="3" width="7" height="7"/>
-                  <rect x="14" y="3" width="7" height="7"/>
-                  <rect x="14" y="14" width="7" height="7"/>
-                  <rect x="3" y="14" width="7" height="7"/>
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="3" y="3" width="7" height="7" />
+                  <rect x="14" y="3" width="7" height="7" />
+                  <rect x="14" y="14" width="7" height="7" />
+                  <rect x="3" y="14" width="7" height="7" />
                 </svg>
               </div>
               <div class="cat-stat-info">
-                <span class="cat-stat-value">{{ products.filter(p => p.originalPrice && p.originalPrice > p.price).length }}</span>
+                <span class="cat-stat-value">{{
+                  products.filter((p) => p.originalPrice && p.originalPrice > p.price).length
+                }}</span>
                 <span class="cat-stat-label">Productos con descuento</span>
               </div>
             </div>
             <div class="cat-stat-card">
               <div class="cat-stat-icon orange">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"/>
-                  <polyline points="12 6 12 12 16 14"/>
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
                 </svg>
               </div>
               <div class="cat-stat-info">
-                <span class="cat-stat-value">{{ products.filter(p => p.status === 'coming-soon').length }}</span>
+                <span class="cat-stat-value">{{
+                  products.filter((p) => p.status === 'coming-soon').length
+                }}</span>
                 <span class="cat-stat-label">Próximamente</span>
                 <span class="cat-stat-sub">Por lanzar</span>
               </div>
@@ -317,11 +462,24 @@
             </div>
             <div class="prod-toolbar-right">
               <div class="search-input-wrapper search-sm">
-                <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="11" cy="11" r="8"/>
-                  <path d="m21 21-4.35-4.35"/>
+                <svg
+                  class="search-icon"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="11" cy="11" r="8" />
+                  <path d="m21 21-4.35-4.35" />
                 </svg>
-                <input type="search" v-model="searchProducts" placeholder="Buscar producto..." class="search-field" />
+                <input
+                  type="search"
+                  v-model="searchProducts"
+                  placeholder="Buscar producto..."
+                  class="search-field"
+                />
               </div>
             </div>
           </div>
@@ -346,12 +504,18 @@
                   <td class="col-product">
                     <div class="prod-cell">
                       <div class="prod-thumb">
-                        <img v-if="product.images && product.images.length > 0" :src="product.images[0]" :alt="product.name" />
+                        <img
+                          v-if="product.images && product.images.length > 0"
+                          :src="product.images[0]"
+                          :alt="product.name"
+                        />
                         <span v-else class="prod-thumb-placeholder">📦</span>
                       </div>
                       <div class="prod-info">
                         <span class="prod-name">{{ product.name }}</span>
-                        <span class="prod-desc">{{ product.description || 'Sin descripción' }}</span>
+                        <span class="prod-desc">{{
+                          product.description || 'Sin descripción'
+                        }}</span>
                       </div>
                     </div>
                   </td>
@@ -362,27 +526,62 @@
                     <span class="prod-price">${{ product.price.toLocaleString() }}</span>
                   </td>
                   <td class="col-status">
-                    <span :class="['prod-status-badge', product.status]">{{ getStatusText(product.status) }}</span>
+                    <span :class="['prod-status-badge', product.status]">{{
+                      getStatusText(product.status)
+                    }}</span>
                   </td>
                   <td class="col-featured">
-                    <button class="prod-star-btn" :class="{ active: product.isShowcase }" @click="toggleProductFeatured(product)">
-                      <svg width="18" height="18" viewBox="0 0 24 24" :fill="product.isShowcase ? '#FFD84D' : 'none'" :stroke="product.isShowcase ? '#FFD84D' : '#9CA3AF'" stroke-width="2">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    <button
+                      class="prod-star-btn"
+                      :class="{ active: product.isShowcase }"
+                      @click="toggleProductFeatured(product)"
+                    >
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        :fill="product.isShowcase ? '#FFD84D' : 'none'"
+                        :stroke="product.isShowcase ? '#FFD84D' : '#9CA3AF'"
+                        stroke-width="2"
+                      >
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                     </button>
                   </td>
                   <td class="col-actions">
                     <div class="cat-actions">
                       <button class="cat-action-btn" @click="editProduct(product)" title="Editar">
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                          <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
-                          <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                        <svg
+                          width="15"
+                          height="15"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                          <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
                         </svg>
                       </button>
-                      <button class="cat-action-btn danger" @click="deleteProductConfirm(product.id)" title="Eliminar">
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                          <polyline points="3 6 5 6 21 6"/>
-                          <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                      <button
+                        class="cat-action-btn danger"
+                        @click="deleteProductConfirm(product.id)"
+                        title="Eliminar"
+                      >
+                        <svg
+                          width="15"
+                          height="15"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <polyline points="3 6 5 6 21 6" />
+                          <path
+                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                          />
                         </svg>
                       </button>
                     </div>
@@ -394,14 +593,48 @@
 
           <!-- Pagination -->
           <div class="cat-pagination" v-if="filteredProducts.length > 0 && totalProductPages > 1">
-            <span class="cat-pagination-info">Mostrando {{ (productPage - 1) * productsPerPage + 1 }} a {{ Math.min(productPage * productsPerPage, filteredProducts.length) }} de {{ filteredProducts.length }} productos</span>
+            <span class="cat-pagination-info"
+              >Mostrando {{ (productPage - 1) * productsPerPage + 1 }} a
+              {{ Math.min(productPage * productsPerPage, filteredProducts.length) }} de
+              {{ filteredProducts.length }} productos</span
+            >
             <div class="cat-pagination-btns">
               <button class="page-btn" :disabled="productPage <= 1" @click="productPage--">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="15 18 9 12 15 6" />
+                </svg>
               </button>
-              <button v-for="p in totalProductPages" :key="p" class="page-btn" :class="{ active: p === productPage }" @click="productPage = p">{{ p }}</button>
-              <button class="page-btn" :disabled="productPage >= totalProductPages" @click="productPage++">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              <button
+                v-for="p in totalProductPages"
+                :key="p"
+                class="page-btn"
+                :class="{ active: p === productPage }"
+                @click="productPage = p"
+              >
+                {{ p }}
+              </button>
+              <button
+                class="page-btn"
+                :disabled="productPage >= totalProductPages"
+                @click="productPage++"
+              >
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
               </button>
             </div>
           </div>
@@ -411,7 +644,9 @@
             <div class="empty-icon">📦</div>
             <h3>No hay productos</h3>
             <p>Comienza agregando tu primer producto</p>
-            <button class="btn btn-primary" @click="showProductForm = true">Crear Primer Producto</button>
+            <button class="btn btn-primary" @click="showProductForm = true">
+              Crear Primer Producto
+            </button>
           </div>
           <div v-else-if="filteredProducts.length === 0 && searchProducts" class="empty-state">
             <div class="empty-icon">🔍</div>
@@ -430,9 +665,16 @@
               <p class="page-subtitle">Gestiona las categorías de productos de tu tienda.</p>
             </div>
             <button class="btn btn-primary" @click="showCategoryForm = true">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <line x1="12" y1="5" x2="12" y2="19"/>
-                <line x1="5" y1="12" x2="19" y2="12"/>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
               </svg>
               Nueva categoría
             </button>
@@ -442,8 +684,17 @@
           <div class="cat-stats-row cat-stats-cards">
             <div class="cat-stat-card">
               <div class="cat-stat-icon yellow">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+                  />
                 </svg>
               </div>
               <div class="cat-stat-info">
@@ -454,14 +705,27 @@
             </div>
             <div class="cat-stat-card" v-for="category in categories" :key="category.id">
               <div class="cat-stat-icon yellow">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+                  />
                 </svg>
               </div>
               <div class="cat-stat-info">
                 <span class="cat-stat-value">{{ getProductsInCategory(category.id) }}</span>
                 <span class="cat-stat-label">{{ category.name }}</span>
-                <span class="cat-stat-sub">{{ getProductsInCategory(category.id) === 1 ? 'Producto asociado' : 'Productos asociados' }}</span>
+                <span class="cat-stat-sub">{{
+                  getProductsInCategory(category.id) === 1
+                    ? 'Producto asociado'
+                    : 'Productos asociados'
+                }}</span>
               </div>
             </div>
           </div>
@@ -471,16 +735,31 @@
             <div class="cat-toolbar-left">
               <select class="cat-filter-select" v-model="selectedCategoryFilter">
                 <option value="">Todas las categorías</option>
-                <option v-for="category in categories" :key="category.id" :value="category.id">{{ category.name }}</option>
+                <option v-for="category in categories" :key="category.id" :value="category.id">
+                  {{ category.name }}
+                </option>
               </select>
             </div>
             <div class="cat-toolbar-right">
               <div class="cat-search">
-                <svg class="cat-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="11" cy="11" r="8"/>
-                  <path d="m21 21-4.35-4.35"/>
+                <svg
+                  class="cat-search-icon"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="11" cy="11" r="8" />
+                  <path d="m21 21-4.35-4.35" />
                 </svg>
-                <input type="search" v-model="searchCategories" placeholder="Buscar categoría..." class="cat-search-input" />
+                <input
+                  type="search"
+                  v-model="searchCategories"
+                  placeholder="Buscar categoría..."
+                  class="cat-search-input"
+                />
               </div>
             </div>
           </div>
@@ -503,7 +782,11 @@
                   <td class="col-check"><input type="checkbox" /></td>
                   <td class="col-img">
                     <div class="cat-thumb">
-                      <img v-if="category.imageUrls && category.imageUrls.length > 0" :src="category.imageUrls[0]" :alt="category.name" />
+                      <img
+                        v-if="category.imageUrls && category.imageUrls.length > 0"
+                        :src="category.imageUrls[0]"
+                        :alt="category.name"
+                      />
                       <span v-else class="cat-thumb-placeholder">🏷️</span>
                     </div>
                   </td>
@@ -511,21 +794,43 @@
                     <span class="cat-name-text">{{ category.name }}</span>
                   </td>
                   <td class="col-desc">
-                    <span class="cat-desc-text">{{ category.description || 'Sin descripción' }}</span>
+                    <span class="cat-desc-text">{{
+                      category.description || 'Sin descripción'
+                    }}</span>
                   </td>
                   <td class="col-products">{{ getProductsInCategory(category.id) }}</td>
                   <td class="col-actions">
                     <div class="cat-actions">
                       <button class="cat-action-btn" @click="editCategory(category)" title="Editar">
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                          <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
-                          <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                        <svg
+                          width="15"
+                          height="15"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                          <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
                         </svg>
                       </button>
-                      <button class="cat-action-btn danger" @click="handleDeleteCategory(category.id)" title="Eliminar">
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                          <polyline points="3 6 5 6 21 6"/>
-                          <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                      <button
+                        class="cat-action-btn danger"
+                        @click="handleDeleteCategory(category.id)"
+                        title="Eliminar"
+                      >
+                        <svg
+                          width="15"
+                          height="15"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <polyline points="3 6 5 6 21 6" />
+                          <path
+                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                          />
                         </svg>
                       </button>
                     </div>
@@ -537,19 +842,36 @@
 
           <!-- Pagination -->
           <div class="cat-pagination">
-            <span class="cat-pagination-info">Mostrando 1 a {{ filteredCategories.length }} de {{ categories.length }} categorías</span>
+            <span class="cat-pagination-info"
+              >Mostrando 1 a {{ filteredCategories.length }} de
+              {{ categories.length }} categorías</span
+            >
             <div class="cat-pagination-btns">
               <button class="cat-page-btn" disabled>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="15 18 9 12 15 6"/>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="15 18 9 12 15 6" />
                 </svg>
               </button>
               <button class="cat-page-btn active">1</button>
               <button class="cat-page-btn">2</button>
               <button class="cat-page-btn">3</button>
               <button class="cat-page-btn">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="9 18 15 12 9 6"/>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="9 18 15 12 9 6" />
                 </svg>
               </button>
             </div>
@@ -560,13 +882,17 @@
             <div class="empty-icon">🏷️</div>
             <h3>No hay categorías</h3>
             <p>Crea categorías para organizar tus productos</p>
-            <button class="btn btn-primary" @click="showCategoryForm = true">Crear Primera Categoría</button>
+            <button class="btn btn-primary" @click="showCategoryForm = true">
+              Crear Primera Categoría
+            </button>
           </div>
           <div v-else-if="filteredCategories.length === 0 && searchCategories" class="empty-state">
             <div class="empty-icon">🔍</div>
             <h3>No se encontraron resultados</h3>
             <p>No hay categorías que coincidan con "{{ searchCategories }}"</p>
-            <button class="btn btn-secondary" @click="searchCategories = ''">Limpiar búsqueda</button>
+            <button class="btn btn-secondary" @click="searchCategories = ''">
+              Limpiar búsqueda
+            </button>
           </div>
         </div>
 
@@ -579,9 +905,16 @@
               <p class="page-subtitle">Gestiona las marcas de productos de tu tienda.</p>
             </div>
             <button class="btn btn-primary" @click="showBrandForm = true">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <line x1="12" y1="5" x2="12" y2="19"/>
-                <line x1="5" y1="12" x2="19" y2="12"/>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
               </svg>
               Nueva marca
             </button>
@@ -591,8 +924,17 @@
           <div class="cat-stats-row">
             <div class="cat-stat-card">
               <div class="cat-stat-icon yellow">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
+                  />
                 </svg>
               </div>
               <div class="cat-stat-info">
@@ -603,9 +945,16 @@
             </div>
             <div class="cat-stat-card">
               <div class="cat-stat-icon green">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                  <polyline points="22 4 12 14.01 9 11.01"/>
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
                 </svg>
               </div>
               <div class="cat-stat-info">
@@ -629,15 +978,35 @@
                 <option>Todas las marcas</option>
               </select>
               <div class="cat-search">
-                <svg class="cat-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="11" cy="11" r="8"/>
-                  <path d="m21 21-4.35-4.35"/>
+                <svg
+                  class="cat-search-icon"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="11" cy="11" r="8" />
+                  <path d="m21 21-4.35-4.35" />
                 </svg>
-                <input type="search" v-model="searchBrands" placeholder="Buscar marca..." class="cat-search-input" />
+                <input
+                  type="search"
+                  v-model="searchBrands"
+                  placeholder="Buscar marca..."
+                  class="cat-search-input"
+                />
               </div>
               <button class="btn btn-outline btn-sm">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
                 </svg>
                 Filtros
               </button>
@@ -674,7 +1043,11 @@
                   <td class="col-check"><input type="checkbox" /></td>
                   <td class="col-img">
                     <div class="cat-thumb">
-                      <img v-if="brand.imageUrls && brand.imageUrls.length > 0" :src="brand.imageUrls[0]" :alt="brand.name" />
+                      <img
+                        v-if="brand.imageUrls && brand.imageUrls.length > 0"
+                        :src="brand.imageUrls[0]"
+                        :alt="brand.name"
+                      />
                       <span v-else class="cat-thumb-placeholder">🏷️</span>
                     </div>
                   </td>
@@ -687,15 +1060,35 @@
                   <td class="col-actions">
                     <div class="cat-actions">
                       <button class="cat-action-btn" @click="editBrand(brand)" title="Editar">
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                          <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
-                          <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                        <svg
+                          width="15"
+                          height="15"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                          <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
                         </svg>
                       </button>
-                      <button class="cat-action-btn danger" @click="handleDeleteBrand(brand.id)" title="Eliminar">
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                          <polyline points="3 6 5 6 21 6"/>
-                          <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                      <button
+                        class="cat-action-btn danger"
+                        @click="handleDeleteBrand(brand.id)"
+                        title="Eliminar"
+                      >
+                        <svg
+                          width="15"
+                          height="15"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <polyline points="3 6 5 6 21 6" />
+                          <path
+                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                          />
                         </svg>
                       </button>
                     </div>
@@ -707,17 +1100,33 @@
 
           <!-- Pagination -->
           <div class="cat-pagination">
-            <span class="cat-pagination-info">Mostrando 1 a {{ filteredBrands.length }} de {{ brands.length }} marcas</span>
+            <span class="cat-pagination-info"
+              >Mostrando 1 a {{ filteredBrands.length }} de {{ brands.length }} marcas</span
+            >
             <div class="cat-pagination-btns">
               <button class="cat-page-btn" disabled>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="15 18 9 12 15 6"/>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="15 18 9 12 15 6" />
                 </svg>
               </button>
               <button class="cat-page-btn active">1</button>
               <button class="cat-page-btn">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="9 18 15 12 9 6"/>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="9 18 15 12 9 6" />
                 </svg>
               </button>
             </div>
@@ -728,7 +1137,9 @@
             <div class="empty-icon">🏷️</div>
             <h3>No hay marcas</h3>
             <p>Crea marcas para asociar a tus productos</p>
-            <button class="btn btn-primary" @click="showBrandForm = true">Crear Primera Marca</button>
+            <button class="btn btn-primary" @click="showBrandForm = true">
+              Crear Primera Marca
+            </button>
           </div>
           <div v-else-if="filteredBrands.length === 0 && searchBrands" class="empty-state">
             <div class="empty-icon">🔍</div>
@@ -746,9 +1157,17 @@
               <p class="page-subtitle">Gestiona los pedidos realizados por tus clientes.</p>
             </div>
             <button class="btn btn-primary" @click="loadPurchases" :disabled="isLoadingSales">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <path d="M23 4v6h-6"/><path d="M1 20v-6h6"/>
-                <path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <path d="M23 4v6h-6" />
+                <path d="M1 20v-6h6" />
+                <path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15" />
               </svg>
               Actualizar
             </button>
@@ -771,8 +1190,22 @@
             <!-- Stats -->
             <div class="stats-row stats-row-4">
               <div class="stat-card">
-                <div class="stat-icon" style="background: linear-gradient(135deg, #FFD84D, #FF8E8E)">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3D2B1F" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                <div
+                  class="stat-icon"
+                  style="background: linear-gradient(135deg, #ffd84d, #ff8e8e)"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#3D2B1F"
+                    stroke-width="2"
+                  >
+                    <circle cx="9" cy="21" r="1" />
+                    <circle cx="20" cy="21" r="1" />
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                  </svg>
                 </div>
                 <div class="stat-content">
                   <span class="stat-label">Total Pedidos</span>
@@ -780,8 +1213,21 @@
                 </div>
               </div>
               <div class="stat-card">
-                <div class="stat-icon" style="background: linear-gradient(135deg, #FFD84D, #FF8E8E)">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3D2B1F" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <div
+                  class="stat-icon"
+                  style="background: linear-gradient(135deg, #ffd84d, #ff8e8e)"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#3D2B1F"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
                 </div>
                 <div class="stat-content">
                   <span class="stat-label">Pendientes</span>
@@ -789,8 +1235,21 @@
                 </div>
               </div>
               <div class="stat-card">
-                <div class="stat-icon" style="background: linear-gradient(135deg, #FFD84D, #FF8E8E)">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3D2B1F" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <div
+                  class="stat-icon"
+                  style="background: linear-gradient(135deg, #ffd84d, #ff8e8e)"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#3D2B1F"
+                    stroke-width="2"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
                 </div>
                 <div class="stat-content">
                   <span class="stat-label">Completados</span>
@@ -798,8 +1257,21 @@
                 </div>
               </div>
               <div class="stat-card">
-                <div class="stat-icon" style="background: linear-gradient(135deg, #FFD84D, #FF8E8E)">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3D2B1F" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                <div
+                  class="stat-icon"
+                  style="background: linear-gradient(135deg, #ffd84d, #ff8e8e)"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#3D2B1F"
+                    stroke-width="2"
+                  >
+                    <line x1="12" y1="1" x2="12" y2="23" />
+                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                  </svg>
                 </div>
                 <div class="stat-content">
                   <span class="stat-label">Ingresos</span>
@@ -811,10 +1283,23 @@
             <!-- Search + Filters -->
             <div class="orders-toolbar">
               <div class="orders-search">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="11" cy="11" r="8" />
+                  <path d="m21 21-4.35-4.35" />
                 </svg>
-                <input type="search" v-model="searchSales" placeholder="Buscar por cliente, email, teléfono o cédula..." class="orders-search-input" />
+                <input
+                  type="search"
+                  v-model="searchSales"
+                  placeholder="Buscar por cliente, email, teléfono o cédula..."
+                  class="orders-search-input"
+                />
                 <button v-if="searchSales" class="search-clear" @click="searchSales = ''">✕</button>
               </div>
               <select v-model="orderStatusFilter" class="orders-filter-select">
@@ -854,15 +1339,49 @@
                     <td>
                       <div class="cell-stack">
                         <span v-if="order.customerPhone" class="cell-primary">
-                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: -1px; margin-right: 4px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                          <svg
+                            width="12"
+                            height="12"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            style="vertical-align: -1px; margin-right: 4px"
+                          >
+                            <path
+                              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                            />
+                          </svg>
                           {{ order.customerPhone }}
                         </span>
                         <span v-if="order.customerIdNumber" class="cell-secondary">
-                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: -1px; margin-right: 4px;"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+                          <svg
+                            width="12"
+                            height="12"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            style="vertical-align: -1px; margin-right: 4px"
+                          >
+                            <rect x="2" y="5" width="20" height="14" rx="2" />
+                            <line x1="2" y1="10" x2="22" y2="10" />
+                          </svg>
                           CC: {{ order.customerIdNumber }}
                         </span>
                         <span v-if="order.shippingAddress" class="cell-secondary">
-                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: -1px; margin-right: 4px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                          <svg
+                            width="12"
+                            height="12"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            style="vertical-align: -1px; margin-right: 4px"
+                          >
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                          </svg>
                           {{ order.shippingAddress }}
                         </span>
                       </div>
@@ -883,7 +1402,10 @@
                       <div v-else class="cell-stack">
                         <span class="cell-primary">{{ order.productName }}</span>
                         <span v-if="order.selectedColor" class="cell-secondary">
-                          <span class="color-dot" :style="{ backgroundColor: getColorHex(order.selectedColor) }"></span>
+                          <span
+                            class="color-dot"
+                            :style="{ backgroundColor: getColorHex(order.selectedColor) }"
+                          ></span>
                           {{ order.selectedColor }}
                         </span>
                       </div>
@@ -892,16 +1414,29 @@
                       <span class="amount">${{ order.totalAmount.toLocaleString() }}</span>
                     </td>
                     <td>
-                      <span :class="['status-pill', order.status]">{{ getPaymentStatusLabel(order.status) }}</span>
+                      <span :class="['status-pill', order.status]">{{
+                        getPaymentStatusLabel(order.status)
+                      }}</span>
                     </td>
                     <td>
                       <span class="cell-secondary">{{ formatDateTime(order.date) }}</span>
                     </td>
                     <td>
-                      <button class="cat-action-btn" @click="openOrderDetail(order)" title="Ver detalle">
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                          <circle cx="12" cy="12" r="3"/>
+                      <button
+                        class="cat-action-btn"
+                        @click="openOrderDetail(order)"
+                        title="Ver detalle"
+                      >
+                        <svg
+                          width="15"
+                          height="15"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                          <circle cx="12" cy="12" r="3" />
                         </svg>
                       </button>
                     </td>
@@ -932,18 +1467,25 @@
             </div>
             <div class="mini-stat">
               <span class="mini-stat-label">Pendientes</span>
-              <span class="mini-stat-value">{{ whatsappQuotes.filter(q => q.status === 'pending').length }}</span>
+              <span class="mini-stat-value">{{
+                whatsappQuotes.filter((q) => q.status === 'pending').length
+              }}</span>
             </div>
             <div class="mini-stat">
               <span class="mini-stat-label">Respondidas</span>
-              <span class="mini-stat-value">{{ whatsappQuotes.filter(q => q.status === 'responded').length }}</span>
+              <span class="mini-stat-value">{{
+                whatsappQuotes.filter((q) => q.status === 'responded').length
+              }}</span>
             </div>
           </div>
 
           <div v-if="whatsappQuotes.length === 0" class="empty-state">
             <div class="empty-icon">💬</div>
             <h3>No hay cotizaciones por WhatsApp</h3>
-            <p>Las solicitudes de cotización aparecerán aquí cuando los clientes envíen mensajes desde el catálogo.</p>
+            <p>
+              Las solicitudes de cotización aparecerán aquí cuando los clientes envíen mensajes
+              desde el catálogo.
+            </p>
           </div>
 
           <div v-else class="table-container">
@@ -961,14 +1503,30 @@
               </thead>
               <tbody>
                 <tr v-for="quote in whatsappQuotes" :key="quote.id">
-                  <td><span class="cell-primary">{{ quote.name }}</span></td>
-                  <td><span class="cell-secondary">{{ quote.company }}</span></td>
-                  <td><span class="cell-secondary">{{ quote.city }}</span></td>
-                  <td><span class="cell-secondary">{{ quote.phone }}</span></td>
-                  <td><span class="products-badge">{{ quote.productCount }} productos</span></td>
-                  <td><span :class="['status-pill', quote.status]">{{ quote.status === 'pending' ? 'Pendiente' : 'Respondida' }}</span></td>
                   <td>
-                    <button class="btn btn-sm btn-primary" @click="openWhatsApp(quote)">Responder</button>
+                    <span class="cell-primary">{{ quote.name }}</span>
+                  </td>
+                  <td>
+                    <span class="cell-secondary">{{ quote.company }}</span>
+                  </td>
+                  <td>
+                    <span class="cell-secondary">{{ quote.city }}</span>
+                  </td>
+                  <td>
+                    <span class="cell-secondary">{{ quote.phone }}</span>
+                  </td>
+                  <td>
+                    <span class="products-badge">{{ quote.productCount }} productos</span>
+                  </td>
+                  <td>
+                    <span :class="['status-pill', quote.status]">{{
+                      quote.status === 'pending' ? 'Pendiente' : 'Respondida'
+                    }}</span>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-primary" @click="openWhatsApp(quote)">
+                      Responder
+                    </button>
                   </td>
                 </tr>
               </tbody>
@@ -990,25 +1548,49 @@
           <form @submit.prevent="saveProduct">
             <div class="form-group">
               <label>Nombre del Producto *</label>
-              <input v-model="productForm.name" type="text" class="form-input" required placeholder="Ej: Vestido de Flores" />
+              <input
+                v-model="productForm.name"
+                type="text"
+                class="form-input"
+                required
+                placeholder="Ej: Vestido de Flores"
+              />
             </div>
             <div class="form-group">
               <label>Descripción</label>
-              <textarea v-model="productForm.description" class="form-input" rows="3" placeholder="Describe las características principales del producto"></textarea>
+              <textarea
+                v-model="productForm.description"
+                class="form-input"
+                rows="3"
+                placeholder="Describe las características principales del producto"
+              ></textarea>
             </div>
             <div class="form-row">
               <div class="form-group">
                 <label>Precio *</label>
                 <div class="price-input">
                   <span class="currency">$</span>
-                  <input :value="formatPriceInput(productForm.price)" @input="handlePriceInput($event, 'price')" type="text" class="form-input" required placeholder="0" />
+                  <input
+                    :value="formatPriceInput(productForm.price)"
+                    @input="handlePriceInput($event, 'price')"
+                    type="text"
+                    class="form-input"
+                    required
+                    placeholder="0"
+                  />
                 </div>
               </div>
               <div class="form-group">
                 <label>Precio Original (descuento)</label>
                 <div class="price-input">
                   <span class="currency">$</span>
-                  <input :value="formatPriceInput(productForm.originalPrice)" @input="handlePriceInput($event, 'originalPrice')" type="text" class="form-input" placeholder="0" />
+                  <input
+                    :value="formatPriceInput(productForm.originalPrice)"
+                    @input="handlePriceInput($event, 'originalPrice')"
+                    type="text"
+                    class="form-input"
+                    placeholder="0"
+                  />
                 </div>
               </div>
             </div>
@@ -1017,7 +1599,9 @@
                 <label>Categoría *</label>
                 <select v-model="productForm.category" class="form-input" required>
                   <option value="">Seleccionar categoría</option>
-                  <option v-for="category in categories" :key="category.id" :value="category.id">{{ category.name }}</option>
+                  <option v-for="category in categories" :key="category.id" :value="category.id">
+                    {{ category.name }}
+                  </option>
                 </select>
               </div>
               <div class="form-group">
@@ -1034,12 +1618,21 @@
                 <input type="checkbox" v-model="productForm.isShowcase" />
                 <span>⭐ Producto Destacado</span>
               </label>
-              <p class="form-help">Marcar para mostrar en la sección de Productos Destacados del inicio</p>
+              <p class="form-help">
+                Marcar para mostrar en la sección de Productos Destacados del inicio
+              </p>
             </div>
             <div class="form-group">
               <label>Tallas Disponibles</label>
               <div class="materials-grid">
-                <button v-for="material in materialOptions" :key="material" type="button" class="material-chip" :class="{ selected: isMaterialSelected(material) }" @click="toggleProductMaterial(material)">
+                <button
+                  v-for="material in materialOptions"
+                  :key="material"
+                  type="button"
+                  class="material-chip"
+                  :class="{ selected: isMaterialSelected(material) }"
+                  @click="toggleProductMaterial(material)"
+                >
                   {{ material }}
                 </button>
               </div>
@@ -1047,7 +1640,13 @@
                 <span class="selected-label">Seleccionadas: </span>
                 <span v-for="(color, idx) in productForm.colors" :key="idx" class="selected-tag">
                   {{ color }}
-                  <button type="button" class="selected-tag-remove" @click="productForm.colors.splice(idx, 1)">✕</button>
+                  <button
+                    type="button"
+                    class="selected-tag-remove"
+                    @click="productForm.colors.splice(idx, 1)"
+                  >
+                    ✕
+                  </button>
                 </span>
               </div>
             </div>
@@ -1055,56 +1654,168 @@
               <label>Imágenes del Producto (URL) *</label>
               <div class="image-urls">
                 <div v-for="(img, idx) in productForm.images" :key="idx" class="image-url-row">
-                  <input :value="img" @input="(e) => updateImageUrl(idx, (e.target as HTMLInputElement).value)" type="text" class="form-input" :placeholder="'URL imagen ' + (idx + 1)" />
-                  <button v-if="productForm.images.length > 1" type="button" class="image-remove-btn" @click="removeImageUrl(idx)" title="Eliminar">✕</button>
-                  <button type="button" class="image-main-btn" :class="{ active: idx === mainImageIndex }" @click="setMainImage(idx)" title="Marcar como principal">
-                    <svg width="14" height="14" viewBox="0 0 24 24" :fill="idx === mainImageIndex ? '#FFD84D' : 'none'" :stroke="idx === mainImageIndex ? '#FFD84D' : '#9CA3AF'" stroke-width="2">
-                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                      <circle cx="12" cy="10" r="3"/>
+                  <input
+                    :value="img"
+                    @input="(e) => updateImageUrl(idx, (e.target as HTMLInputElement).value)"
+                    type="text"
+                    class="form-input"
+                    :placeholder="'URL imagen ' + (idx + 1)"
+                  />
+                  <button
+                    v-if="productForm.images.length > 1"
+                    type="button"
+                    class="image-remove-btn"
+                    @click="removeImageUrl(idx)"
+                    title="Eliminar"
+                  >
+                    ✕
+                  </button>
+                  <button
+                    type="button"
+                    class="image-main-btn"
+                    :class="{ active: idx === mainImageIndex }"
+                    @click="setMainImage(idx)"
+                    title="Marcar como principal"
+                  >
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      :fill="idx === mainImageIndex ? '#FFD84D' : 'none'"
+                      :stroke="idx === mainImageIndex ? '#FFD84D' : '#9CA3AF'"
+                      stroke-width="2"
+                    >
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                      <circle cx="12" cy="10" r="3" />
                     </svg>
                   </button>
                 </div>
                 <button type="button" class="image-add-btn" @click="addImageUrl">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <line x1="12" y1="5" x2="12" y2="19"/>
-                    <line x1="5" y1="12" x2="19" y2="12"/>
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <line x1="12" y1="5" x2="12" y2="19" />
+                    <line x1="5" y1="12" x2="19" y2="12" />
                   </svg>
                   Agregar imagen
                 </button>
               </div>
 
-              <div v-if="productForm.images.some(img => img && img.trim())" class="images-preview-grid" style="margin-top: 12px;">
-                <div v-for="(img, idx) in productForm.images" :key="idx" v-show="img && img.trim()" class="image-preview-item" :class="{ 'is-main': idx === mainImageIndex }">
+              <div
+                v-if="productForm.images.some((img) => img && img.trim())"
+                class="images-preview-grid"
+                style="margin-top: 12px"
+              >
+                <div
+                  v-for="(img, idx) in productForm.images"
+                  :key="idx"
+                  v-show="img && img.trim()"
+                  class="image-preview-item"
+                  :class="{ 'is-main': idx === mainImageIndex }"
+                >
                   <img :src="getPreviewUrl(img)" alt="Vista previa" />
                   <span v-if="idx === mainImageIndex" class="image-index">Principal</span>
                   <div class="image-preview-arrows">
-                    <button v-if="idx > 0" type="button" class="preview-arrow-btn" @click="moveImageUrl(idx, -1)" title="Mover izquierda">
-                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="15 18 9 12 15 6"/></svg>
+                    <button
+                      v-if="idx > 0"
+                      type="button"
+                      class="preview-arrow-btn"
+                      @click="moveImageUrl(idx, -1)"
+                      title="Mover izquierda"
+                    >
+                      <svg
+                        width="10"
+                        height="10"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="3"
+                      >
+                        <polyline points="15 18 9 12 15 6" />
+                      </svg>
                     </button>
-                    <button v-if="idx < productForm.images.length - 1" type="button" class="preview-arrow-btn" @click="moveImageUrl(idx, 1)" title="Mover derecha">
-                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>
+                    <button
+                      v-if="idx < productForm.images.length - 1"
+                      type="button"
+                      class="preview-arrow-btn"
+                      @click="moveImageUrl(idx, 1)"
+                      title="Mover derecha"
+                    >
+                      <svg
+                        width="10"
+                        height="10"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="3"
+                      >
+                        <polyline points="9 18 15 12 9 6" />
+                      </svg>
                     </button>
                   </div>
                 </div>
               </div>
 
-              <div v-else class="preview-placeholder" style="margin-top: 12px;">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                  <circle cx="9" cy="9" r="2"/>
-                  <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/>
+              <div v-else class="preview-placeholder" style="margin-top: 12px">
+                <svg
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                  <circle cx="9" cy="9" r="2" />
+                  <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
                 </svg>
                 <p>Pega URLs de imágenes para ver la vista previa</p>
               </div>
             </div>
-            <div v-if="productForm.originalPrice && productForm.originalPrice > productForm.price" class="discount-info">
-              <span class="discount-badge">💰 Descuento: {{ Math.round(((productForm.originalPrice - productForm.price) / productForm.originalPrice) * 100) }}%</span>
+            <div
+              v-if="productForm.originalPrice && productForm.originalPrice > productForm.price"
+              class="discount-info"
+            >
+              <span class="discount-badge"
+                >💰 Descuento:
+                {{
+                  Math.round(
+                    ((productForm.originalPrice - productForm.price) / productForm.originalPrice) *
+                      100,
+                  )
+                }}%</span
+              >
             </div>
             <div class="form-actions">
-              <button type="button" class="btn btn-secondary" @click="closeProductForm" :disabled="savingProduct">Cancelar</button>
-              <button type="submit" class="btn btn-primary" :disabled="!isFormValid || savingProduct">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                @click="closeProductForm"
+                :disabled="savingProduct"
+              >
+                Cancelar
+              </button>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                :disabled="!isFormValid || savingProduct"
+              >
                 <span v-if="savingProduct" class="btn-loading-text">
-                  <svg class="spinner-sm" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" stroke-linecap="round" /></svg>
+                  <svg class="spinner-sm" viewBox="0 0 24 24" fill="none">
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                    />
+                  </svg>
                   {{ editingProduct ? 'Actualizando...' : 'Creando...' }}
                 </span>
                 <span v-else>{{ editingProduct ? 'Actualizar Producto' : 'Crear Producto' }}</span>
@@ -1136,21 +1847,56 @@
               <label>Imágenes de la Categoría (URLs)</label>
               <div class="image-urls">
                 <div v-for="(_, index) in categoryImageUrls" :key="index" class="image-url-row">
-                  <input :value="categoryImageUrls[index]" @input="(e) => updateCategoryImageUrl(index, (e.target as HTMLInputElement).value)" type="text" class="form-input" placeholder="https://ejemplo.com/imagen.jpg" />
-                  <button type="button" class="btn btn-secondary btn-sm" @click="removeCategoryImageUrl(index)" :disabled="categoryImageUrls.length <= 1">✕</button>
+                  <input
+                    :value="categoryImageUrls[index]"
+                    @input="
+                      (e) => updateCategoryImageUrl(index, (e.target as HTMLInputElement).value)
+                    "
+                    type="text"
+                    class="form-input"
+                    placeholder="https://ejemplo.com/imagen.jpg"
+                  />
+                  <button
+                    type="button"
+                    class="btn btn-secondary btn-sm"
+                    @click="removeCategoryImageUrl(index)"
+                    :disabled="categoryImageUrls.length <= 1"
+                  >
+                    ✕
+                  </button>
                 </div>
               </div>
-              <button type="button" class="btn btn-secondary btn-sm" @click="addCategoryImageUrl" style="margin-top: 8px;">+ Agregar otra URL</button>
-              <div v-if="categoryImageUrls.some(i => i.trim())" class="images-preview-grid" style="margin-top: 12px;">
-                <div v-for="(image, index) in categoryImageUrls" :key="`cat-${index}-${image}`" class="image-preview-item" v-show="image.trim()">
+              <button
+                type="button"
+                class="btn btn-secondary btn-sm"
+                @click="addCategoryImageUrl"
+                style="margin-top: 8px"
+              >
+                + Agregar otra URL
+              </button>
+              <div
+                v-if="categoryImageUrls.some((i) => i.trim())"
+                class="images-preview-grid"
+                style="margin-top: 12px"
+              >
+                <div
+                  v-for="(image, index) in categoryImageUrls"
+                  :key="`cat-${index}-${image}`"
+                  class="image-preview-item"
+                  v-show="image.trim()"
+                >
                   <img :src="image" :alt="`Preview ${index + 1}`" />
                   <span class="image-index">{{ index + 1 }}</span>
                 </div>
               </div>
             </div>
             <div class="form-actions">
-              <button type="button" class="btn btn-secondary" @click="closeCategoryForm">Cancelar</button>
-              <button type="submit" class="btn btn-primary">{{ editingCategory ? 'Actualizar' : 'Crear' }}</button>
+              <button type="button" class="btn btn-secondary" @click="closeCategoryForm">
+                Cancelar
+              </button>
+              <button type="submit" class="btn btn-primary">
+                {{ editingCategory ? 'Actualizar' : 'Crear' }}
+              </button>
             </div>
           </form>
         </div>
@@ -1178,21 +1924,54 @@
               <label>Imágenes de la Marca (URLs)</label>
               <div class="image-urls">
                 <div v-for="(_, index) in brandImageUrls" :key="index" class="image-url-row">
-                  <input :value="brandImageUrls[index]" @input="(e) => updateBrandImageUrl(index, (e.target as HTMLInputElement).value)" type="text" class="form-input" placeholder="https://ejemplo.com/imagen.jpg" />
-                  <button type="button" class="btn btn-secondary btn-sm" @click="removeBrandImageUrl(index)" :disabled="brandImageUrls.length <= 1">✕</button>
+                  <input
+                    :value="brandImageUrls[index]"
+                    @input="(e) => updateBrandImageUrl(index, (e.target as HTMLInputElement).value)"
+                    type="text"
+                    class="form-input"
+                    placeholder="https://ejemplo.com/imagen.jpg"
+                  />
+                  <button
+                    type="button"
+                    class="btn btn-secondary btn-sm"
+                    @click="removeBrandImageUrl(index)"
+                    :disabled="brandImageUrls.length <= 1"
+                  >
+                    ✕
+                  </button>
                 </div>
               </div>
-              <button type="button" class="btn btn-secondary btn-sm" @click="addBrandImageUrl" style="margin-top: 8px;">+ Agregar otra URL</button>
-              <div v-if="brandImageUrls.some(i => i.trim())" class="images-preview-grid" style="margin-top: 12px;">
-                <div v-for="(image, index) in brandImageUrls" :key="`brand-${index}-${image}`" class="image-preview-item" v-show="image.trim()">
+              <button
+                type="button"
+                class="btn btn-secondary btn-sm"
+                @click="addBrandImageUrl"
+                style="margin-top: 8px"
+              >
+                + Agregar otra URL
+              </button>
+              <div
+                v-if="brandImageUrls.some((i) => i.trim())"
+                class="images-preview-grid"
+                style="margin-top: 12px"
+              >
+                <div
+                  v-for="(image, index) in brandImageUrls"
+                  :key="`brand-${index}-${image}`"
+                  class="image-preview-item"
+                  v-show="image.trim()"
+                >
                   <img :src="image" :alt="`Preview ${index + 1}`" />
                   <span class="image-index">{{ index + 1 }}</span>
                 </div>
               </div>
             </div>
             <div class="form-actions">
-              <button type="button" class="btn btn-secondary" @click="closeBrandForm">Cancelar</button>
-              <button type="submit" class="btn btn-primary">{{ editingBrand ? 'Actualizar' : 'Crear' }}</button>
+              <button type="button" class="btn btn-secondary" @click="closeBrandForm">
+                Cancelar
+              </button>
+              <button type="submit" class="btn btn-primary">
+                {{ editingBrand ? 'Actualizar' : 'Crear' }}
+              </button>
             </div>
           </form>
         </div>
@@ -1203,10 +1982,17 @@
     <div v-if="confirmModal.open" class="modal-overlay" @click.self="confirmModal.onCancel()">
       <div class="modal confirm-modal">
         <div class="confirm-icon">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="2">
-            <circle cx="12" cy="12" r="10"/>
-            <line x1="12" y1="8" x2="12" y2="12"/>
-            <line x1="12" y1="16" x2="12.01" y2="16"/>
+          <svg
+            width="48"
+            height="48"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#D4A017"
+            stroke-width="2"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <line x1="12" y1="8" x2="12" y2="12" />
+            <line x1="12" y1="16" x2="12.01" y2="16" />
           </svg>
         </div>
         <h3 class="confirm-title">{{ confirmModal.title }}</h3>
@@ -1219,7 +2005,11 @@
     </div>
 
     <!-- Order Detail Modal -->
-    <div v-if="showOrderDetail && selectedOrderDetail" class="modal-overlay" @click="closeOrderDetail">
+    <div
+      v-if="showOrderDetail && selectedOrderDetail"
+      class="modal-overlay"
+      @click="closeOrderDetail"
+    >
       <div class="modal order-detail-modal" @click.stop>
         <div class="modal-header">
           <h3>Detalle del Pedido #{{ selectedOrderDetail.id }}</h3>
@@ -1229,7 +2019,17 @@
           <!-- Customer Info -->
           <div class="order-detail-section">
             <h4 class="order-detail-section-title">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
               Datos del Cliente
             </h4>
             <div class="order-detail-grid">
@@ -1249,7 +2049,10 @@
                 <span class="order-detail-label">Cédula / ID</span>
                 <span class="order-detail-value">{{ selectedOrderDetail.customerIdNumber }}</span>
               </div>
-              <div v-if="selectedOrderDetail.shippingAddress" class="order-detail-field order-detail-field-full">
+              <div
+                v-if="selectedOrderDetail.shippingAddress"
+                class="order-detail-field order-detail-field-full"
+              >
                 <span class="order-detail-label">Dirección de envío</span>
                 <span class="order-detail-value">{{ selectedOrderDetail.shippingAddress }}</span>
               </div>
@@ -1259,21 +2062,37 @@
           <!-- Products -->
           <div class="order-detail-section">
             <h4 class="order-detail-section-title">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                />
+              </svg>
               Productos
             </h4>
             <div class="order-detail-products">
-              <div v-for="(item, idx) in selectedOrderDetail.items" :key="idx" class="order-detail-product">
+              <div
+                v-for="(item, idx) in selectedOrderDetail.items"
+                :key="idx"
+                class="order-detail-product"
+              >
                 <div class="order-detail-product-info">
                   <span class="order-detail-product-name">{{ item.productName }}</span>
                   <span v-if="item.selectedColor" class="order-detail-product-color">
-                    <span class="color-dot" :style="{ backgroundColor: getColorHex(item.selectedColor) }"></span>
+                    <span
+                      class="color-dot"
+                      :style="{ backgroundColor: getColorHex(item.selectedColor) }"
+                    ></span>
                     {{ item.selectedColor }}
                   </span>
                 </div>
-                <div class="order-detail-product-qty">
-                  x{{ item.quantity }}
-                </div>
+                <div class="order-detail-product-qty">x{{ item.quantity }}</div>
                 <div class="order-detail-product-price">
                   ${{ item.totalPrice.toLocaleString() }}
                 </div>
@@ -1284,21 +2103,39 @@
           <!-- Status & Total -->
           <div class="order-detail-section">
             <h4 class="order-detail-section-title">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
               Resumen
             </h4>
             <div class="order-detail-grid">
               <div class="order-detail-field">
                 <span class="order-detail-label">Estado de pago</span>
-                <span :class="['status-pill', selectedOrderDetail.status]">{{ getPaymentStatusLabel(selectedOrderDetail.status) }}</span>
+                <span :class="['status-pill', selectedOrderDetail.status]">{{
+                  getPaymentStatusLabel(selectedOrderDetail.status)
+                }}</span>
               </div>
               <div class="order-detail-field">
                 <span class="order-detail-label">Fecha de compra</span>
-                <span class="order-detail-value">{{ selectedOrderDetail.createdAt ? formatDateTime(new Date(selectedOrderDetail.createdAt)) : formatDateTime(selectedOrderDetail.date) }}</span>
+                <span class="order-detail-value">{{
+                  selectedOrderDetail.createdAt
+                    ? formatDateTime(new Date(selectedOrderDetail.createdAt))
+                    : formatDateTime(selectedOrderDetail.date)
+                }}</span>
               </div>
               <div v-if="selectedOrderDetail.updatedAt" class="order-detail-field">
                 <span class="order-detail-label">Última actualización</span>
-                <span class="order-detail-value">{{ formatDateTime(new Date(selectedOrderDetail.updatedAt)) }}</span>
+                <span class="order-detail-value">{{
+                  formatDateTime(new Date(selectedOrderDetail.updatedAt))
+                }}</span>
               </div>
               <div class="order-detail-field">
                 <span class="order-detail-label">Moneda</span>
@@ -1307,7 +2144,9 @@
             </div>
             <div class="order-detail-total">
               <span class="order-detail-total-label">Total del pedido</span>
-              <span class="order-detail-total-value">${{ selectedOrderDetail.totalAmount.toLocaleString() }}</span>
+              <span class="order-detail-total-value"
+                >${{ selectedOrderDetail.totalAmount.toLocaleString() }}</span
+              >
             </div>
           </div>
         </div>
@@ -1372,10 +2211,26 @@ const productPage = ref(1)
 const productsPerPage = 10
 
 const navItems = [
-  { id: 'dashboard', label: 'Dashboard', icon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>' },
-  { id: 'products', label: 'Productos', icon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>' },
-  { id: 'categories', label: 'Categorías', icon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>' },
-  { id: 'sales', label: 'Pedidos', icon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>' }
+  {
+    id: 'dashboard',
+    label: 'Dashboard',
+    icon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>',
+  },
+  {
+    id: 'products',
+    label: 'Productos',
+    icon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>',
+  },
+  {
+    id: 'categories',
+    label: 'Categorías',
+    icon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>',
+  },
+  {
+    id: 'sales',
+    label: 'Pedidos',
+    icon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>',
+  },
 ]
 
 const dashboardStats = computed(() => [
@@ -1383,37 +2238,48 @@ const dashboardStats = computed(() => [
     label: 'Productos',
     value: products.value.length.toString(),
     icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3D2B1F" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>',
-    iconBg: 'linear-gradient(135deg, #FFD84D, #FF8E8E)'
+    iconBg: 'linear-gradient(135deg, #FFD84D, #FF8E8E)',
   },
   {
     label: 'Categorías',
     value: categories.value.length.toString(),
     icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3D2B1F" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>',
-    iconBg: 'linear-gradient(135deg, #FFD84D, #FF8E8E)'
+    iconBg: 'linear-gradient(135deg, #FFD84D, #FF8E8E)',
   },
   {
     label: 'Ventas',
     value: `$${totalRevenue.value.toLocaleString()}`,
     icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3D2B1F" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>',
-    iconBg: 'linear-gradient(135deg, #FFD84D, #FF8E8E)'
+    iconBg: 'linear-gradient(135deg, #FFD84D, #FF8E8E)',
   },
   {
     label: 'Pedidos',
     value: totalSalesCount.value.toString(),
     icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3D2B1F" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>',
-    iconBg: 'linear-gradient(135deg, #FFD84D, #FF8E8E)'
-  }
+    iconBg: 'linear-gradient(135deg, #FFD84D, #FF8E8E)',
+  },
 ])
 
-const categoryColors = ['#FFD84D', '#FF8E8E', '#8B6914', '#A0522D', '#D2691E', '#DAA520', '#F4A460', '#DEB887']
+const categoryColors = [
+  '#FFD84D',
+  '#FF8E8E',
+  '#8B6914',
+  '#A0522D',
+  '#D2691E',
+  '#DAA520',
+  '#F4A460',
+  '#DEB887',
+]
 
 const productsByCategory = computed(() => {
   const map: Record<string, number> = {}
-  categories.value.forEach(c => { map[c.name] = 0 })
-  products.value.forEach(p => {
+  categories.value.forEach((c) => {
+    map[c.name] = 0
+  })
+  products.value.forEach((p) => {
     const catId = p.category || ''
-    const catObj = categories.value.find(c => String(c.id) === String(catId))
-    const catName = catObj ? catObj.name : (catId || 'Sin categoría')
+    const catObj = categories.value.find((c) => String(c.id) === String(catId))
+    const catName = catObj ? catObj.name : catId || 'Sin categoría'
     map[catName] = (map[catName] || 0) + 1
   })
   const entries = Object.entries(map).sort((a, b) => b[1] - a[1])
@@ -1422,7 +2288,7 @@ const productsByCategory = computed(() => {
     name,
     count,
     percent: Math.round((count / max) * 100),
-    color: categoryColors[i % categoryColors.length]
+    color: categoryColors[i % categoryColors.length],
   }))
 })
 
@@ -1432,38 +2298,50 @@ const productsByPrice = computed(() => {
     { label: '$20k - $50k', min: 20000, max: 50000, color: '#FF8E8E' },
     { label: '$50k - $100k', min: 50000, max: 100000, color: '#8B6914' },
     { label: '$100k - $200k', min: 100000, max: 200000, color: '#A0522D' },
-    { label: '$200k+', min: 200000, max: Infinity, color: '#D2691E' }
+    { label: '$200k+', min: 200000, max: Infinity, color: '#D2691E' },
   ]
-  const counts = ranges.map(r => ({
+  const counts = ranges.map((r) => ({
     ...r,
-    count: products.value.filter(p => p.price >= r.min && p.price < r.max).length
+    count: products.value.filter((p) => p.price >= r.min && p.price < r.max).length,
   }))
-  const max = Math.max(...counts.map(c => c.count), 1)
-  return counts.map(c => ({ ...c, percent: Math.round((c.count / max) * 100) }))
+  const max = Math.max(...counts.map((c) => c.count), 1)
+  return counts.map((c) => ({ ...c, percent: Math.round((c.count / max) * 100) }))
 })
 
 const productStatusData = computed(() => {
   const total = products.value.length || 1
-  const availableCount = products.value.filter(p => p.status === 'available').length
-  const unavailableCount = products.value.filter(p => p.status !== 'available').length
+  const availableCount = products.value.filter((p) => p.status === 'available').length
+  const unavailableCount = products.value.filter((p) => p.status !== 'available').length
   const circumference = 2 * Math.PI * 50
   return {
     availableCount,
     unavailableCount,
     availableArc: Math.round((availableCount / total) * circumference),
     unavailableArc: Math.round((unavailableCount / total) * circumference),
-    totalArc: circumference
+    totalArc: circumference,
   }
 })
 
-const featuredProducts = computed(() => products.value.filter(p => p.isShowcase).slice(0, 5))
-const featuredCount = computed(() => products.value.filter(p => p.isShowcase).length)
+const featuredProducts = computed(() => products.value.filter((p) => p.isShowcase).slice(0, 5))
+const featuredCount = computed(() => products.value.filter((p) => p.isShowcase).length)
 const featuredPercent = computed(() => {
   const total = products.value.length || 1
   return Math.round((featuredCount.value / total) * 100)
 })
 
-const { products: backendProducts, categories, availableProducts, addProduct, updateProduct, deleteProduct, loadCategories, loadProducts, addCategory, updateCategory, deleteCategory } = useProducts()
+const {
+  products: backendProducts,
+  categories,
+  availableProducts,
+  addProduct,
+  updateProduct,
+  deleteProduct,
+  loadCategories,
+  loadProducts,
+  addCategory,
+  updateCategory,
+  deleteCategory,
+} = useProducts()
 const products = backendProducts
 
 const categoryDropdownOpen = ref(false)
@@ -1472,19 +2350,29 @@ const categoryDropdownRef = ref<HTMLElement | null>(null)
 const selectedCategoryLabel = computed(() => {
   const selectedId = selectedCategoryFilter.value
   if (!selectedId) return 'Todas'
-  const found = categories.value.find(c => c.id === selectedId)
+  const found = categories.value.find((c) => c.id === selectedId)
   return found?.name || 'Todas'
 })
 
-const toggleCategoryDropdown = () => { categoryDropdownOpen.value = !categoryDropdownOpen.value }
-const closeCategoryDropdown = () => { categoryDropdownOpen.value = false }
-const selectCategoryFilter = (categoryId: string) => { selectedCategoryFilter.value = categoryId; closeCategoryDropdown() }
+const toggleCategoryDropdown = () => {
+  categoryDropdownOpen.value = !categoryDropdownOpen.value
+}
+const closeCategoryDropdown = () => {
+  categoryDropdownOpen.value = false
+}
+const selectCategoryFilter = (categoryId: string) => {
+  selectedCategoryFilter.value = categoryId
+  closeCategoryDropdown()
+}
 
 const onCategoryDropdownDocumentClick = (event: MouseEvent) => {
   if (!categoryDropdownOpen.value) return
   const target = event.target as Node | null
   const root = categoryDropdownRef.value
-  if (!target || !root) { closeCategoryDropdown(); return }
+  if (!target || !root) {
+    closeCategoryDropdown()
+    return
+  }
   if (!root.contains(target)) closeCategoryDropdown()
 }
 
@@ -1496,11 +2384,17 @@ onMounted(async () => {
   document.addEventListener('click', onCategoryDropdownDocumentClick)
 })
 
-onBeforeUnmount(() => { document.removeEventListener('click', onCategoryDropdownDocumentClick) })
+onBeforeUnmount(() => {
+  document.removeEventListener('click', onCategoryDropdownDocumentClick)
+})
 
-watch(categories, (newCategories) => {
-  console.log('Categorías:', newCategories.length)
-}, { deep: true })
+watch(
+  categories,
+  (newCategories) => {
+    console.log('Categorías:', newCategories.length)
+  },
+  { deep: true },
+)
 
 watch([selectedCategoryFilter, productStatusFilter, searchProducts], () => {
   productPage.value = 1
@@ -1515,8 +2409,11 @@ const transformPurchaseToSale = (purchase: Purchase): Sale => {
   const itemCount = purchase.items?.length || 0
   const totalQuantity = purchase.items?.reduce((sum, item) => sum + item.quantity, 0) || 0
   let productName = 'Múltiples productos'
-  if (itemCount === 1) { productName = firstItem?.productName || 'Producto desconocido' }
-  else if (itemCount > 1) { productName = `${itemCount} productos diferentes` }
+  if (itemCount === 1) {
+    productName = firstItem?.productName || 'Producto desconocido'
+  } else if (itemCount > 1) {
+    productName = `${itemCount} productos diferentes`
+  }
   return {
     id: purchase.id.toString(),
     productId: '',
@@ -1536,15 +2433,30 @@ const transformPurchaseToSale = (purchase: Purchase): Sale => {
     items: purchase.items,
     currency: purchase.currency,
     createdAt: purchase.createdAt,
-    updatedAt: purchase.updatedAt
+    updatedAt: purchase.updatedAt,
   }
 }
 
 const mapPurchaseStatus = (status: string): 'completed' | 'pending' | 'cancelled' => {
   if (!status) return 'pending'
   const upperStatus = status.toUpperCase().trim()
-  if (upperStatus === 'COMPLETED' || upperStatus === 'APPROVED' || upperStatus === 'PAID' || upperStatus === 'SUCCESS' || upperStatus === 'APPROVED') return 'completed'
-  if (upperStatus === 'CANCELLED' || upperStatus === 'REJECTED' || upperStatus === 'DECLINED' || upperStatus === 'VOIDED' || upperStatus === 'FAILED' || upperStatus === 'ERROR') return 'cancelled'
+  if (
+    upperStatus === 'COMPLETED' ||
+    upperStatus === 'APPROVED' ||
+    upperStatus === 'PAID' ||
+    upperStatus === 'SUCCESS' ||
+    upperStatus === 'APPROVED'
+  )
+    return 'completed'
+  if (
+    upperStatus === 'CANCELLED' ||
+    upperStatus === 'REJECTED' ||
+    upperStatus === 'DECLINED' ||
+    upperStatus === 'VOIDED' ||
+    upperStatus === 'FAILED' ||
+    upperStatus === 'ERROR'
+  )
+    return 'cancelled'
   return 'pending'
 }
 
@@ -1574,7 +2486,7 @@ const productForm = ref({
   category: '',
   status: 'available' as 'available' | 'out-of-stock' | 'coming-soon',
   colors: [] as string[],
-  isShowcase: false
+  isShowcase: false,
 })
 
 const getPreviewUrl = (url: string) => url || ''
@@ -1583,7 +2495,15 @@ const materialOptions = ['Bebe', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8', 'T9',
 const categoryForm = ref<CreateCategoryRequest>({ name: '', description: '' })
 const categoryImageUrls = ref<string[]>([''])
 
-const { brands, loading: brandsLoading, error: brandsError, loadBrands, createBrand, updateBrand, deleteBrand } = useBrands()
+const {
+  brands,
+  loading: brandsLoading,
+  error: brandsError,
+  loadBrands,
+  createBrand,
+  updateBrand,
+  deleteBrand,
+} = useBrands()
 const showBrandForm = ref(false)
 const editingBrand = ref<Brand | null>(null)
 const searchBrands = ref('')
@@ -1591,24 +2511,34 @@ const brandForm = ref<CreateBrandRequest>({ name: '', description: '' })
 const brandImageUrls = ref<string[]>([''])
 
 const availableProductsCount = computed(() => availableProducts.value.length)
-const totalValue = computed(() => sales.value.filter(s => s.status === 'completed').reduce((sum, s) => sum + s.totalAmount, 0))
-const completedSales = computed(() => sales.value.filter(s => s.status === 'completed'))
+const totalValue = computed(() =>
+  sales.value.filter((s) => s.status === 'completed').reduce((sum, s) => sum + s.totalAmount, 0),
+)
+const completedSales = computed(() => sales.value.filter((s) => s.status === 'completed'))
 const completedSalesCount = computed(() => completedSales.value.length)
 const totalRevenue = computed(() => completedSales.value.reduce((sum, s) => sum + s.totalAmount, 0))
-const pendingSales = computed(() => sales.value.filter(s => s.status === 'pending').length)
+const pendingSales = computed(() => sales.value.filter((s) => s.status === 'pending').length)
 const totalSalesCount = computed(() => sales.value.length)
 
 const filteredOrders = computed(() => {
   let result = sales.value
   if (orderStatusFilter.value) {
-    result = result.filter(s => s.status === orderStatusFilter.value)
+    result = result.filter((s) => s.status === orderStatusFilter.value)
   }
   if (orderShippingFilter.value) {
-    result = result.filter(s => s.orderStatus === orderShippingFilter.value)
+    result = result.filter((s) => s.orderStatus === orderShippingFilter.value)
   }
   if (searchSales.value.trim()) {
     const q = searchSales.value.toLowerCase().trim()
-    result = result.filter(s => s.customerName.toLowerCase().includes(q) || s.customerEmail.toLowerCase().includes(q) || s.productName.toLowerCase().includes(q) || (s.items && s.items.some(i => i.productName.toLowerCase().includes(q))) || (s.customerPhone && s.customerPhone.includes(q)) || (s.customerIdNumber && s.customerIdNumber.includes(q)))
+    result = result.filter(
+      (s) =>
+        s.customerName.toLowerCase().includes(q) ||
+        s.customerEmail.toLowerCase().includes(q) ||
+        s.productName.toLowerCase().includes(q) ||
+        (s.items && s.items.some((i) => i.productName.toLowerCase().includes(q))) ||
+        (s.customerPhone && s.customerPhone.includes(q)) ||
+        (s.customerIdNumber && s.customerIdNumber.includes(q)),
+    )
   }
   return result
 })
@@ -1645,68 +2575,79 @@ const closeOrderDetail = () => {
 
 const getOrderStatusLabel = (status?: string): string => {
   const labels: Record<string, string> = {
-    'PENDING': 'Pendiente',
-    'PROCESSING': 'Procesando',
-    'SHIPPED': 'Enviado',
-    'DELIVERED': 'Entregado',
-    'CANCELLED': 'Cancelado'
+    PENDING: 'Pendiente',
+    PROCESSING: 'Procesando',
+    SHIPPED: 'Enviado',
+    DELIVERED: 'Entregado',
+    CANCELLED: 'Cancelado',
   }
   return labels[status || ''] || status || 'Sin estado'
 }
 
 const getOrderStatusClass = (status?: string): string => {
   const classes: Record<string, string> = {
-    'PENDING': 'pending',
-    'PROCESSING': 'processing',
-    'SHIPPED': 'shipped',
-    'DELIVERED': 'delivered',
-    'CANCELLED': 'cancelled'
+    PENDING: 'pending',
+    PROCESSING: 'processing',
+    SHIPPED: 'shipped',
+    DELIVERED: 'delivered',
+    CANCELLED: 'cancelled',
   }
   return classes[status || ''] || 'pending'
 }
 
 const getPaymentStatusLabel = (status: string): string => {
   const labels: Record<string, string> = {
-    'completed': 'Pagado',
-    'pending': 'Pendiente pago',
-    'cancelled': 'Cancelado'
+    completed: 'Pagado',
+    pending: 'Pendiente pago',
+    cancelled: 'Cancelado',
   }
   return labels[status] || status
 }
 
 const filteredProducts = computed(() => {
-  let baseList = selectedCategoryFilter.value ? products.value.filter(p => p.category === selectedCategoryFilter.value) : products.value
+  let baseList = selectedCategoryFilter.value
+    ? products.value.filter((p) => p.category === selectedCategoryFilter.value)
+    : products.value
   if (productStatusFilter.value) {
-    baseList = baseList.filter(p => p.status === productStatusFilter.value)
+    baseList = baseList.filter((p) => p.status === productStatusFilter.value)
   }
   if (productFeaturedFilter.value) {
     const isFeatured = productFeaturedFilter.value === 'yes'
-    baseList = baseList.filter(p => Boolean(p.isShowcase) === isFeatured)
+    baseList = baseList.filter((p) => Boolean(p.isShowcase) === isFeatured)
   }
   if (productPriceFilter.value) {
-    baseList = baseList.filter(p => {
+    baseList = baseList.filter((p) => {
       switch (productPriceFilter.value) {
-        case 'lt100': return p.price < 100000
-        case '100-300': return p.price >= 100000 && p.price <= 300000
-        case '300-500': return p.price > 300000 && p.price <= 500000
-        case 'gt500': return p.price > 500000
-        default: return true
+        case 'lt100':
+          return p.price < 100000
+        case '100-300':
+          return p.price >= 100000 && p.price <= 300000
+        case '300-500':
+          return p.price > 300000 && p.price <= 500000
+        case 'gt500':
+          return p.price > 500000
+        default:
+          return true
       }
     })
   }
   if (!searchProducts.value.trim()) return baseList
   const q = searchProducts.value.toLowerCase().trim()
-  return baseList.filter(p => p.name.toLowerCase().includes(q) || p.description?.toLowerCase().includes(q))
+  return baseList.filter(
+    (p) => p.name.toLowerCase().includes(q) || p.description?.toLowerCase().includes(q),
+  )
 })
 
-const totalProductPages = computed(() => Math.max(1, Math.ceil(filteredProducts.value.length / productsPerPage)))
+const totalProductPages = computed(() =>
+  Math.max(1, Math.ceil(filteredProducts.value.length / productsPerPage)),
+)
 const paginatedProducts = computed(() => {
   const start = (productPage.value - 1) * productsPerPage
   return filteredProducts.value.slice(start, start + productsPerPage)
 })
 
 const getCategoryName = (categoryId: string): string => {
-  const cat = categories.value.find(c => c.id === categoryId)
+  const cat = categories.value.find((c) => c.id === categoryId)
   return cat?.name || 'Sin categoría'
 }
 
@@ -1718,17 +2659,32 @@ const toggleProductFeatured = async (product: Product) => {
 const filteredCategories = computed(() => {
   let result = categories.value
   if (selectedCategoryFilter.value) {
-    result = result.filter(c => c.id === selectedCategoryFilter.value)
+    result = result.filter((c) => c.id === selectedCategoryFilter.value)
   }
   if (searchCategories.value.trim()) {
     const q = searchCategories.value.toLowerCase().trim()
-    result = result.filter(c => c.name.toLowerCase().includes(q) || c.description?.toLowerCase().includes(q))
+    result = result.filter(
+      (c) => c.name.toLowerCase().includes(q) || c.description?.toLowerCase().includes(q),
+    )
   }
   return result
 })
 
 const getColorHex = (colorName: string): string => {
-  const colorMap: Record<string, string> = { 'esmeralda': '#10b981', 'plata': '#c0c0c0', 'silver': '#c0c0c0', 'azul': '#1976d2', 'negro': '#000000', 'blanco': '#ffffff', 'oro': '#ffd700', 'gold': '#ffd700', 'rosa': '#ff69b4', 'amarillo': '#ffeb3b', 'verde': '#4caf50', 'púrpura': '#9c27b0' }
+  const colorMap: Record<string, string> = {
+    esmeralda: '#10b981',
+    plata: '#c0c0c0',
+    silver: '#c0c0c0',
+    azul: '#1976d2',
+    negro: '#000000',
+    blanco: '#ffffff',
+    oro: '#ffd700',
+    gold: '#ffd700',
+    rosa: '#ff69b4',
+    amarillo: '#ffeb3b',
+    verde: '#4caf50',
+    púrpura: '#9c27b0',
+  }
   return colorMap[colorName.toLowerCase().trim()] || '#9e9e9e'
 }
 
@@ -1744,7 +2700,7 @@ const confirmModal = ref({
   title: '',
   message: '',
   onConfirm: () => {},
-  onCancel: () => {}
+  onCancel: () => {},
 })
 
 function showConfirm(title: string, message: string): Promise<boolean> {
@@ -1753,8 +2709,14 @@ function showConfirm(title: string, message: string): Promise<boolean> {
       open: true,
       title,
       message,
-      onConfirm: () => { confirmModal.value.open = false; resolve(true) },
-      onCancel: () => { confirmModal.value.open = false; resolve(false) }
+      onConfirm: () => {
+        confirmModal.value.open = false
+        resolve(true)
+      },
+      onCancel: () => {
+        confirmModal.value.open = false
+        resolve(false)
+      },
     }
   })
 }
@@ -1766,42 +2728,79 @@ const handleLogout = async () => {
   }
 }
 
-const getStatusText = (status: string) => ({ 'available': 'Disponible', 'out-of-stock': 'Sin Stock', 'coming-soon': 'Próximamente' }[status] || status)
-const getSaleStatusText = (status: string) => ({ 'completed': 'Completada', 'pending': 'Pendiente', 'cancelled': 'Cancelada' }[status] || status)
-const formatDate = (date: Date) => date.toLocaleDateString('es-CO', { year: 'numeric', month: 'short', day: 'numeric' })
-const formatDateTime = (date: Date) => date.toLocaleDateString('es-CO', { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })
-const getProductsInCategory = (categoryId: string) => products.value.filter(p => String(p.category) === String(categoryId)).length
+const getStatusText = (status: string) =>
+  ({ available: 'Disponible', 'out-of-stock': 'Sin Stock', 'coming-soon': 'Próximamente' })[
+    status
+  ] || status
+const getSaleStatusText = (status: string) =>
+  ({ completed: 'Completada', pending: 'Pendiente', cancelled: 'Cancelada' })[status] || status
+const formatDate = (date: Date) =>
+  date.toLocaleDateString('es-CO', { year: 'numeric', month: 'short', day: 'numeric' })
+const formatDateTime = (date: Date) =>
+  date.toLocaleDateString('es-CO', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+  })
+const getProductsInCategory = (categoryId: string) =>
+  products.value.filter((p) => String(p.category) === String(categoryId)).length
 
 const editProduct = (product: Product) => {
   editingProduct.value = product
-  productForm.value = { name: product.name, description: product.description, price: product.price, originalPrice: product.originalPrice || 0, images: product.images && product.images.length > 0 ? [...product.images] : [''], category: product.category, status: product.status, colors: product.colors ? [...product.colors] : [], isShowcase: product.isShowcase || false }
+  productForm.value = {
+    name: product.name,
+    description: product.description,
+    price: product.price,
+    originalPrice: product.originalPrice || 0,
+    images: product.images && product.images.length > 0 ? [...product.images] : [''],
+    category: product.category,
+    status: product.status,
+    colors: product.colors ? [...product.colors] : [],
+    isShowcase: product.isShowcase || false,
+  }
   mainImageIndex.value = 0
   showProductForm.value = true
 }
 const editCategory = (category: Category) => {
   editingCategory.value = category
-  categoryForm.value = { name: category.name, description: category.description || '', imageUrls: category.imageUrls || [] }
-  categoryImageUrls.value = category.imageUrls && category.imageUrls.length > 0 ? [...category.imageUrls] : ['']
+  categoryForm.value = {
+    name: category.name,
+    description: category.description || '',
+    imageUrls: category.imageUrls || [],
+  }
+  categoryImageUrls.value =
+    category.imageUrls && category.imageUrls.length > 0 ? [...category.imageUrls] : ['']
   showCategoryForm.value = true
 }
 
 const deleteProductConfirm = async (id: string) => {
-  if (await showConfirm('Eliminar producto', '¿Estás seguro de eliminar este producto?')) deleteProduct(id)
+  if (await showConfirm('Eliminar producto', '¿Estás seguro de eliminar este producto?'))
+    deleteProduct(id)
 }
 
 const handleDeleteCategory = async (id: string) => {
   const count = getProductsInCategory(id)
   let msg = '¿Estás seguro de eliminar esta categoría?'
-  if (count > 0) msg = `⚠️ Esta categoría tiene ${count} producto(s) asociado(s). ¿Estás seguro de que deseas continuar?`
+  if (count > 0)
+    msg = `⚠️ Esta categoría tiene ${count} producto(s) asociado(s). ¿Estás seguro de que deseas continuar?`
   if (await showConfirm('Eliminar categoría', msg)) await deleteCategory(id)
 }
 
 const isFormValid = computed(() => {
-  const hasImage = productForm.value.images.some(i => i.trim().length > 0)
-  return productForm.value.name.trim() !== '' && productForm.value.price > 0 && productForm.value.category !== '' && hasImage
+  const hasImage = productForm.value.images.some((i) => i.trim().length > 0)
+  return (
+    productForm.value.name.trim() !== '' &&
+    productForm.value.price > 0 &&
+    productForm.value.category !== '' &&
+    hasImage
+  )
 })
 
-const updateImageUrl = (index: number, value: string) => { productForm.value.images[index] = value }
+const updateImageUrl = (index: number, value: string) => {
+  productForm.value.images[index] = value
+}
 const mainImageIndex = ref(0)
 const setMainImage = (idx: number) => {
   if (idx === 0) return
@@ -1810,7 +2809,9 @@ const setMainImage = (idx: number) => {
   images.unshift(selected)
   mainImageIndex.value = 0
 }
-const addImageUrl = () => { productForm.value.images.push('') }
+const addImageUrl = () => {
+  productForm.value.images.push('')
+}
 const removeImageUrl = (index: number) => {
   productForm.value.images.splice(index, 1)
   if (mainImageIndex.value >= productForm.value.images.length) {
@@ -1831,15 +2832,27 @@ const moveImageUrl = (index: number, direction: -1 | 1) => {
   }
 }
 
-const normalizeString = (str: string): string => str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim().replace(/\s+/g, ' ')
-const isMaterialSelected = (material: string) => productForm.value.colors.some(c => normalizeString(c) === normalizeString(material))
+const normalizeString = (str: string): string =>
+  str
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .trim()
+    .replace(/\s+/g, ' ')
+const isMaterialSelected = (material: string) =>
+  productForm.value.colors.some((c) => normalizeString(c) === normalizeString(material))
 const toggleProductMaterial = (material: string) => {
-  const idx = productForm.value.colors.findIndex(c => normalizeString(c) === normalizeString(material))
+  const idx = productForm.value.colors.findIndex(
+    (c) => normalizeString(c) === normalizeString(material),
+  )
   if (idx > -1) productForm.value.colors.splice(idx, 1)
   else productForm.value.colors.push(material)
 }
 
-const formatPriceInput = (value: number): string => { if (!value || value === 0) return ''; return value.toLocaleString('es-CO') }
+const formatPriceInput = (value: number): string => {
+  if (!value || value === 0) return ''
+  return value.toLocaleString('es-CO')
+}
 const handlePriceInput = (event: Event, field: 'price' | 'originalPrice') => {
   const raw = (event.target as HTMLInputElement).value.replace(/\./g, '').replace(/[^\d]/g, '')
   productForm.value[field] = raw ? parseInt(raw, 10) : 0
@@ -1848,9 +2861,18 @@ const handlePriceInput = (event: Event, field: 'price' | 'originalPrice') => {
 const savingProduct = ref(false)
 
 const saveProduct = async () => {
-  const payload = { ...productForm.value, images: productForm.value.images.map(i => i.trim()).filter(Boolean) }
+  const payload = {
+    ...productForm.value,
+    images: productForm.value.images.map((i) => i.trim()).filter(Boolean),
+  }
   if (editingProduct.value) {
-    if (!await showConfirm('Actualizar producto', `¿Actualizar producto "${editingProduct.value.name}"?`)) return
+    if (
+      !(await showConfirm(
+        'Actualizar producto',
+        `¿Actualizar producto "${editingProduct.value.name}"?`,
+      ))
+    )
+      return
     savingProduct.value = true
     try {
       await updateProduct(editingProduct.value.id, payload)
@@ -1870,19 +2892,41 @@ const saveProduct = async () => {
 }
 
 const saveCategory = async () => {
-  const urls = categoryImageUrls.value.map(i => i.trim()).filter(Boolean)
-  const payload: CreateCategoryRequest = { name: categoryForm.value.name, description: categoryForm.value.description, imageUrls: urls.length > 0 ? urls : undefined }
+  const urls = categoryImageUrls.value.map((i) => i.trim()).filter(Boolean)
+  const payload: CreateCategoryRequest = {
+    name: categoryForm.value.name,
+    description: categoryForm.value.description,
+    imageUrls: urls.length > 0 ? urls : undefined,
+  }
   if (editingCategory.value) {
-    if (!await showConfirm('Actualizar categoría', `¿Actualizar categoría "${editingCategory.value.name}"?`)) return
+    if (
+      !(await showConfirm(
+        'Actualizar categoría',
+        `¿Actualizar categoría "${editingCategory.value.name}"?`,
+      ))
+    )
+      return
     await updateCategory(editingCategory.value.id, payload)
-  } else { await addCategory(payload) }
+  } else {
+    await addCategory(payload)
+  }
   closeCategoryForm()
 }
 
 const closeProductForm = () => {
   showProductForm.value = false
   editingProduct.value = null
-  productForm.value = { name: '', description: '', price: 0, originalPrice: 0, images: [''], category: '', status: 'available', colors: [], isShowcase: false }
+  productForm.value = {
+    name: '',
+    description: '',
+    price: 0,
+    originalPrice: 0,
+    images: [''],
+    category: '',
+    status: 'available',
+    colors: [],
+    isShowcase: false,
+  }
 }
 
 const closeCategoryForm = () => {
@@ -1892,9 +2936,16 @@ const closeCategoryForm = () => {
   categoryImageUrls.value = ['']
 }
 
-const addCategoryImageUrl = () => { categoryImageUrls.value.push('') }
-const updateCategoryImageUrl = (index: number, value: string) => { categoryImageUrls.value[index] = value }
-const removeCategoryImageUrl = (index: number) => { categoryImageUrls.value.splice(index, 1); if (categoryImageUrls.value.length === 0) categoryImageUrls.value = [''] }
+const addCategoryImageUrl = () => {
+  categoryImageUrls.value.push('')
+}
+const updateCategoryImageUrl = (index: number, value: string) => {
+  categoryImageUrls.value[index] = value
+}
+const removeCategoryImageUrl = (index: number) => {
+  categoryImageUrls.value.splice(index, 1)
+  if (categoryImageUrls.value.length === 0) categoryImageUrls.value = ['']
+}
 
 const loadBrandsData = async () => {
   await loadBrands()
@@ -1903,12 +2954,18 @@ const loadBrandsData = async () => {
 const filteredBrands = computed(() => {
   if (!searchBrands.value.trim()) return brands.value
   const q = searchBrands.value.toLowerCase().trim()
-  return brands.value.filter(b => b.name.toLowerCase().includes(q) || b.description?.toLowerCase().includes(q))
+  return brands.value.filter(
+    (b) => b.name.toLowerCase().includes(q) || b.description?.toLowerCase().includes(q),
+  )
 })
 
 const editBrand = (brand: Brand) => {
   editingBrand.value = brand
-  brandForm.value = { name: brand.name, description: brand.description || '', imageUrls: brand.imageUrls || [] }
+  brandForm.value = {
+    name: brand.name,
+    description: brand.description || '',
+    imageUrls: brand.imageUrls || [],
+  }
   brandImageUrls.value = brand.imageUrls && brand.imageUrls.length > 0 ? [...brand.imageUrls] : ['']
   showBrandForm.value = true
 }
@@ -1919,12 +2976,19 @@ const handleDeleteBrand = async (id: string) => {
 }
 
 const saveBrand = async () => {
-  const urls = brandImageUrls.value.map(i => i.trim()).filter(Boolean)
-  const payload: CreateBrandRequest = { name: brandForm.value.name, description: brandForm.value.description, imageUrls: urls.length > 0 ? urls : undefined }
+  const urls = brandImageUrls.value.map((i) => i.trim()).filter(Boolean)
+  const payload: CreateBrandRequest = {
+    name: brandForm.value.name,
+    description: brandForm.value.description,
+    imageUrls: urls.length > 0 ? urls : undefined,
+  }
   if (editingBrand.value) {
-    if (!await showConfirm('Actualizar marca', `¿Actualizar marca "${editingBrand.value.name}"?`)) return
+    if (!(await showConfirm('Actualizar marca', `¿Actualizar marca "${editingBrand.value.name}"?`)))
+      return
     await updateBrand(Number(editingBrand.value.id), payload)
-  } else { await createBrand(payload) }
+  } else {
+    await createBrand(payload)
+  }
   closeBrandForm()
 }
 
@@ -1935,46 +2999,89 @@ const closeBrandForm = () => {
   brandImageUrls.value = ['']
 }
 
-const addBrandImageUrl = () => { brandImageUrls.value.push('') }
-const updateBrandImageUrl = (index: number, value: string) => { brandImageUrls.value[index] = value }
-const removeBrandImageUrl = (index: number) => { brandImageUrls.value.splice(index, 1); if (brandImageUrls.value.length === 0) brandImageUrls.value = [''] }
+const addBrandImageUrl = () => {
+  brandImageUrls.value.push('')
+}
+const updateBrandImageUrl = (index: number, value: string) => {
+  brandImageUrls.value[index] = value
+}
+const removeBrandImageUrl = (index: number) => {
+  brandImageUrls.value.splice(index, 1)
+  if (brandImageUrls.value.length === 0) brandImageUrls.value = ['']
+}
 
 // Cotizaciones WhatsApp
 const whatsappQuotes = ref([
-  { id: 1, name: 'Laura Martínez', company: 'Mamá de Sofía', city: 'Bogotá', phone: '3206770595', productCount: 3, status: 'pending', products: 'Camiseta infantil, Pantalón jeans, Chaqueta' },
-  { id: 2, name: 'Andrés Ramírez', company: 'Papá de Mateo', city: 'Medellín', phone: '3101234567', productCount: 2, status: 'responded', products: 'Vestido floral, Falda plisada' },
-  { id: 3, name: 'Valentina López', company: 'Mamá de Lucas', city: 'Cali', phone: '3159876543', productCount: 5, status: 'pending', products: 'Body bebé, Enterizo, Gorro, Medias, Zapatos' },
+  {
+    id: 1,
+    name: 'Laura Martínez',
+    company: 'Mamá de Sofía',
+    city: 'Bogotá',
+    phone: '3206770595',
+    productCount: 3,
+    status: 'pending',
+    products: 'Camiseta infantil, Pantalón jeans, Chaqueta',
+  },
+  {
+    id: 2,
+    name: 'Andrés Ramírez',
+    company: 'Papá de Mateo',
+    city: 'Medellín',
+    phone: '3101234567',
+    productCount: 2,
+    status: 'responded',
+    products: 'Vestido floral, Falda plisada',
+  },
+  {
+    id: 3,
+    name: 'Valentina López',
+    company: 'Mamá de Lucas',
+    city: 'Cali',
+    phone: '3159876543',
+    productCount: 5,
+    status: 'pending',
+    products: 'Body bebé, Enterizo, Gorro, Medias, Zapatos',
+  },
 ])
 
 const openWhatsApp = (quote: { phone: string; name: string }) => {
-  const message = encodeURIComponent(`Hola ${quote.name}, gracias por tu solicitud de cotización. ¿En qué podemos ayudarte?`)
+  const message = encodeURIComponent(
+    `Hola ${quote.name}, gracias por tu solicitud de cotización. ¿En qué podemos ayudarte?`,
+  )
   window.open(`https://wa.me/57${quote.phone}?text=${message}`, '_blank')
 }
 </script>
 
 <style scoped>
 /* ===== RESET & VARIABLES ===== */
-.admin-layout, .admin-layout *, .admin-layout *::before, .admin-layout *::after { box-sizing: border-box; margin: 0; padding: 0; }
+.admin-layout,
+.admin-layout *,
+.admin-layout *::before,
+.admin-layout *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 .admin-layout {
-  --c-primary: #FFD84D;
-  --c-primary-hover: #8B6914;
-  --c-accent: #FF8E8E;
-  --c-black: #3D2B1F;
-  --c-dark: #5C3D1A;
-  --c-sidebar: #FFF8E8;
-  --c-white: #FFFFFF;
-  --c-light: #F5F5F5;
-  --c-gray: #6B7280;
-  --c-gray-light: #9CA3AF;
-  --c-border: #E5E7EB;
-  --c-success: #10B981;
-  --c-danger: #EF4444;
-  --c-warning: #F59E0B;
-  --c-info: #3B82F6;
+  --c-primary: #ffd84d;
+  --c-primary-hover: #8b6914;
+  --c-accent: #ff8e8e;
+  --c-black: #3d2b1f;
+  --c-dark: #5c3d1a;
+  --c-sidebar: #fff8e8;
+  --c-white: #ffffff;
+  --c-light: #f5f5f5;
+  --c-gray: #6b7280;
+  --c-gray-light: #9ca3af;
+  --c-border: #e5e7eb;
+  --c-success: #10b981;
+  --c-danger: #ef4444;
+  --c-warning: #f59e0b;
+  --c-info: #3b82f6;
   --sidebar-w: 240px;
   --topbar-h: 64px;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
   display: flex;
   min-height: 100vh;
   background: var(--c-light);
@@ -1999,7 +3106,7 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
 
 .sidebar-header {
   padding: 24px 20px 16px;
-  border-bottom: 1px solid rgba(139,105,20,0.1);
+  border-bottom: 1px solid rgba(139, 105, 20, 0.1);
 }
 
 .sidebar-logo {
@@ -2022,7 +3129,7 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
 
 .sidebar-subtitle {
   font-size: 0.7rem;
-  color: #8B6914;
+  color: #8b6914;
   margin-top: 4px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -2044,7 +3151,7 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   border-radius: 10px;
   border: none;
   background: none;
-  color: #5C3D1A;
+  color: #5c3d1a;
   font-size: 0.88rem;
   font-weight: 500;
   cursor: pointer;
@@ -2054,13 +3161,13 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
 }
 
 .nav-item:hover {
-  background: rgba(255,216,77,0.15);
-  color: #3D2B1F;
+  background: rgba(255, 216, 77, 0.15);
+  color: #3d2b1f;
 }
 
 .nav-item.active {
   background: var(--c-primary);
-  color: #3D2B1F;
+  color: #3d2b1f;
   font-weight: 600;
 }
 
@@ -2072,7 +3179,9 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   flex-shrink: 0;
 }
 
-.nav-item.active .nav-icon { color: #3D2B1F; }
+.nav-item.active .nav-icon {
+  color: #3d2b1f;
+}
 
 .nav-badge {
   margin-left: auto;
@@ -2088,22 +3197,29 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
 
 .sidebar-footer {
   padding: 16px 10px 20px;
-  border-top: 1px solid rgba(139,105,20,0.1);
+  border-top: 1px solid rgba(139, 105, 20, 0.1);
 }
 
-.logout { color: #8B6914; }
-.logout:hover { background: rgba(239,68,68,0.12); color: #EF4444; }
+.logout {
+  color: #8b6914;
+}
+.logout:hover {
+  background: rgba(239, 68, 68, 0.12);
+  color: #ef4444;
+}
 
 .copyright {
   font-size: 0.65rem;
-  color: #8B6914;
+  color: #8b6914;
   text-align: center;
   line-height: 1.5;
   margin-top: 12px;
   padding: 0 10px;
 }
 
-.sidebar-overlay { display: none; }
+.sidebar-overlay {
+  display: none;
+}
 
 /* ===== MAIN AREA ===== */
 .main-area {
@@ -2137,7 +3253,9 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   padding: 6px;
   border-radius: 8px;
 }
-.menu-toggle:hover { background: var(--c-light); }
+.menu-toggle:hover {
+  background: var(--c-light);
+}
 
 .home-btn {
   display: flex;
@@ -2185,8 +3303,14 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   outline: none;
   transition: all 0.2s ease;
 }
-.topbar-search .search-input:focus { border-color: var(--c-primary); background: var(--c-white); box-shadow: 0 0 0 3px rgba(255,216,77,0.1); }
-.topbar-search .search-input::placeholder { color: var(--c-gray-light); }
+.topbar-search .search-input:focus {
+  border-color: var(--c-primary);
+  background: var(--c-white);
+  box-shadow: 0 0 0 3px rgba(255, 216, 77, 0.1);
+}
+.topbar-search .search-input::placeholder {
+  color: var(--c-gray-light);
+}
 
 .topbar-actions {
   display: flex;
@@ -2205,7 +3329,10 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   color: var(--c-gray);
   transition: all 0.2s ease;
 }
-.action-btn:hover { background: var(--c-light); color: var(--c-black); }
+.action-btn:hover {
+  background: var(--c-light);
+  color: var(--c-black);
+}
 
 .action-btn .badge {
   position: absolute;
@@ -2232,7 +3359,9 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   cursor: pointer;
   margin-left: 8px;
 }
-.topbar-user:hover { background: var(--c-light); }
+.topbar-user:hover {
+  background: var(--c-light);
+}
 
 .user-avatar {
   width: 36px;
@@ -2250,8 +3379,15 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   flex-direction: column;
 }
 
-.user-name { font-size: 0.82rem; font-weight: 600; color: var(--c-black); }
-.user-role { font-size: 0.68rem; color: var(--c-gray); }
+.user-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--c-black);
+}
+.user-role {
+  font-size: 0.68rem;
+  color: var(--c-gray);
+}
 
 .topbar-divider {
   width: 1px;
@@ -2318,7 +3454,9 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   color: var(--c-gray);
   cursor: pointer;
 }
-.date-filter:hover { border-color: var(--c-primary); }
+.date-filter:hover {
+  border-color: var(--c-primary);
+}
 
 /* ===== STATS ROW ===== */
 .stats-row {
@@ -2338,7 +3476,10 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   gap: 16px;
   transition: all 0.2s ease;
 }
-.stat-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.06); transform: translateY(-1px); }
+.stat-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
+}
 
 .stat-icon {
   width: 52px;
@@ -2377,8 +3518,12 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   gap: 3px;
 }
 
-.stat-change.up { color: var(--c-success); }
-.stat-change.down { color: var(--c-danger); }
+.stat-change.up {
+  color: var(--c-success);
+}
+.stat-change.down {
+  color: var(--c-danger);
+}
 
 /* ===== CARDS ===== */
 .card {
@@ -2411,7 +3556,9 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   font-weight: 600;
   cursor: pointer;
 }
-.link-btn:hover { color: var(--c-primary-hover); }
+.link-btn:hover {
+  color: var(--c-primary-hover);
+}
 
 .chart-filter {
   padding: 6px 12px;
@@ -2424,7 +3571,9 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
 }
 
 /* ===== CHART ===== */
-.chart-card { grid-column: span 1; }
+.chart-card {
+  grid-column: span 1;
+}
 
 .chart-placeholder {
   padding: 20px;
@@ -2442,9 +3591,14 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   min-width: 40px;
 }
 
-.chart-area { flex: 1; }
+.chart-area {
+  flex: 1;
+}
 
-.chart-svg { width: 100%; height: 180px; }
+.chart-svg {
+  width: 100%;
+  height: 180px;
+}
 
 .chart-x-axis {
   display: flex;
@@ -2502,7 +3656,9 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
 }
 
 /* ===== BAR CHART ===== */
-.bar-chart { padding: 8px 0; }
+.bar-chart {
+  padding: 8px 0;
+}
 
 .bar-row {
   display: flex;
@@ -2624,7 +3780,7 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
 
 .featured-bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, #FFD84D, #FF8E8E);
+  background: linear-gradient(90deg, #ffd84d, #ff8e8e);
   border-radius: 4px;
   transition: width 0.6s ease;
 }
@@ -2647,7 +3803,9 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   border-top: 1px solid var(--c-border);
 }
 
-.featured-item:first-child { border-top: none; }
+.featured-item:first-child {
+  border-top: none;
+}
 
 .featured-item-img {
   width: 36px;
@@ -2693,7 +3851,9 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
 }
 
 /* ===== ORDERS LIST ===== */
-.orders-list { padding: 0; }
+.orders-list {
+  padding: 0;
+}
 
 .order-item {
   display: flex;
@@ -2702,7 +3862,9 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   border-bottom: 1px solid var(--c-border);
   gap: 12px;
 }
-.order-item:last-child { border-bottom: none; }
+.order-item:last-child {
+  border-bottom: none;
+}
 
 .order-info {
   display: flex;
@@ -2710,8 +3872,15 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   min-width: 90px;
 }
 
-.order-id { font-size: 0.85rem; font-weight: 600; color: var(--c-black); }
-.order-date { font-size: 0.7rem; color: var(--c-gray); }
+.order-id {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--c-black);
+}
+.order-date {
+  font-size: 0.7rem;
+  color: var(--c-gray);
+}
 
 .order-status {
   padding: 4px 10px;
@@ -2721,9 +3890,18 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   white-space: nowrap;
 }
 
-.order-status.pending { background: #FEF3C7; color: #92400E; }
-.order-status.completed { background: #D1FAE5; color: #065F46; }
-.order-status.cancelled { background: #FEE2E2; color: #991B1B; }
+.order-status.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+.order-status.completed {
+  background: #d1fae5;
+  color: #065f46;
+}
+.order-status.cancelled {
+  background: #fee2e2;
+  color: #991b1b;
+}
 
 .order-amount {
   font-size: 0.85rem;
@@ -2741,7 +3919,10 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   color: var(--c-gray);
   border-radius: 6px;
 }
-.order-view:hover { background: var(--c-light); color: var(--c-black); }
+.order-view:hover {
+  background: var(--c-light);
+  color: var(--c-black);
+}
 
 .card-footer-btn {
   display: flex;
@@ -2758,10 +3939,14 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   font-weight: 600;
   cursor: pointer;
 }
-.card-footer-btn:hover { background: rgba(255,216,77,0.04); }
+.card-footer-btn:hover {
+  background: rgba(255, 216, 77, 0.04);
+}
 
 /* ===== TOP PRODUCTS ===== */
-.products-top-list { padding: 0; }
+.products-top-list {
+  padding: 0;
+}
 
 .top-product-item {
   display: flex;
@@ -2770,7 +3955,9 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   padding: 14px 20px;
   border-bottom: 1px solid var(--c-border);
 }
-.top-product-item:last-child { border-bottom: none; }
+.top-product-item:last-child {
+  border-bottom: none;
+}
 
 .top-product-img {
   width: 44px;
@@ -2813,7 +4000,9 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
 }
 
 /* ===== INVENTORY ALERTS ===== */
-.alerts-list { padding: 0; }
+.alerts-list {
+  padding: 0;
+}
 
 .alert-item {
   display: flex;
@@ -2822,7 +4011,9 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   padding: 14px 20px;
   border-bottom: 1px solid var(--c-border);
 }
-.alert-item:last-child { border-bottom: none; }
+.alert-item:last-child {
+  border-bottom: none;
+}
 
 .alert-img {
   width: 44px;
@@ -2843,21 +4034,30 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   min-width: 0;
 }
 
-.alert-name { font-size: 0.82rem; font-weight: 600; color: var(--c-black); }
-.alert-stock { font-size: 0.72rem; color: var(--c-gray); }
+.alert-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--c-black);
+}
+.alert-stock {
+  font-size: 0.72rem;
+  color: var(--c-gray);
+}
 
 .alert-badge {
   padding: 4px 10px;
   border-radius: 6px;
   font-size: 0.7rem;
   font-weight: 600;
-  background: #FEE2E2;
-  color: #991B1B;
+  background: #fee2e2;
+  color: #991b1b;
   white-space: nowrap;
 }
 
 /* ===== QUOTATIONS ===== */
-.quotations-list { padding: 0; }
+.quotations-list {
+  padding: 0;
+}
 
 .quotation-item {
   display: flex;
@@ -2866,7 +4066,9 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   padding: 14px 20px;
   border-bottom: 1px solid var(--c-border);
 }
-.quotation-item:last-child { border-bottom: none; }
+.quotation-item:last-child {
+  border-bottom: none;
+}
 
 .quotation-info {
   display: flex;
@@ -2874,8 +4076,15 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   min-width: 80px;
 }
 
-.quotation-id { font-size: 0.82rem; font-weight: 600; color: var(--c-black); }
-.quotation-date { font-size: 0.7rem; color: var(--c-gray); }
+.quotation-id {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--c-black);
+}
+.quotation-date {
+  font-size: 0.7rem;
+  color: var(--c-gray);
+}
 
 .quotation-status {
   padding: 4px 10px;
@@ -2885,9 +4094,18 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   white-space: nowrap;
 }
 
-.quotation-status.pending { background: #FEF3C7; color: #92400E; }
-.quotation-status.completed { background: #D1FAE5; color: #065F46; }
-.quotation-status.cancelled { background: #FEE2E2; color: #991B1B; }
+.quotation-status.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+.quotation-status.completed {
+  background: #d1fae5;
+  color: #065f46;
+}
+.quotation-status.cancelled {
+  background: #fee2e2;
+  color: #991b1b;
+}
 
 .quotation-amount {
   font-size: 0.85rem;
@@ -2943,8 +4161,13 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   outline: none;
   transition: all 0.2s ease;
 }
-.search-field:focus { border-color: var(--c-primary); box-shadow: 0 0 0 3px rgba(255,216,77,0.1); }
-.search-field::placeholder { color: var(--c-gray-light); }
+.search-field:focus {
+  border-color: var(--c-primary);
+  box-shadow: 0 0 0 3px rgba(255, 216, 77, 0.1);
+}
+.search-field::placeholder {
+  color: var(--c-gray-light);
+}
 
 .search-clear {
   position: absolute;
@@ -2963,7 +4186,10 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   align-items: center;
   justify-content: center;
 }
-.search-clear:hover { background: var(--c-danger); color: white; }
+.search-clear:hover {
+  background: var(--c-danger);
+  color: white;
+}
 
 /* ===== PRODUCTS TABLE ===== */
 .prod-toolbar {
@@ -3014,15 +4240,31 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   cursor: pointer;
   min-width: 150px;
 }
-.prod-filter-select:focus { border-color: var(--c-primary); outline: none; }
+.prod-filter-select:focus {
+  border-color: var(--c-primary);
+  outline: none;
+}
 
-.search-sm { max-width: 220px; }
+.search-sm {
+  max-width: 220px;
+}
 
-.products-table .col-product { min-width: 250px; }
-.products-table .col-category { min-width: 140px; }
-.products-table .col-price { min-width: 100px; }
-.products-table .col-status { min-width: 100px; }
-.products-table .col-featured { min-width: 70px; text-align: center; }
+.products-table .col-product {
+  min-width: 250px;
+}
+.products-table .col-category {
+  min-width: 140px;
+}
+.products-table .col-price {
+  min-width: 100px;
+}
+.products-table .col-status {
+  min-width: 100px;
+}
+.products-table .col-featured {
+  min-width: 70px;
+  text-align: center;
+}
 
 .prod-cell {
   display: flex;
@@ -3048,7 +4290,9 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   object-fit: cover;
 }
 
-.prod-thumb-placeholder { font-size: 1.2rem; }
+.prod-thumb-placeholder {
+  font-size: 1.2rem;
+}
 
 .prod-info {
   display: flex;
@@ -3074,8 +4318,8 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
 .prod-category-badge {
   display: inline-block;
   padding: 4px 10px;
-  background: #FEF3C7;
-  color: #92400E;
+  background: #fef3c7;
+  color: #92400e;
   border-radius: 6px;
   font-size: 0.75rem;
   font-weight: 500;
@@ -3096,18 +4340,18 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
 }
 
 .prod-status-badge.available {
-  background: #D1FAE5;
-  color: #065F46;
+  background: #d1fae5;
+  color: #065f46;
 }
 
 .prod-status-badge.out-of-stock {
-  background: #FEE2E2;
-  color: #991B1B;
+  background: #fee2e2;
+  color: #991b1b;
 }
 
 .prod-status-badge.coming-soon {
-  background: #FEF3C7;
-  color: #92400E;
+  background: #fef3c7;
+  color: #92400e;
 }
 
 .prod-star-btn {
@@ -3123,7 +4367,7 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
 }
 
 .prod-star-btn:hover {
-  background: #FEF3C7;
+  background: #fef3c7;
 }
 
 .prod-star-btn.active {
@@ -3147,10 +4391,16 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   text-decoration: none;
   font-weight: 500;
 }
-.breadcrumb-link:hover { color: var(--c-primary-hover); }
+.breadcrumb-link:hover {
+  color: var(--c-primary-hover);
+}
 
-.breadcrumb-sep { color: var(--c-gray-light); }
-.breadcrumb-current { color: var(--c-gray); }
+.breadcrumb-sep {
+  color: var(--c-gray-light);
+}
+.breadcrumb-current {
+  color: var(--c-gray);
+}
 
 /* ===== CATEGORIES TABLE ===== */
 .cat-stats-row {
@@ -3192,11 +4442,26 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   flex-shrink: 0;
 }
 
-.cat-stat-icon.yellow { background: rgba(255,216,77,0.12); color: var(--c-primary); }
-.cat-stat-icon.green { background: rgba(16,185,129,0.12); color: var(--c-success); }
-.cat-stat-icon.red { background: rgba(239,68,68,0.12); color: var(--c-danger); }
-.cat-stat-icon.blue { background: rgba(59,130,246,0.12); color: var(--c-info); }
-.cat-stat-icon.orange { background: rgba(249,115,22,0.12); color: #f97316; }
+.cat-stat-icon.yellow {
+  background: rgba(255, 216, 77, 0.12);
+  color: var(--c-primary);
+}
+.cat-stat-icon.green {
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--c-success);
+}
+.cat-stat-icon.red {
+  background: rgba(239, 68, 68, 0.12);
+  color: var(--c-danger);
+}
+.cat-stat-icon.blue {
+  background: rgba(59, 130, 246, 0.12);
+  color: var(--c-info);
+}
+.cat-stat-icon.orange {
+  background: rgba(249, 115, 22, 0.12);
+  color: #f97316;
+}
 
 .cat-stat-info {
   display: flex;
@@ -3276,7 +4541,9 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   background: var(--c-white);
   color: var(--c-black);
 }
-.cat-search-input:focus { border-color: var(--c-primary); }
+.cat-search-input:focus {
+  border-color: var(--c-primary);
+}
 
 /* Table */
 .cat-table-container {
@@ -3312,13 +4579,27 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   vertical-align: middle;
 }
 
-.cat-table tbody tr:hover { background: rgba(255,216,77,0.02); }
-.cat-table tbody tr:last-child td { border-bottom: none; }
+.cat-table tbody tr:hover {
+  background: rgba(255, 216, 77, 0.02);
+}
+.cat-table tbody tr:last-child td {
+  border-bottom: none;
+}
 
-.col-check { width: 40px; text-align: center; }
-.col-check input { width: 16px; height: 16px; accent-color: var(--c-primary); cursor: pointer; }
+.col-check {
+  width: 40px;
+  text-align: center;
+}
+.col-check input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--c-primary);
+  cursor: pointer;
+}
 
-.col-img { width: 60px; }
+.col-img {
+  width: 60px;
+}
 
 .cat-thumb {
   width: 44px;
@@ -3365,13 +4646,13 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
 }
 
 .cat-status-badge.active {
-  background: #D1FAE5;
-  color: #065F46;
+  background: #d1fae5;
+  color: #065f46;
 }
 
 .cat-status-badge.inactive {
-  background: #FEE2E2;
-  color: #991B1B;
+  background: #fee2e2;
+  color: #991b1b;
 }
 
 .cat-actions {
@@ -3390,8 +4671,14 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   align-items: center;
   transition: all 0.2s;
 }
-.cat-action-btn:hover { border-color: var(--c-primary); color: var(--c-primary); }
-.cat-action-btn.danger:hover { border-color: var(--c-danger); color: var(--c-danger); }
+.cat-action-btn:hover {
+  border-color: var(--c-primary);
+  color: var(--c-primary);
+}
+.cat-action-btn.danger:hover {
+  border-color: var(--c-danger);
+  color: var(--c-danger);
+}
 
 /* Pagination */
 .cat-pagination {
@@ -3425,13 +4712,19 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   font-size: 0.82rem;
   font-weight: 500;
 }
-.cat-page-btn:hover:not(:disabled) { border-color: var(--c-primary); color: var(--c-primary); }
+.cat-page-btn:hover:not(:disabled) {
+  border-color: var(--c-primary);
+  color: var(--c-primary);
+}
 .cat-page-btn.active {
   background: var(--c-primary);
   color: var(--c-black);
   border-color: var(--c-primary);
 }
-.cat-page-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.cat-page-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
 
 .page-btn {
   min-width: 32px;
@@ -3448,13 +4741,19 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   font-weight: 500;
   padding: 0 8px;
 }
-.page-btn:hover:not(:disabled):not(.active) { border-color: var(--c-primary); color: var(--c-primary); }
+.page-btn:hover:not(:disabled):not(.active) {
+  border-color: var(--c-primary);
+  color: var(--c-primary);
+}
 .page-btn.active {
   background: var(--c-primary);
   color: var(--c-black);
   border-color: var(--c-primary);
 }
-.page-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.page-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
 
 /* ===== SALES ===== */
 .sales-stats-row {
@@ -3474,8 +4773,15 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   gap: 4px;
 }
 
-.mini-stat-label { font-size: 0.78rem; color: var(--c-gray); }
-.mini-stat-value { font-size: 1.3rem; font-weight: 800; color: var(--c-black); }
+.mini-stat-label {
+  font-size: 0.78rem;
+  color: var(--c-gray);
+}
+.mini-stat-value {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--c-black);
+}
 
 .table-container {
   background: var(--c-white);
@@ -3507,12 +4813,27 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   border-bottom: 1px solid var(--c-border);
 }
 
-.data-table tbody tr:hover { background: rgba(255,216,77,0.02); }
-.data-table tbody tr:last-child td { border-bottom: none; }
+.data-table tbody tr:hover {
+  background: rgba(255, 216, 77, 0.02);
+}
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
 
-.cell-stack { display: flex; flex-direction: column; gap: 2px; }
-.cell-primary { font-weight: 500; color: var(--c-black); font-size: 0.85rem; }
-.cell-secondary { font-size: 0.75rem; color: var(--c-gray); }
+.cell-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.cell-primary {
+  font-weight: 500;
+  color: var(--c-black);
+  font-size: 0.85rem;
+}
+.cell-secondary {
+  font-size: 0.75rem;
+  color: var(--c-gray);
+}
 
 .color-dot {
   width: 10px;
@@ -3532,7 +4853,11 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   font-size: 0.8rem;
 }
 
-.amount { font-weight: 700; color: var(--c-success); font-size: 0.85rem; }
+.amount {
+  font-weight: 700;
+  color: var(--c-success);
+  font-size: 0.85rem;
+}
 
 .status-pill {
   padding: 4px 10px;
@@ -3541,9 +4866,18 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   font-weight: 600;
 }
 
-.status-pill.completed { background: #D1FAE5; color: #065F46; }
-.status-pill.pending { background: #FEF3C7; color: #92400E; }
-.status-pill.cancelled { background: #FEE2E2; color: #991B1B; }
+.status-pill.completed {
+  background: #d1fae5;
+  color: #065f46;
+}
+.status-pill.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+.status-pill.cancelled {
+  background: #fee2e2;
+  color: #991b1b;
+}
 
 .products-badge {
   background: var(--c-primary);
@@ -3555,7 +4889,9 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   display: inline-block;
 }
 
-.products-details { margin-top: 4px; }
+.products-details {
+  margin-top: 4px;
+}
 .products-toggle {
   cursor: pointer;
   color: var(--c-primary);
@@ -3577,7 +4913,9 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   background: var(--c-light);
   border-radius: 6px;
 }
-.item-qty { font-weight: 600; }
+.item-qty {
+  font-weight: 600;
+}
 
 /* ===== BUTTONS ===== */
 .btn {
@@ -3597,37 +4935,57 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   background: var(--c-primary);
   color: var(--c-black);
 }
-.btn-primary:hover { background: var(--c-primary-hover); transform: translateY(-1px); }
-.btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn-primary:hover {
+  background: var(--c-primary-hover);
+  transform: translateY(-1px);
+}
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 
 .btn-secondary {
   background: var(--c-light);
   color: var(--c-gray);
   border: 1px solid var(--c-border);
 }
-.btn-secondary:hover { border-color: var(--c-primary); color: var(--c-primary); }
+.btn-secondary:hover {
+  border-color: var(--c-primary);
+  color: var(--c-primary);
+}
 
 .btn-outline {
   background: transparent;
   color: var(--c-gray);
   border: 1px solid var(--c-border);
 }
-.btn-outline:hover { border-color: var(--c-primary); color: var(--c-primary); }
+.btn-outline:hover {
+  border-color: var(--c-primary);
+  color: var(--c-primary);
+}
 
 .btn-outline-danger {
   background: transparent;
   color: var(--c-gray);
   border: 1px solid var(--c-border);
 }
-.btn-outline-danger:hover { border-color: var(--c-danger); color: var(--c-danger); background: rgba(239,68,68,0.04); }
+.btn-outline-danger:hover {
+  border-color: var(--c-danger);
+  color: var(--c-danger);
+  background: rgba(239, 68, 68, 0.04);
+}
 
-.btn-sm { padding: 7px 12px; font-size: 0.78rem; border-radius: 8px; }
+.btn-sm {
+  padding: 7px 12px;
+  font-size: 0.78rem;
+  border-radius: 8px;
+}
 
 /* ===== FORMS ===== */
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
@@ -3643,7 +5001,7 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   max-width: 600px;
   max-height: 90vh;
   overflow-y: auto;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
 .modal-header {
@@ -3653,7 +5011,11 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   align-items: center;
 }
 
-.modal-header h3 { font-size: 1.2rem; font-weight: 700; color: var(--c-black); }
+.modal-header h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--c-black);
+}
 
 .modal-close {
   background: var(--c-light);
@@ -3668,25 +5030,60 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   justify-content: center;
   font-size: 1rem;
 }
-.modal-close:hover { background: var(--c-danger); color: white; }
+.modal-close:hover {
+  background: var(--c-danger);
+  color: white;
+}
 
-.modal-body { padding: 24px; }
+.modal-body {
+  padding: 24px;
+}
 
 .confirm-modal {
   max-width: 400px;
   text-align: center;
   padding: 32px;
 }
-.confirm-icon { margin-bottom: 16px; }
-.confirm-title { font-size: 1.15rem; font-weight: 700; color: var(--c-black); margin-bottom: 8px; }
-.confirm-message { font-size: 0.9rem; color: #666; margin-bottom: 24px; line-height: 1.5; }
-.confirm-actions { display: flex; gap: 12px; justify-content: center; }
-.confirm-actions .btn { min-width: 120px; }
+.confirm-icon {
+  margin-bottom: 16px;
+}
+.confirm-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--c-black);
+  margin-bottom: 8px;
+}
+.confirm-message {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+.confirm-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+.confirm-actions .btn {
+  min-width: 120px;
+}
 
-.form-group { margin-bottom: 18px; }
-.form-group label { display: block; font-weight: 600; font-size: 0.85rem; color: var(--c-black); margin-bottom: 6px; }
+.form-group {
+  margin-bottom: 18px;
+}
+.form-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--c-black);
+  margin-bottom: 6px;
+}
 
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
 
 .form-input {
   width: 100%;
@@ -3699,12 +5096,30 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   outline: none;
   transition: border-color 0.2s;
 }
-.form-input:focus { border-color: var(--c-primary); box-shadow: 0 0 0 3px rgba(255,216,77,0.1); }
-.form-input::placeholder { color: var(--c-gray-light); }
+.form-input:focus {
+  border-color: var(--c-primary);
+  box-shadow: 0 0 0 3px rgba(255, 216, 77, 0.1);
+}
+.form-input::placeholder {
+  color: var(--c-gray-light);
+}
 
-.price-input { position: relative; display: flex; align-items: center; }
-.currency { position: absolute; left: 14px; font-weight: 600; color: var(--c-gray); font-size: 0.9rem; z-index: 1; }
-.price-input .form-input { padding-left: 32px; }
+.price-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.currency {
+  position: absolute;
+  left: 14px;
+  font-weight: 600;
+  color: var(--c-gray);
+  font-size: 0.9rem;
+  z-index: 1;
+}
+.price-input .form-input {
+  padding-left: 32px;
+}
 
 .checkbox-label {
   display: flex;
@@ -3713,11 +5128,24 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   cursor: pointer;
   font-weight: 500;
 }
-.checkbox-label input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--c-primary); }
+.checkbox-label input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--c-primary);
+}
 
-.form-help { font-size: 0.78rem; color: var(--c-gray); margin-top: 4px; }
+.form-help {
+  font-size: 0.78rem;
+  color: var(--c-gray);
+  margin-top: 4px;
+}
 
-.materials-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+.materials-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
 
 .material-chip {
   padding: 8px 14px;
@@ -3730,8 +5158,14 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   color: var(--c-black);
   transition: all 0.2s;
 }
-.material-chip:hover { border-color: var(--c-primary); }
-.material-chip.selected { background: rgba(255,216,77,0.1); border-color: var(--c-primary); color: var(--c-primary); }
+.material-chip:hover {
+  border-color: var(--c-primary);
+}
+.material-chip.selected {
+  background: rgba(255, 216, 77, 0.1);
+  border-color: var(--c-primary);
+  color: var(--c-primary);
+}
 
 .selected-materials {
   padding: 8px 12px;
@@ -3742,14 +5176,18 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   align-items: center;
   gap: 6px;
 }
-.selected-label { font-weight: 600; color: var(--c-primary); font-size: 0.82rem; }
+.selected-label {
+  font-weight: 600;
+  color: var(--c-primary);
+  font-size: 0.82rem;
+}
 .selected-tag {
   display: inline-flex;
   align-items: center;
   gap: 4px;
   padding: 2px 8px;
-  background: rgba(255,216,77,0.15);
-  border: 1px solid rgba(255,216,77,0.4);
+  background: rgba(255, 216, 77, 0.15);
+  border: 1px solid rgba(255, 216, 77, 0.4);
   border-radius: 6px;
   font-size: 0.8rem;
   color: var(--c-primary);
@@ -3766,10 +5204,21 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   opacity: 0.6;
   transition: opacity 0.15s;
 }
-.selected-tag-remove:hover { opacity: 1; }
+.selected-tag-remove:hover {
+  opacity: 1;
+}
 
-.image-urls { display: flex; flex-direction: column; gap: 8px; }
-.image-url-row { display: grid; grid-template-columns: 1fr auto auto; gap: 6px; align-items: center; }
+.image-urls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.image-url-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 6px;
+  align-items: center;
+}
 
 .image-preview-arrows {
   position: absolute;
@@ -3778,7 +5227,7 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   transform: translateX(-50%);
   display: flex;
   gap: 2px;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 6px;
   padding: 2px;
 }
@@ -3796,7 +5245,9 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   justify-content: center;
   transition: background 0.2s;
 }
-.preview-arrow-btn:hover { background: rgba(255,255,255,0.25); }
+.preview-arrow-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
 
 .image-remove-btn {
   width: 28px;
@@ -3812,7 +5263,10 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   font-size: 0.75rem;
   transition: all 0.2s;
 }
-.image-remove-btn:hover { background: #fef2f2; border-color: #ef4444; }
+.image-remove-btn:hover {
+  background: #fef2f2;
+  border-color: #ef4444;
+}
 
 .image-main-btn {
   width: 32px;
@@ -3827,9 +5281,19 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   transition: all 0.2s;
   flex-shrink: 0;
 }
-.image-main-btn svg { pointer-events: none; width: 16px; height: 16px; }
-.image-main-btn:hover { border-color: #FFD84D; background: #fffbeb; }
-.image-main-btn.active { border-color: #FFD84D; background: #FFD84D; }
+.image-main-btn svg {
+  pointer-events: none;
+  width: 16px;
+  height: 16px;
+}
+.image-main-btn:hover {
+  border-color: #ffd84d;
+  background: #fffbeb;
+}
+.image-main-btn.active {
+  border-color: #ffd84d;
+  background: #ffd84d;
+}
 
 .image-add-btn {
   display: inline-flex;
@@ -3845,7 +5309,10 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   transition: all 0.2s;
   width: fit-content;
 }
-.image-add-btn:hover { border-color: #9ca3af; color: #374151; }
+.image-add-btn:hover {
+  border-color: #9ca3af;
+  color: #374151;
+}
 
 .images-preview-grid {
   display: grid;
@@ -3862,16 +5329,21 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
 }
 
 .image-preview-item.is-main {
-  border: 2px solid #FFD84D;
+  border: 2px solid #ffd84d;
 }
 
-.image-preview-item img { width: 100%; height: 80px; object-fit: cover; display: block; }
+.image-preview-item img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  display: block;
+}
 
 .img-action-btn {
   position: absolute;
   bottom: 4px;
   left: 4px;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   color: white;
   border: none;
   padding: 2px 6px;
@@ -3879,14 +5351,20 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   border-radius: 4px;
   cursor: pointer;
 }
-.img-action-btn.primary { background: var(--c-primary); color: var(--c-black); }
-.img-action-btn:disabled { opacity: 0.4; cursor: default; }
+.img-action-btn.primary {
+  background: var(--c-primary);
+  color: var(--c-black);
+}
+.img-action-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
 
 .image-index {
   position: absolute;
   top: 4px;
   right: 4px;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   color: white;
   width: 18px;
   height: 18px;
@@ -3899,8 +5377,8 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
 }
 
 .discount-info {
-  background: rgba(16,185,129,0.06);
-  border: 1px solid rgba(16,185,129,0.15);
+  background: rgba(16, 185, 129, 0.06);
+  border: 1px solid rgba(16, 185, 129, 0.15);
   border-radius: 8px;
   padding: 10px 14px;
   margin-bottom: 16px;
@@ -3926,12 +5404,33 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   text-align: center;
   padding: 60px 20px;
 }
-.empty-icon { font-size: 3.5rem; margin-bottom: 16px; opacity: 0.4; }
-.empty-state h3 { font-size: 1.2rem; font-weight: 600; color: var(--c-black); margin-bottom: 8px; }
-.empty-state p { font-size: 0.9rem; color: var(--c-gray); margin-bottom: 20px; }
+.empty-icon {
+  font-size: 3.5rem;
+  margin-bottom: 16px;
+  opacity: 0.4;
+}
+.empty-state h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--c-black);
+  margin-bottom: 8px;
+}
+.empty-state p {
+  font-size: 0.9rem;
+  color: var(--c-gray);
+  margin-bottom: 20px;
+}
 
-.loading-state, .error-state { text-align: center; padding: 60px 20px; }
-.loading-state p, .error-state p { margin-top: 16px; color: var(--c-gray); }
+.loading-state,
+.error-state {
+  text-align: center;
+  padding: 60px 20px;
+}
+.loading-state p,
+.error-state p {
+  margin-top: 16px;
+  color: var(--c-gray);
+}
 
 .spinner {
   border: 3px solid var(--c-border);
@@ -3954,7 +5453,11 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   gap: 6px;
 }
 
-@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 /* ===== ORDERS / PEDIDOS ===== */
 .orders-toolbar {
@@ -4050,12 +5553,30 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   background: var(--c-white);
 }
 
-.status-select.completed { border-color: #10b981; color: #10b981; }
-.status-select.pending { border-color: #f59e0b; color: #f59e0b; }
-.status-select.cancelled { border-color: #ef4444; color: #ef4444; }
-.status-select.processing { border-color: #3b82f6; color: #3b82f6; }
-.status-select.shipped { border-color: #8b5cf6; color: #8b5cf6; }
-.status-select.delivered { border-color: #10b981; color: #10b981; }
+.status-select.completed {
+  border-color: #10b981;
+  color: #10b981;
+}
+.status-select.pending {
+  border-color: #f59e0b;
+  color: #f59e0b;
+}
+.status-select.cancelled {
+  border-color: #ef4444;
+  color: #ef4444;
+}
+.status-select.processing {
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+.status-select.shipped {
+  border-color: #8b5cf6;
+  color: #8b5cf6;
+}
+.status-select.delivered {
+  border-color: #10b981;
+  color: #10b981;
+}
 
 /* ===== ORDER DETAIL MODAL ===== */
 .order-detail-modal {
@@ -4178,8 +5699,8 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
   align-items: center;
   margin-top: 16px;
   padding: 14px 16px;
-  background: rgba(255,216,77,0.08);
-  border: 1px solid rgba(255,216,77,0.2);
+  background: rgba(255, 216, 77, 0.08);
+  border: 1px solid rgba(255, 216, 77, 0.2);
   border-radius: 10px;
 }
 
@@ -4197,13 +5718,21 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1200px) {
-  .stats-row { grid-template-columns: repeat(3, 1fr); }
-  .dashboard-grid-3 { grid-template-columns: 1fr; }
+  .stats-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .dashboard-grid-3 {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 1024px) {
-  .dashboard-grid { grid-template-columns: 1fr; }
-  .chart-card { grid-column: span 1; }
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  .chart-card {
+    grid-column: span 1;
+  }
 }
 
 @media (max-width: 768px) {
@@ -4219,60 +5748,124 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0, 0, 0, 0.4);
     z-index: 99;
   }
 
-  .sidebar-open .sidebar-overlay { display: block; }
+  .sidebar-open .sidebar-overlay {
+    display: block;
+  }
 
-  .main-area { margin-left: 0; overflow-x: hidden; }
+  .main-area {
+    margin-left: 0;
+    overflow-x: hidden;
+  }
 
-  .menu-toggle { display: flex; }
+  .menu-toggle {
+    display: flex;
+  }
 
-  .topbar-search { display: none; }
+  .topbar-search {
+    display: none;
+  }
 
-  .topbar-user .user-info { display: none; }
+  .topbar-user .user-info {
+    display: none;
+  }
 
-  .stats-row { grid-template-columns: repeat(2, 1fr); }
-  .stats-row-4 { grid-template-columns: repeat(2, 1fr); }
-  .dashboard-grid-3 { grid-template-columns: 1fr; }
-  .dashboard-charts-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stats-row-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .dashboard-grid-3 {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-charts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-  .main-content { padding: 16px; }
+  .main-content {
+    padding: 16px;
+  }
 
-  .content-header { flex-direction: column; }
+  .content-header {
+    flex-direction: column;
+  }
 
-  .form-row { grid-template-columns: 1fr; }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
 
-  .sales-stats-row { grid-template-columns: 1fr; }
+  .sales-stats-row {
+    grid-template-columns: 1fr;
+  }
 
-  .products-grid { grid-template-columns: 1fr; }
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
 
-  .cat-stats-row { grid-template-columns: repeat(2, 1fr); }
-  .cat-stats-row-5 { grid-template-columns: repeat(3, 1fr); }
-  .cat-toolbar { flex-direction: column; align-items: stretch; }
+  .cat-stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cat-stats-row-5 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .cat-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
   .cat-toolbar-left,
-  .cat-toolbar-right { flex-wrap: wrap; }
-  .cat-search-input { width: 100%; }
-  .cat-table-container { overflow-x: auto; }
-  .cat-pagination { flex-direction: column; gap: 12px; align-items: center; }
+  .cat-toolbar-right {
+    flex-wrap: wrap;
+  }
+  .cat-search-input {
+    width: 100%;
+  }
+  .cat-table-container {
+    overflow-x: auto;
+  }
+  .cat-pagination {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
 }
 
 @media (max-width: 480px) {
-  .stats-row { grid-template-columns: 1fr; }
-  .stats-row-4 { grid-template-columns: 1fr; }
-  .stat-card { padding: 14px; }
-  .stat-value { font-size: 1.1rem; }
+  .stats-row {
+    grid-template-columns: 1fr;
+  }
+  .stats-row-4 {
+    grid-template-columns: 1fr;
+  }
+  .stat-card {
+    padding: 14px;
+  }
+  .stat-value {
+    font-size: 1.1rem;
+  }
 }
 
 /* ===== MOBILE DASHBOARD FIXES ===== */
 @media (max-width: 640px) {
-  .main-content { padding: 12px; overflow-x: hidden; }
+  .main-content {
+    padding: 12px;
+    overflow-x: hidden;
+  }
 
-  .page-title { font-size: 1.1rem; }
-  .page-subtitle { font-size: 0.78rem; }
+  .page-title {
+    font-size: 1.1rem;
+  }
+  .page-subtitle {
+    font-size: 0.78rem;
+  }
 
-  .content-header { flex-direction: column; gap: 12px; }
+  .content-header {
+    flex-direction: column;
+    gap: 12px;
+  }
 
   .section-top {
     flex-direction: column;
@@ -4280,7 +5873,10 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
     gap: 10px;
   }
 
-  .section-top .btn { width: 100%; justify-content: center; }
+  .section-top .btn {
+    width: 100%;
+    justify-content: center;
+  }
 
   .stats-row,
   .stats-row-4,
@@ -4311,12 +5907,22 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
     height: 18px;
   }
 
-  .stat-label { font-size: 0.68rem; }
-  .stat-value { font-size: 1rem; }
+  .stat-label {
+    font-size: 0.68rem;
+  }
+  .stat-value {
+    font-size: 1rem;
+  }
 
-  .cat-stat-value { font-size: 1rem; }
-  .cat-stat-label { font-size: 0.68rem; }
-  .cat-stat-sub { font-size: 0.6rem; }
+  .cat-stat-value {
+    font-size: 1rem;
+  }
+  .cat-stat-label {
+    font-size: 0.68rem;
+  }
+  .cat-stat-sub {
+    font-size: 0.6rem;
+  }
 
   .dashboard-charts-grid {
     grid-template-columns: 1fr;
@@ -4344,9 +5950,14 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
     font-size: 0.78rem;
   }
 
-  .search-sm { max-width: 100%; width: 100%; }
+  .search-sm {
+    max-width: 100%;
+    width: 100%;
+  }
 
-  .prod-toolbar-right { width: 100%; }
+  .prod-toolbar-right {
+    width: 100%;
+  }
 
   /* ===== PRODUCTS TABLE -> CARDS ON MOBILE ===== */
   .cat-table-wrap {
@@ -4387,7 +5998,9 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
     font-size: 0.82rem;
   }
 
-  .cat-table-wrap .col-check { display: none; }
+  .cat-table-wrap .col-check {
+    display: none;
+  }
 
   .cat-table-wrap .col-product {
     min-width: 0;
@@ -4496,14 +6109,18 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
     flex-direction: column;
   }
 
-  .cat-search-input { width: 100%; }
+  .cat-search-input {
+    width: 100%;
+  }
 
   .orders-toolbar {
     flex-direction: column;
     gap: 10px;
   }
 
-  .orders-search { width: 100%; }
+  .orders-search {
+    width: 100%;
+  }
 
   .orders-filter-select {
     width: 100%;
@@ -4515,7 +6132,9 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
     gap: 10px;
   }
 
-  .mini-stat { padding: 14px; }
+  .mini-stat {
+    padding: 14px;
+  }
 
   .cat-pagination {
     flex-direction: column;
@@ -4523,19 +6142,44 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
     align-items: center;
   }
 
-  .cat-pagination-info { font-size: 0.75rem; text-align: center; }
+  .cat-pagination-info {
+    font-size: 0.75rem;
+    text-align: center;
+  }
 
-  .empty-state { padding: 40px 16px; }
-  .empty-icon { font-size: 2.5rem; }
-  .empty-state h3 { font-size: 1rem; }
-  .empty-state p { font-size: 0.82rem; }
+  .empty-state {
+    padding: 40px 16px;
+  }
+  .empty-icon {
+    font-size: 2.5rem;
+  }
+  .empty-state h3 {
+    font-size: 1rem;
+  }
+  .empty-state p {
+    font-size: 0.82rem;
+  }
 
-  .modal { max-width: calc(100vw - 32px); margin: 0 16px; }
-  .modal-header { padding: 16px 16px 0; }
-  .modal-body { padding: 16px; }
-  .form-row { grid-template-columns: 1fr; }
-  .form-actions { flex-direction: column; }
-  .form-actions .btn { width: 100%; justify-content: center; }
+  .modal {
+    max-width: calc(100vw - 32px);
+    margin: 0 16px;
+  }
+  .modal-header {
+    padding: 16px 16px 0;
+  }
+  .modal-body {
+    padding: 16px;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  .form-actions {
+    flex-direction: column;
+  }
+  .form-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
 
   .topbar {
     padding: 0 12px;
@@ -4543,6 +6187,8 @@ const openWhatsApp = (quote: { phone: string; name: string }) => {
     overflow: hidden;
   }
 
-  .home-btn { display: none; }
+  .home-btn {
+    display: none;
+  }
 }
 </style>

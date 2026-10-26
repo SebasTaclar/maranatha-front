@@ -100,7 +100,7 @@ const acceptAndGoBack = () => {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&display=swap');
+
 
 .terms-page {
   min-height: 100vh;
@@ -162,7 +162,7 @@ const acceptAndGoBack = () => {
 
 .title {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
   font-size: 2.1rem;
   letter-spacing: 0.2px;
   color: rgba(246, 245, 241, 0.98);
@@ -195,7 +195,7 @@ const acceptAndGoBack = () => {
 .section-title {
   margin: 0 0 0.9rem;
   color: rgb(201, 168, 89);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
   font-weight: 800;
   letter-spacing: 0.2px;
   font-size: 1.25rem;

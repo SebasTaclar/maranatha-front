@@ -312,7 +312,7 @@ onBeforeUnmount(() => {
   background: #fff8e8;
   padding: 0 92px 0 16px;
   font-size: 0.95rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
   color: #4A3728;
   outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
@@ -390,7 +390,7 @@ onBeforeUnmount(() => {
 .search-suggestions-label {
   font-size: 0.85rem;
   color: #8B7355;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
 }
 
 .search-suggestion {
@@ -399,7 +399,7 @@ onBeforeUnmount(() => {
   cursor: pointer;
   color: #4A3728;
   font-size: 0.8rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -423,7 +423,7 @@ onBeforeUnmount(() => {
 .search-state {
   padding: 18px 4px;
   color: #8B7355;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
   text-align: center;
 }
 
@@ -475,7 +475,7 @@ onBeforeUnmount(() => {
   font-size: 0.85rem;
   font-weight: 600;
   color: #4A3728;
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Callisto MT', 'Roundo', 'Nunito', sans-serif;
 }
 
 .result-category {
@@ -483,7 +483,7 @@ onBeforeUnmount(() => {
   color: #D7AC43;
   letter-spacing: 0.05em;
   margin-top: 2px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
   font-weight: 600;
 }
 
@@ -491,7 +491,7 @@ onBeforeUnmount(() => {
   font-size: 0.85rem;
   color: #4A3728;
   margin-top: 4px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
   font-weight: 700;
 }
 

@@ -5,8 +5,8 @@
         <!-- Section Header -->
         <div class="flex flex-col sm:flex-row items-center justify-between mb-14 gap-4">
           <div class="text-center sm:text-left">
-            <span class="inline-block font-poppins font-semibold text-sm text-pikiitos-pink tracking-widest uppercase mb-3">Lo más querido</span>
-            <h2 class="font-fredoka font-bold text-3xl sm:text-4xl lg:text-5xl text-pikiitos-brown">
+            <span class="inline-block font-roundo font-semibold text-sm text-pikiitos-pink tracking-widest uppercase mb-3">Lo más querido</span>
+            <h2 class="font-callisto font-bold text-3xl sm:text-4xl lg:text-5xl text-pikiitos-brown">
               Productos Destacados
             </h2>
           </div>
