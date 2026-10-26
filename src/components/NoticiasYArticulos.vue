@@ -32,12 +32,12 @@ const articles: NewsArticle[] = [
   {
     title: 'Nuestro trabajo con personas con discapacidad',
     date: '12 May,26',
-    image: 'https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes15-370x250.webp',
+    image: 'https://res.cloudinary.com/dlwzazojt/image/upload/v1793029232/Maranatha_phes15_tj0vgr.webp',
   },
   {
     title: 'Nuestro trabajo con madres cabeza de hogar',
     date: '07 Feb,26',
-    image: 'https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes16-370x250.webp',
+    image: 'https://res.cloudinary.com/dlwzazojt/image/upload/v1793029232/Maranatha_phes16_xd3cqj.webp',
   },
 ]
 

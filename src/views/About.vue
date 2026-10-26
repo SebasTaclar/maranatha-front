@@ -9,7 +9,7 @@
       <div class="about-story-media">
         <span class="about-story-frame" aria-hidden="true"></span>
         <img
-          src="https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes04.webp"
+          src="https://res.cloudinary.com/dlwzazojt/image/upload/v1793029231/Maranatha_phes04_fjre72.webp"
           alt="Actividad de la Fundación Maranatha PHES"
           class="about-story-img"
         />
@@ -84,19 +84,19 @@ const testimonialPeople = [
   {
     name: 'Nelinda Tibata Medina',
     role: 'Soy madre cabeza de familia de dos jóvenes',
-    avatar: 'https://maranathaphes.org/wp-content/uploads/2026/05/Nelinda-Tibata-Medina.jpg',
+    avatar: 'https://res.cloudinary.com/dlwzazojt/image/upload/v1793029234/Nelinda-Tibata-Medina_gfqrah.jpg',
     text: 'Actualmente para la Gloria de Dios he estado aquí en la Fundación Maranatha PHES, sirviendo en las diferentes actividades y en las brigadas evangelísticas, hace aproximadamente 8 años cambió mi vida, me ha venido transformando por medio de su Palabra en una mujer sabia y entendida para liderar a los dos jóvenes que el Señor me regaló. Dios me ha dado en este momento el privilegio de estudiar y compartir la palabra en amor a otras personas y gracias a esta fundación he estado adquiriendo más conocimiento del Señor Jesús y más experiencias en el ámbito de manualidades.',
   },
   {
     name: 'Heilene Piedad Lopez Sánchez',
     role: 'Deseo de mostrar a otros las maravillas del poder de Dios en las vidas',
-    avatar: 'https://maranathaphes.org/wp-content/uploads/2026/05/Heilene-Piedad-Lopez-Sanchez.jpg',
+    avatar: 'https://res.cloudinary.com/dlwzazojt/image/upload/v1793029232/Heilene-Piedad-Lopez-Sanchez_boohdk.jpg',
     text: 'Soy Heilene Piedad Lopez Sánchez y con el deseo de mostrar a otros las maravillas del poder de Dios en las vidas, buscaba la manera de servir y no sabía cómo desarrollar este deseo o anhelo, necesitaba ser capacitada, pero en su tiempo perfecto ya había el Señor dispuesto el lugar correcto y el equipo correcto, el cual para mí es la Fundación Maranatha PHES, permitiéndonos a mí y a mi hijo contribuir en su obra. Aquí hemos podido dar una mano aquellos vulnerables, solitarios, necesitados, no solo de Cristo, que es lo más importante y objetivo principal de la fundación, sino aquellos que están en desventaja social, física, económica, emocional y sobre todo espiritual, es una bendición muy grande y un privilegio servir en el Reino para el Señor y hacerlo desde el lugar que el señor dispuso en su perfecta voluntad, gracias a Dios y a la Fundación Maranatha PHES.',
   },
   {
     name: 'Samuel Andrés Vega Lopez',
     role: 'Empecé evangelizando en compañía de personas que reflejan el carácter de Cristo con un corazón manso y humilde',
-    avatar: 'https://maranathaphes.org/wp-content/uploads/2026/05/Samuel-Andres-Vega-Lopez-.jpg',
+    avatar: 'https://res.cloudinary.com/dlwzazojt/image/upload/v1793029232/Samuel-Andres-Vega-Lopez-_dev6ch.jpg',
     text: 'Todo comienza desde los 12 años, todo lo que viví y experimenté desde entonces hasta ahora me ayudó a conocer a Dios e incluso desde muy chiquito el Señor ya cuidaba mi corazón para no guardar rencor, agradezco que aún estando lejos no me haya soltado y me haya dado un corazón humilde para no hacer oídos sordos a su llamado, y cuando me permitió conocerlo, Él me condujo a servirle de una manera que no esperaba pero poco a poco me introdujo a una fundación llamada Maranatha PHES, dónde empecé evangelizando en compañía de personas que reflejan el carácter de Cristo con un corazón manso y humilde, de las cuales he podido aprender y madurar, cada vez más en el conocimiento del Señor, y solo puedo decir gracias a ti mi Dios por permitirme servirte, para tu obra y sobre todo para tu gloria y honra.',
   },
 ]
@@ -115,7 +115,7 @@ const testimonialPeople = [
   min-height: 18rem;
   place-items: center;
   overflow: hidden;
-  background: url('https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes36.webp')
+  background: url('https://res.cloudinary.com/dlwzazojt/image/upload/v1793029231/Maranatha_phes36_mrbjl1.webp')
     center / cover no-repeat;
 }
 

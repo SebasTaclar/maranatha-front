@@ -126,7 +126,7 @@ defineOptions({ name: 'StorySection' })
   padding: 4.5rem 1.5rem 0;
   background:
     linear-gradient(rgba(255, 253, 249, 0.94), rgba(255, 253, 249, 0.94)),
-    url('https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes35.webp') center / cover
+    url('https://res.cloudinary.com/dlwzazojt/image/upload/v1793029230/Maranatha_phes35_sfrd9i.webp') center / cover
       no-repeat;
 }
 

@@ -71,7 +71,7 @@ defineOptions({ name: 'JoinUsSection' })
 .join-us-hero::before {
   position: absolute;
   inset: 0;
-  background: url('https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes36.webp')
+  background: url('https://res.cloudinary.com/dlwzazojt/image/upload/v1793029231/Maranatha_phes36_mrbjl1.webp')
     center 43% / cover no-repeat;
   content: '';
   mix-blend-mode: luminosity;

@@ -5,7 +5,7 @@
         <div class="welcome-media">
           <span class="welcome-media-frame" aria-hidden="true"></span>
           <img
-            src="https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes06.webp"
+            src="https://res.cloudinary.com/dlwzazojt/image/upload/v1793029237/Maranatha_phes06_rt3ybl.webp"
             alt="Familia de la Fundación Maranatha PHES"
             class="welcome-media-img"
             loading="lazy"
