@@ -113,26 +113,26 @@ import { computed, onMounted, onUnmounted, ref } from 'vue'
 const testimonials = [
   {
     name: 'Nelinda Tibata Medina',
-    avatar: 'https://maranathaphes.org/wp-content/uploads/2026/05/Nelinda-Tibata-Medina.jpg',
+    avatar: 'https://res.cloudinary.com/dlwzazojt/image/upload/v1793029234/Nelinda-Tibata-Medina_gfqrah.jpg',
     text: 'Actualmente para la Gloria de Dios he estado aquí en la Fundación Maranatha PHES, sirviendo en las diferentes actividades y en las brigadas evangelísticas, hace aproximadamente 8 años cambió mi vida.',
   },
   {
     name: 'Samuel Andrés Vega Lopez',
-    avatar: 'https://maranathaphes.org/wp-content/uploads/2026/05/Samuel-Andres-Vega-Lopez-.jpg',
+    avatar: 'https://res.cloudinary.com/dlwzazojt/image/upload/v1793029232/Samuel-Andres-Vega-Lopez-_dev6ch.jpg',
     text: 'Todo comienza desde los 12 años, todo lo que viví y experimenté desde entonces hasta ahora me ayudó a conocer a Dios e incluso desde muy chiquito el Señor ya cuidaba mi corazón para no guardar rencor, agradezco que aún estando lejos no me haya soltado y me haya dado un corazón humilde para no hacer oídos sordos a su llamado.',
   },
   {
     name: 'Heilene Piedad Lopez Sánchez',
-    avatar: 'https://maranathaphes.org/wp-content/uploads/2026/05/Heilene-Piedad-Lopez-Sanchez.jpg',
+    avatar: 'https://res.cloudinary.com/dlwzazojt/image/upload/v1793029232/Heilene-Piedad-Lopez-Sanchez_boohdk.jpg',
     text: 'Soy Heilene Piedad Lopez Sánchez y con el deseo de mostrar a otros las maravillas del poder de Dios en las vidas, buscaba la manera de servir y no sabía cómo desarrollar este deseo o anhelo, necesitaba ser capacitada, pero en su tiempo perfecto ya había el Señor dispuesto el lugar correcto y el equipo correcto.',
   },
 ]
 
 const avatars = [
-  'https://maranathaphes.org/wp-content/uploads/2026/05/Nelinda-Tibata-Medina.jpg',
-  'https://maranathaphes.org/wp-content/uploads/2026/05/Samuel-Andres-Vega-Lopez-.jpg',
-  'https://maranathaphes.org/wp-content/uploads/2026/05/Heilene-Piedad-Lopez-Sanchez.jpg',
-  'https://maranathaphes.org/wp-content/uploads/2026/05/Screenshot_20260112_205706_Gallery-1-e1778512929709.png',
+  'https://res.cloudinary.com/dlwzazojt/image/upload/v1793029234/Nelinda-Tibata-Medina_gfqrah.jpg',
+  'https://res.cloudinary.com/dlwzazojt/image/upload/v1793029232/Samuel-Andres-Vega-Lopez-_dev6ch.jpg',
+  'https://res.cloudinary.com/dlwzazojt/image/upload/v1793029232/Heilene-Piedad-Lopez-Sanchez_boohdk.jpg',
+  'https://res.cloudinary.com/dlwzazojt/image/upload/v1793029231/Screenshot_20260112_205706_Gallery-1-e1778512929709_ywz3oa.png',
 ]
 
 const galleryPhotos = [
@@ -439,7 +439,7 @@ defineOptions({ name: 'TestimonialsSection' })
 .testimonials-background {
   position: absolute;
   inset: 0;
-  background: url('https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes17.webp')
+  background: url('https://res.cloudinary.com/dlwzazojt/image/upload/v1793029232/Maranatha_phes17_xktvhw.webp')
     center / cover no-repeat;
   mix-blend-mode: luminosity;
   opacity: 0.1;

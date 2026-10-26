@@ -108,7 +108,7 @@ defineOptions({ name: 'FooterSection' })
   background-color: #2f4538;
   background-image:
     linear-gradient(rgba(15, 32, 24, 0.97), rgba(15, 32, 24, 0.97)),
-    url('https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes32.webp');
+    url('https://res.cloudinary.com/dlwzazojt/image/upload/v1793029232/Maranatha_phes32_itkren.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

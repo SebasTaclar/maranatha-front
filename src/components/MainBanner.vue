@@ -111,7 +111,7 @@ interface BannerSlide {
   cta?: { label: string; to: string }
 }
 
-const shapeImage = 'https://maranathaphes.org/wp-content/uploads/2022/09/main-slider-shape-2.png'
+const shapeImage = 'https://res.cloudinary.com/dlwzazojt/image/upload/v1793030028/main-slider-shape-2_plcoyl.png'
 
 const slides: BannerSlide[] = [
   {
@@ -130,7 +130,7 @@ const slides: BannerSlide[] = [
     cta: { label: 'Dona hoy', to: '/donaciones' },
   },
   {
-    image: 'https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes32.webp',
+    image: 'https://res.cloudinary.com/dlwzazojt/image/upload/v1793029237/Maranatha_phes32_ty1z7w.webp',
     alt: 'Ayuda social de la Fundación Maranatha PHES',
     imageLeft: true,
     eyebrow: 'Juntos servimos a Jesús ayudando',
@@ -139,7 +139,7 @@ const slides: BannerSlide[] = [
     cta: { label: 'ver cómo ayudar', to: '/donaciones' },
   },
   {
-    image: 'https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes05.webp',
+    image: 'https://res.cloudinary.com/dlwzazojt/image/upload/v1793029237/Maranatha_phes05_tthfbk.webp',
     alt: 'Familia de la Fundación Maranatha PHES',
     eyebrow: 'Haz parte de la familia Maranatha PHES',
     eyebrowSmall: true,

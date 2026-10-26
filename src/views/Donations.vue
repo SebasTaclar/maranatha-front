@@ -146,12 +146,12 @@ import { ref } from 'vue'
 import { useQuotation } from '@/composables/useQuotation'
 
 const donationImages = [
-  'https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes24-1024x768.webp',
-  'https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes23-100x100.webp',
-  'https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes16-100x100.webp',
-  'https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes21-570x428.webp',
-  'https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes15-570x321.webp',
-  'https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes23-1024x768.webp',
+  'https://res.cloudinary.com/dlwzazojt/image/upload/v1793029231/Maranatha_phes24-1024x768_uqobh7.webp',
+  'https://res.cloudinary.com/dlwzazojt/image/upload/v1793029231/Maranatha_phes23-1024x768_exfcxl.webp',
+  'https://res.cloudinary.com/dlwzazojt/image/upload/v1793029231/Maranatha_phes21-570x428_bh24mt.webp',
+  'https://res.cloudinary.com/dlwzazojt/image/upload/v1793029232/Maranatha_phes16_xd3cqj.webp',
+  'https://res.cloudinary.com/dlwzazojt/image/upload/v1793029232/Maranatha_phes15_tj0vgr.webp',
+  'https://res.cloudinary.com/dlwzazojt/image/upload/v1793029231/Maranatha_phes23-1024x768_exfcxl.webp',
 ]
 
 const selectedDonationImage = ref(donationImages[0])
@@ -204,7 +204,7 @@ defineOptions({ name: 'DonationsView' })
   min-height: 18rem;
   place-items: center;
   overflow: hidden;
-  background: url('https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes35.webp')
+  background: url('https://res.cloudinary.com/dlwzazojt/image/upload/v1793029230/Maranatha_phes35_sfrd9i.webp')
     center / cover no-repeat;
 }
 

@@ -80,7 +80,7 @@ defineOptions({ name: 'NewsletterSection' })
   min-height: 15.5rem;
   place-items: center;
   overflow: hidden;
-  background: url('https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes32.webp')
+  background: url('https://res.cloudinary.com/dlwzazojt/image/upload/v1793029232/Maranatha_phes32_itkren.webp')
     center / cover no-repeat;
 }
 
