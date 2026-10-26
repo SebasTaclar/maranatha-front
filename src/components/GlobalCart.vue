@@ -233,7 +233,7 @@ watch(
   gap: 0.3rem;
   font-size: 0.75rem;
   font-weight: 600;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
   transition: all 0.2s ease;
   white-space: nowrap;
 }
@@ -248,7 +248,7 @@ watch(
   font-size: 1.15rem;
   font-weight: 700;
   color: #ffffff;
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Callisto MT', 'Roundo', 'Nunito', sans-serif;
 }
 
 .drawer-close-btn {
@@ -303,7 +303,7 @@ watch(
   font-weight: 700;
   font-size: 1.05rem;
   color: var(--pikiitos-brown);
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Callisto MT', 'Roundo', 'Nunito', sans-serif;
 }
 
 .empty-sub {
@@ -323,7 +323,7 @@ watch(
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
 }
 
 .empty-btn:hover {
@@ -384,7 +384,7 @@ watch(
   font-weight: 700;
   color: var(--pikiitos-brown);
   line-height: 1.3;
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Callisto MT', 'Roundo', 'Nunito', sans-serif;
 }
 
 .drawer-item-remove {
@@ -417,7 +417,7 @@ watch(
   font-weight: 600;
   padding: 0.2rem 0.55rem;
   border-radius: 50px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
 }
 
 .tag-size {
@@ -484,14 +484,14 @@ watch(
   border-left: 1px solid var(--pikiitos-cream-dark);
   border-right: 1px solid var(--pikiitos-cream-dark);
   padding: 0.2rem 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
 }
 
 .drawer-item-price {
   font-size: 0.9rem;
   font-weight: 700;
   color: var(--pikiitos-brown);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
 }
 
 /* Footer */
@@ -515,14 +515,14 @@ watch(
   font-size: 0.85rem;
   color: var(--pikiitos-text-light);
   font-weight: 600;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
 }
 
 .summary-total {
   font-size: 1.2rem;
   font-weight: 800;
   color: var(--pikiitos-brown);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
 }
 
 .drawer-actions {
@@ -541,7 +541,7 @@ watch(
   font-size: 0.9rem;
   transition: all 0.2s ease;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
 }
 
 .btn-continue {

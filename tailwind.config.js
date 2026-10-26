@@ -26,11 +26,8 @@ export default {
         },
       },
       fontFamily: {
-        fredoka: ['"Fredoka"', 'sans-serif'],
-        nunito: ['"Nunito"', 'sans-serif'],
-        poppins: ['"Poppins"', 'sans-serif'],
-        script: ['"Great Vibes"', 'cursive'],
-        dancing: ['"Dancing Script"', 'cursive'],
+        callisto: ['"Callisto MT"', '"Roundo"', '"Nunito"', 'sans-serif'],
+        roundo: ['"Roundo"', '"Nunito"', 'sans-serif'],
       },
       borderRadius: {
         '4xl': '2rem',

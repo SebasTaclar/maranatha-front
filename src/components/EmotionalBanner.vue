@@ -1,34 +1,34 @@
 <template>
-  <section class="py-4 sm:py-10 lg:py-14 relative overflow-hidden bg-white">
-    <!-- Background image small -->
-    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
-      <img src="https://res.cloudinary.com/dlwzazojt/image/upload/v1787584794/emotional_gnufw7.jpg" alt="" class="bg-emotional" />
-    </div>
-
-    <div class="section-padding relative z-10">
-      <div class="section-container">
-        <div class="text-center">
-          <div class="mb-2 sm:mb-6">
-            <svg class="w-12 h-12 mx-auto animate-heartbeat" viewBox="0 0 24 24" fill="#FFD84D" stroke="#3D2E1F" stroke-width="1.5">
-              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-            </svg>
-          </div>
-          <blockquote class="font-fredoka font-bold text-xl sm:text-2xl lg:text-3xl xl:text-4xl text-pikiitos-brown leading-snug text-balance">
-            Porque la ropa se queda pequeña con el tiempo,
-            <span class="text-pikiitos-yellow">pero los recuerdos</span>
-            que se crean con ella
-            <span class="text-pikiitos-yellow">permanecen para siempre.</span>
-          </blockquote>
-          <div class="mt-4 sm:mt-8 flex items-center justify-center gap-0">
-            <svg class="w-36 sm:w-48 h-4" viewBox="0 0 200 10" fill="none">
-              <path d="M0 5 Q50 0, 100 5 Q150 10, 200 5" stroke="#8B6914" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-            <span class="text-2xl mx-2 flex-shrink-0">🐣</span>
-            <svg class="w-36 sm:w-48 h-4" viewBox="0 0 200 10" fill="none">
-              <path d="M0 5 Q50 10, 100 5 Q150 0, 200 5" stroke="#8B6914" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-          </div>
+  <section class="emotional-banner">
+    <div class="emotional-card">
+      <div class="emotional-card-header">
+        <div>
+          <p class="emotional-eyebrow">Apoya nuestra causa</p>
+          <h2 class="emotional-title">
+            Encuentra una causa<br />
+            y ayuda a transformar vidas
+          </h2>
         </div>
+        <span class="emotional-date">11 May 2026</span>
+      </div>
+
+      <div
+        class="emotional-progress"
+        role="progressbar"
+        aria-label="Progreso de la campaña"
+        aria-valuenow="0"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      >
+        <span class="emotional-progress-value">0%</span>
+        <div class="emotional-progress-track">
+          <div class="emotional-progress-fill"></div>
+        </div>
+      </div>
+
+      <div class="emotional-totals">
+        <span>$0 <strong>Donated</strong></span>
+        <span>$10,000.00 <strong>Goal</strong></span>
       </div>
     </div>
   </section>
@@ -39,36 +39,127 @@ defineOptions({ name: 'EmotionalBanner' })
 </script>
 
 <style scoped>
-.bg-emotional {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 140%;
-  max-width: none;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-  opacity: 0.3;
-}
-@media (min-width: 640px) {
-  .bg-emotional {
-    top: 80%;
-    width: 100%;
-    object-fit: contain;
-    height: auto;
-    opacity: 0.2;
-  }
+.emotional-banner {
+  padding: 2rem 1rem;
+  background: #ffffff;
 }
 
-@keyframes heartbeat {
-  0%, 100% { transform: scale(1); }
-  15% { transform: scale(1.2); }
-  30% { transform: scale(1); }
-  45% { transform: scale(1.15); }
-  60% { transform: scale(1); }
+.emotional-card {
+  max-width: 58.5rem;
+  margin: 0 auto;
+  padding: 4.75rem 5rem;
+  border-radius: 1.5rem;
+  background: #263a36;
+  color: #ffffff;
 }
-.animate-heartbeat {
-  animation: heartbeat 1.8s ease-in-out infinite;
+
+.emotional-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.emotional-eyebrow {
+  color: #d7aa67;
+  font-family: 'Callisto MT', 'Roundo', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.emotional-title {
+  margin-top: 0.15rem;
+  font-family: 'Roundo', 'Nunito', sans-serif;
+  font-size: clamp(1.75rem, 3.5vw, 2.45rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.06em;
+}
+
+.emotional-date {
+  padding-top: 0.15rem;
+  color: #ffffff;
+  font-family: 'Callisto MT', 'Roundo', sans-serif;
+  font-size: 0.95rem;
+  font-style: italic;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.emotional-progress {
+  margin-top: 0.7rem;
+}
+
+.emotional-progress-value {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.emotional-progress-track {
+  height: 1rem;
+  overflow: hidden;
+  border-radius: 9999px;
+  background: #005b35;
+}
+
+.emotional-progress-fill {
+  width: 0%;
+  height: 100%;
+  border-radius: inherit;
+  background: #d7aa67;
+}
+
+.emotional-totals {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.7rem;
+  font-size: 1rem;
+}
+
+.emotional-totals strong {
+  color: #d7aa67;
+  font-weight: 400;
+}
+
+@media (max-width: 640px) {
+  .emotional-banner {
+    padding: 1.5rem 1rem;
+  }
+
+  .emotional-card {
+    padding: 2.5rem 1.5rem;
+    border-radius: 1.25rem;
+  }
+
+  .emotional-card-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .emotional-title {
+    font-size: 1.7rem;
+  }
+
+  .emotional-title br {
+    display: none;
+  }
+
+  .emotional-date {
+    order: -1;
+    align-self: flex-end;
+  }
+
+  .emotional-totals {
+    flex-direction: column;
+    gap: 0.35rem;
+    font-size: 0.9rem;
+  }
+
+  .emotional-progress-track {
+    height: 0.75rem;
+  }
 }
 </style>

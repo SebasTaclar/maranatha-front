@@ -51,13 +51,17 @@ const saveToStorage = (items: QuotationItem[]) => {
 const quotationItems = ref<QuotationItem[]>(loadFromStorage())
 const isDrawerOpen = ref(false)
 
-watch(quotationItems, (newItems) => {
-  saveToStorage(newItems)
-}, { deep: true })
+watch(
+  quotationItems,
+  (newItems) => {
+    saveToStorage(newItems)
+  },
+  { deep: true },
+)
 
 function buildWhatsAppMessage(items: QuotationItem[]): string {
   const lines: string[] = []
-  lines.push('Hola Pikiitos.')
+  lines.push('Hola, Fundación Maranatha PHES.')
   lines.push('')
   lines.push('Estoy interesado en recibir una cotización de los siguientes productos:')
   lines.push('')
@@ -95,16 +99,19 @@ export function useQuotation() {
   })
 
   const totalPrice = computed(() => {
-    return quotationItems.value.reduce((total, item) => total + (item.price || 0) * item.quantity, 0)
+    return quotationItems.value.reduce(
+      (total, item) => total + (item.price || 0) * item.quantity,
+      0,
+    )
   })
 
   const addToQuotation = (
     product: QuotationProduct,
     quantity: number = 1,
-    characteristic?: string
+    characteristic?: string,
   ) => {
     const key = characteristic ? `${product.id}_${characteristic}` : product.id
-    const existing = quotationItems.value.find(item => {
+    const existing = quotationItems.value.find((item) => {
       const itemKey = item.characteristic ? `${item.id}_${item.characteristic}` : item.id
       return itemKey === key
     })
@@ -122,20 +129,20 @@ export function useQuotation() {
         category: product.category,
         categoryName: product.categoryName,
         price: product.price,
-        characteristic
+        characteristic,
       })
     }
   }
 
   const removeFromQuotation = (productId: string) => {
-    const index = quotationItems.value.findIndex(item => item.id === productId)
+    const index = quotationItems.value.findIndex((item) => item.id === productId)
     if (index > -1) {
       quotationItems.value.splice(index, 1)
     }
   }
 
   const updateQuantity = (productId: string, quantity: number) => {
-    const item = quotationItems.value.find(item => item.id === productId)
+    const item = quotationItems.value.find((item) => item.id === productId)
     if (item) {
       if (quantity <= 0) {
         removeFromQuotation(productId)
@@ -146,7 +153,7 @@ export function useQuotation() {
   }
 
   const updateObservations = (productId: string, observations: string) => {
-    const item = quotationItems.value.find(item => item.id === productId)
+    const item = quotationItems.value.find((item) => item.id === productId)
     if (item) {
       item.observations = observations
     }
@@ -157,7 +164,7 @@ export function useQuotation() {
   }
 
   const getItemQuantity = (productId: string) => {
-    const item = quotationItems.value.find(item => item.id === productId)
+    const item = quotationItems.value.find((item) => item.id === productId)
     return item ? item.quantity : 0
   }
 
@@ -176,7 +183,7 @@ export function useQuotation() {
   const sendToWhatsApp = () => {
     const message = buildWhatsAppMessage(quotationItems.value)
     const encoded = encodeURIComponent(message)
-    window.open(`https://wa.me/573206770595?text=${encoded}`, '_blank')
+    window.open(`https://wa.me/573213691619?text=${encoded}`, '_blank')
   }
 
   return {
@@ -193,6 +200,6 @@ export function useQuotation() {
     toggleDrawer,
     openDrawer,
     closeDrawer,
-    sendToWhatsApp
+    sendToWhatsApp,
   }
 }

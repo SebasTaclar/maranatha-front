@@ -1,11 +1,11 @@
 {
-  "name": "Pikiitos Store",
-  "short_name": "Pikiitos",
-  "description": "Ropa infantil diseñada con amor para que cada momento sea un recuerdo inolvidable. Encuentra las mejores prendas para tus peques en Bogotá.",
+  "name": "Fundación Maranatha PHES",
+  "short_name": "Maranatha PHES",
+  "description": "Fundación cristiana dedicada a la evangelización, la ayuda social y la transformación de vidas en Colombia.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FFF8E8",
-  "theme_color": "#FFD84D",
+  "background_color": "#fffdf9",
+  "theme_color": "#003d1f",
   "orientation": "portrait-primary",
   "lang": "es-CO",
   "dir": "ltr",
@@ -60,7 +60,7 @@
       "purpose": "any maskable"
     }
   ],
-  "categories": ["shopping", "technology", "lifestyle", "home", "seasonal"],
+  "categories": ["social", "lifestyle", "nonprofit"],
   "screenshots": [
     {
       "src": "/images/screenshot-1.jpg",
@@ -70,10 +70,10 @@
   ],
   "shortcuts": [
     {
-      "name": "Ropa Niñas",
-      "short_name": "Niñas",
-      "description": "Ver ropa para niñas",
-      "url": "/ninas",
+      "name": "Conócenos",
+      "short_name": "Conócenos",
+      "description": "Conoce la labor de la Fundación Maranatha PHES",
+      "url": "/#nosotros",
       "icons": [
         {
           "src": "/icons/icon-96x96.png",
@@ -82,10 +82,10 @@
       ]
     },
     {
-      "name": "Ropa Niños",
-      "short_name": "Niños",
-      "description": "Ver ropa para niños",
-      "url": "/ninos",
+      "name": "Donaciones",
+      "short_name": "Donar",
+      "description": "Apoya los proyectos de la Fundación",
+      "url": "/#donaciones",
       "icons": [
         {
           "src": "/icons/icon-96x96.png",
@@ -94,10 +94,10 @@
       ]
     },
     {
-      "name": "Ofertas",
-      "short_name": "Ofertas",
-      "description": "Ver ofertas especiales",
-      "url": "/ofertas",
+      "name": "Contacto",
+      "short_name": "Contacto",
+      "description": "Comunícate con la Fundación Maranatha PHES",
+      "url": "/#contacto",
       "icons": [
         {
           "src": "/icons/icon-96x96.png",

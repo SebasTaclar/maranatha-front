@@ -1,201 +1,391 @@
 <template>
-  <section class="pt-10 pb-10 lg:pb-16" style="background: linear-gradient(135deg, #FFFDF9 0%, #FFFFFF 40%, #FFF8E8 100%);">
-    <div class="section-padding">
-      <div class="section-container">
+  <section ref="sectionRef" class="faq-section">
+    <div class="faq-content">
+      <div class="faq-intro">
+        <p class="faq-eyebrow">Preguntas frecuentes</p>
+        <h2>Algunas dudas que las personas suelen tener</h2>
+        <p class="faq-description">
+          Aquí respondemos algunas preguntas sobre cómo recibir ayuda, cómo apoyar la fundación y
+          cómo hacer parte de esta obra. Si tienes alguna otra duda, puedes escribirnos por nuestros
+          canales de contacto.
+        </p>
+      </div>
 
-        <!-- Top: Quiénes somos -->
-        <div class="grid lg:grid-cols-[0.5fr_0.9fr] gap-6 lg:gap-14 items-start">
-          <div class="space-y-2 lg:space-y-3">
-            <p class="font-poppins font-semibold text-[11px] lg:text-sm uppercase tracking-[0.2em] text-pikiitos-yellow">
-              Quiénes somos
-            </p>
-            <h2 class="font-fredoka font-bold text-2xl sm:text-4xl lg:text-5xl text-pikiitos-brown leading-[0.95]">
-              Más que ropa,
-              <span class="block font-dancing text-pikiitos-yellow text-[1.15em]" style="font-family: 'Dancing Script', cursive;">
-                creamos recuerdos♡
-              </span>
-            </h2>
-            <p class="font-poppins text-pikiitos-text-light text-xs lg:text-lg leading-relaxed max-w-xl">
-              Pikiitos nació del amor por los detalles, los colores y esos pequeños momentos que se convierten en los más grandes recuerdos. Cada prenda está diseñada para acompañar a los niños en sus aventuras, juegos y sonrisas, con comodidad, calidad y mucha alegría.
-            </p>
+      <div class="faq-list">
+        <article
+          v-for="(faq, index) in faqs"
+          :key="faq.question"
+          class="faq-item"
+          :class="{ 'faq-item--open': openFaq === index }"
+        >
+          <button
+            type="button"
+            class="faq-question"
+            :aria-expanded="openFaq === index"
+            @click="toggleFaq(index)"
+          >
+            <span>{{ faq.question }}</span>
+            <span class="faq-toggle" aria-hidden="true">{{ openFaq === index ? '−' : '+' }}</span>
+          </button>
+          <div v-if="openFaq === index" class="faq-answer">
+            <p>{{ faq.answer }}</p>
           </div>
+        </article>
+      </div>
+    </div>
 
-          <div class="story-image-wrapper">
-            <div class="story-image-glow"></div>
-            <div class="story-image-container">
-              <img
-                src="/images/pikitos1.png"
-                alt="Ropa y detalles de Pikiitos"
-                class="story-image"
-              />
-              <div class="story-image-fade-left"></div>
-              <div class="story-image-fade-right"></div>
-              <div class="story-image-fade-top"></div>
-              <div class="story-image-fade-bottom"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Bottom: La diseñadora -->
-        <div class="mt-8 lg:mt-14">
-          <div class="grid lg:grid-cols-[1.05fr_1.2fr] items-center gap-5 lg:gap-8 p-3 sm:p-5 lg:p-8">
-            <div class="overflow-hidden rounded-[1.4rem] lg:rounded-[1.8rem] shadow-soft-sm">
-              <img
-                src="/images/pikitos2.jpeg"
-                alt="Paula Salcedo, diseñadora de Pikiitos"
-                class="w-full h-[260px] sm:h-[420px] object-cover"
-              />
-            </div>
-
-            <div class="px-1 py-2 sm:px-4 lg:px-6">
-              <div class="flex items-center gap-2 lg:gap-3">
-                <svg class="w-5 h-5 lg:w-7 lg:h-7 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="#FF8E8E" stroke-width="1.4">
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M12 8c-1.2-1.8-4-2.2-5 0s0 4.5 5 7.5c5-3 5-5.7 5-7.5s-3.8-1.8-5 0z" stroke="#FF8E8E" fill="none" stroke-width="1.4" />
-                </svg>
-                <span
-                  class="font-poppins font-semibold text-[11px] sm:text-sm uppercase tracking-[0.18em]"
-                  style="color: #FF8E8E;"
-                >
-                  La diseñadora
-                </span>
-              </div>
-
-              <h3
-                class="mt-3 lg:mt-5 font-fredoka font-bold text-2xl sm:text-4xl lg:text-5xl leading-none"
-                style="color: #4A4A4A;"
-              >
-                Hola, soy Paula
-              </h3>
-              <p
-                class="mt-1.5 lg:mt-2 text-lg sm:text-2xl lg:text-[2.15rem]"
-                style="font-family: 'Dancing Script', cursive; color: #FFD84D;"
-              >
-                y este es mi sueño hecho realidad
-                <span style="color: #FFD84D;">♡</span>
-              </p>
-
-              <div class="mt-4 lg:mt-6 space-y-3 lg:space-y-4 font-poppins text-xs sm:text-base leading-[1.75]" style="color: #6B6B6B;">
-                <p>
-                  Desde siempre he creído que hay prendas que no olvidamos porque acompañan momentos únicos. Por eso creé Pikiitos, una marca pensada para vestir la infancia con amor, diseño y calidad, y para ser parte de esos recuerdos que los niños llevarán para siempre.
-                </p>
-                <p>
-                  Gracias por permitirnos ser parte de su historia.
-                </p>
-              </div>
-
-              <div class="mt-5 lg:mt-7">
-                <p
-                  class="text-xl sm:text-3xl"
-                  style="font-family: 'Dancing Script', cursive; color: #4A4A4A;"
-                >
-                  Paula Salcedo
-                  <span style="color: #FFD84D;">♡</span>
-                </p>
-                <p
-                  class="mt-1 font-poppins text-[11px] sm:text-sm"
-                  style="color: #888888;"
-                >
-                  Fundadora y Diseñadora de Pikiitos
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
+    <div class="faq-stats">
+      <div v-for="(stat, index) in stats" :key="stat.label" class="faq-stat">
+        <strong>{{ animatedValues[index] }}{{ stat.suffix }}</strong>
+        <span>{{ stat.label }}</span>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
+import { onMounted, onUnmounted, ref } from 'vue'
+
+const faqs = [
+  {
+    question: '¿Cómo puedo solicitar ayuda para mi familia?',
+    answer:
+      'Puedes comunicarte con nosotros por WhatsApp o correo electrónico y contarnos brevemente tu situación. Nuestro equipo revisará tu caso y, según la disponibilidad de recursos y campañas activas, te contactaremos para orientarte y agendar una visita, jornada o entrega de ayudas.',
+  },
+  {
+    question: '¿De qué manera puedo apoyar la fundación?',
+    answer:
+      'Puedes apoyar a la fundación a través de donaciones económicas, donación de alimentos y vestuario, o sirviendo como voluntario en las actividades de evangelización y ayuda social. También nos ayudas mucho compartiendo la información con otras personas que quieran sumarse a esta misión.',
+  },
+]
+
+const stats = [
+  { target: 70, suffix: 'M', label: 'Total de donaciones' },
+  { target: 48, suffix: 'K', label: 'Proyectos apoyados' },
+  { target: 500, suffix: '', label: 'Niños que necesitan ayuda' },
+  { target: 230, suffix: '', label: 'Nuestros voluntarios' },
+]
+
+const openFaq = ref(0)
+const sectionRef = ref<HTMLElement | null>(null)
+const animatedValues = ref(stats.map(() => 0))
+let animationFrame = 0
+let statsObserver: IntersectionObserver | null = null
+
+const toggleFaq = (index: number) => {
+  openFaq.value = openFaq.value === index ? -1 : index
+}
+
+const resetStats = () => {
+  cancelAnimationFrame(animationFrame)
+  animatedValues.value = stats.map(() => 0)
+}
+
+const animateStats = () => {
+  cancelAnimationFrame(animationFrame)
+  const startTime = performance.now()
+  const duration = 1200
+
+  const update = (currentTime: number) => {
+    const progress = Math.min((currentTime - startTime) / duration, 1)
+    const easedProgress = 1 - Math.pow(1 - progress, 3)
+
+    animatedValues.value = stats.map((stat) => Math.round(stat.target * easedProgress))
+
+    if (progress < 1) {
+      animationFrame = requestAnimationFrame(update)
+    }
+  }
+
+  animationFrame = requestAnimationFrame(update)
+}
+
+onMounted(() => {
+  if (!sectionRef.value) return
+
+  statsObserver = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        animateStats()
+      } else {
+        resetStats()
+      }
+    },
+    { threshold: 0.35 },
+  )
+
+  statsObserver.observe(sectionRef.value)
+})
+
+onUnmounted(() => {
+  cancelAnimationFrame(animationFrame)
+  statsObserver?.disconnect()
+})
+
 defineOptions({ name: 'StorySection' })
 </script>
 
 <style scoped>
-.story-image-wrapper {
+.faq-section {
   position: relative;
-  width: 100%;
-  max-width: 100%;
-  overflow: hidden;
+  overflow: visible;
+  padding: 4.5rem 1.5rem 0;
+  background:
+    linear-gradient(rgba(255, 253, 249, 0.94), rgba(255, 253, 249, 0.94)),
+    url('https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes35.webp') center / cover
+      no-repeat;
 }
 
-.story-image-glow {
+.faq-section::before {
   position: absolute;
-  inset: -20px;
-  border-radius: 2.5rem;
-  background: radial-gradient(ellipse at center, rgba(255, 248, 232, 0.4) 0%, transparent 70%);
-  filter: blur(20px);
-  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 18rem;
+  height: 100%;
+  background: radial-gradient(circle at 20% 45%, rgba(0, 61, 31, 0.08), transparent 68%);
+  content: '';
   pointer-events: none;
 }
 
-.story-image-container {
+.faq-content {
   position: relative;
-  border-radius: 1.4rem;
-  overflow: hidden;
   z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(24rem, 1fr);
+  gap: 4rem;
+  max-width: 76rem;
+  margin: 0 auto;
+  padding-bottom: 4.5rem;
 }
 
-.story-image {
-  display: block;
+.faq-intro {
+  padding-top: 0.2rem;
+}
+
+.faq-eyebrow {
+  color: #806b55;
+  font-family: 'Callisto MT', 'Roundo', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.faq-intro h2 {
+  max-width: 28rem;
+  margin-top: 0.2rem;
+  color: #283734;
+  font-family: 'Roundo', 'Nunito', sans-serif;
+  font-size: clamp(2.2rem, 4vw, 2.55rem);
+  font-weight: 900;
+  line-height: 0.98;
+}
+
+.faq-description {
+  max-width: 30rem;
+  margin-top: 1.5rem;
+  color: #87918e;
+  font-family: 'Roundo', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.faq-list {
+  display: grid;
+  align-content: start;
+  gap: 0.9rem;
+}
+
+.faq-item {
+  overflow: hidden;
+  border: 1px solid rgba(226, 218, 202, 0.8);
+  border-radius: 1.5rem;
+  background: #ffffff;
+  box-shadow: 0 0.5rem 1.4rem rgba(52, 48, 37, 0.05);
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
-  height: 220px;
-  object-fit: cover;
-  object-position: center 30%;
-  mask-image: radial-gradient(ellipse 90% 85% at 60% 50%, black 40%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse 90% 85% at 60% 50%, black 40%, transparent 100%);
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border: 0;
+  background: transparent;
+  color: #283734;
+  font-family: 'Roundo', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-align: left;
+  cursor: pointer;
 }
 
-.story-image-fade-left {
-  position: absolute;
-  inset: 0;
-  width: 50%;
-  background: linear-gradient(to right, #FFFDF9 0%, rgba(255, 253, 249, 0.8) 25%, rgba(255, 253, 249, 0.3) 60%, transparent 100%);
-  z-index: 2;
-  pointer-events: none;
+.faq-toggle {
+  display: grid;
+  flex: 0 0 2.25rem;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: #f7f1e5;
+  color: #283734;
+  font-size: 1.3rem;
+  line-height: 1;
 }
 
-.story-image-fade-right {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 25%;
-  background: linear-gradient(to left, rgba(255, 253, 249, 0.6) 0%, transparent 100%);
-  z-index: 2;
-  pointer-events: none;
+.faq-item--open .faq-toggle {
+  background: #d7aa67;
 }
 
-.story-image-fade-top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 30%;
-  background: linear-gradient(to bottom, rgba(255, 253, 249, 0.5) 0%, transparent 100%);
-  z-index: 2;
-  pointer-events: none;
+.faq-answer {
+  padding: 0 1.5rem 1.4rem;
+  color: #87918e;
+  font-family: 'Roundo', sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.75;
 }
 
-.story-image-fade-bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 30%;
-  background: linear-gradient(to top, rgba(255, 253, 249, 0.5) 0%, transparent 100%);
-  z-index: 2;
-  pointer-events: none;
+.faq-answer p {
+  max-width: 38rem;
 }
 
-@media (min-width: 640px) {
-  .story-image-container {
-    border-radius: 2rem;
+.faq-stats {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  width: min(100%, 72rem);
+  margin: 0 auto;
+  padding: 1.7rem 2rem;
+  border-radius: 1rem;
+  transform: translateY(50%);
+  background:
+    linear-gradient(rgba(0, 61, 31, 0.94), rgba(0, 61, 31, 0.94)),
+    url('https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes17.webp') center / cover
+      no-repeat;
+}
+
+.faq-stat {
+  display: grid;
+  justify-items: center;
+  gap: 0.45rem;
+  padding: 0 1rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.16);
+  text-align: center;
+}
+
+.faq-stat:last-child {
+  border-right: 0;
+}
+
+.faq-stat strong {
+  color: #ffffff;
+  font-family: 'Roundo', 'Nunito', sans-serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.7rem);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.faq-stat span {
+  color: #a9c2b7;
+  font-family: 'Roundo', sans-serif;
+  font-size: 0.85rem;
+}
+
+.faq-stat:last-child span {
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid #d7aa67;
+}
+
+@media (max-width: 800px) {
+  .faq-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
-  .story-image {
-    height: 350px;
-    object-position: center 25%;
+
+  .faq-intro h2,
+  .faq-description {
+    max-width: 40rem;
+  }
+
+  .faq-intro h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .faq-section {
+    padding: 0.8rem 0.65rem 0;
+  }
+
+  .faq-content {
+    gap: 0.7rem;
+    padding-bottom: 0.9rem;
+  }
+
+  .faq-eyebrow {
+    font-size: 1.05rem;
+  }
+
+  .faq-intro h2 {
+    margin-top: 0.1rem;
+    font-size: 1.9rem;
+    line-height: 1.05;
+  }
+
+  .faq-description {
+    margin-top: 0.4rem;
+    font-size: 0.88rem;
+    line-height: 1.4;
+  }
+
+  .faq-list {
+    gap: 0.4rem;
+  }
+
+  .faq-item {
+    border-radius: 0.9rem;
+  }
+
+  .faq-question {
+    min-height: 2.4rem;
+    padding: 0.4rem 0.55rem;
+    font-size: 0.84rem;
+  }
+
+  .faq-toggle {
+    flex-basis: 1.8rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 1.1rem;
+  }
+
+  .faq-answer {
+    padding: 0 0.55rem 0.5rem;
+    font-size: 0.84rem;
+    line-height: 1.55;
+  }
+
+  .faq-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem 0;
+    padding: 0.7rem 0.2rem;
+    border-radius: 0.75rem;
+  }
+
+  .faq-stat:nth-child(2) {
+    border-right: 0;
+  }
+
+  .faq-stat {
+    padding: 0 0.35rem;
+  }
+
+  .faq-stat strong {
+    font-size: 1.35rem;
+  }
+
+  .faq-stat span {
+    font-size: 0.75rem;
   }
 }
 </style>

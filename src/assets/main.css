@@ -1,17 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Fredoka:wght@300;400;500;600;700&family=Nunito:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../../tailwind.config.js";
+
+@font-face {
+  font-family: 'Callisto MT';
+  src: url('./fonts/CallistoMT-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roundo';
+  src: url('./fonts/Roundo-300.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roundo';
+  src: url('./fonts/Roundo-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roundo';
+  src: url('./fonts/Roundo-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roundo';
+  src: url('./fonts/Roundo-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roundo';
+  src: url('./fonts/Roundo-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 @layer base {
+  :root {
+    --font-primary: 'Roundo', 'Nunito', sans-serif;
+    --font-body: 'Roundo', 'Nunito', sans-serif;
+  }
+
   html {
     scroll-behavior: smooth;
     overflow-x: hidden;
   }
 
   body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roundo', 'Nunito', sans-serif;
     background-color: #FFF8E8;
     color: #3D2E1F;
     -webkit-font-smoothing: antialiased;
@@ -26,15 +78,15 @@
 
 @layer components {
   .btn-pikiitos {
-    @apply inline-flex items-center justify-center gap-2 px-8 py-4 bg-pikiitos-yellow text-pikiitos-brown font-poppins font-semibold rounded-full transition-all duration-300 ease-out hover:bg-pikiitos-yellow-dark hover:shadow-glow-yellow hover:-translate-y-0.5 active:translate-y-0 active:shadow-soft;
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 bg-pikiitos-yellow text-pikiitos-brown font-roundo font-semibold rounded-full transition-all duration-300 ease-out hover:bg-pikiitos-yellow-dark hover:shadow-glow-yellow hover:-translate-y-0.5 active:translate-y-0 active:shadow-soft;
   }
 
   .btn-pikiitos-outline {
-    @apply inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-pikiitos-brown font-poppins font-semibold rounded-full border-2 border-pikiitos-yellow/30 transition-all duration-300 ease-out hover:border-pikiitos-yellow hover:bg-pikiitos-cream hover:shadow-soft hover:-translate-y-0.5;
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-pikiitos-brown font-roundo font-semibold rounded-full border-2 border-pikiitos-yellow/30 transition-all duration-300 ease-out hover:border-pikiitos-yellow hover:bg-pikiitos-cream hover:shadow-soft hover:-translate-y-0.5;
   }
 
   .btn-pikiitos-pink {
-    @apply inline-flex items-center justify-center gap-2 px-8 py-4 bg-pikiitos-pink text-white font-poppins font-semibold rounded-full transition-all duration-300 ease-out hover:bg-pink-400 hover:shadow-glow-pink hover:-translate-y-0.5;
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 bg-pikiitos-pink text-white font-roundo font-semibold rounded-full transition-all duration-300 ease-out hover:bg-pink-400 hover:shadow-glow-pink hover:-translate-y-0.5;
   }
 
   .section-padding {

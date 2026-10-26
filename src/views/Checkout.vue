@@ -520,7 +520,7 @@ const goToHome = () => {
   border-radius: 12px;
   cursor: pointer;
   font-size: 0.9rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
   font-weight: 600;
   display: inline-flex;
   align-items: center;
@@ -539,7 +539,7 @@ const goToHome = () => {
   font-size: 2rem;
   color: #4A3728;
   margin: 0;
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Callisto MT', 'Roundo', 'Nunito', sans-serif;
   font-weight: 700;
 }
 
@@ -566,7 +566,7 @@ const goToHome = () => {
   font-size: 1.3rem;
   margin-bottom: 1.25rem;
   color: #4A3728;
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Callisto MT', 'Roundo', 'Nunito', sans-serif;
   font-weight: 700;
 }
 
@@ -608,7 +608,7 @@ const goToHome = () => {
   font-size: 0.9rem;
   margin: 0 0 0.3rem 0;
   color: #4A3728;
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Callisto MT', 'Roundo', 'Nunito', sans-serif;
   font-weight: 600;
 }
 
@@ -627,7 +627,7 @@ const goToHome = () => {
   border-radius: 50px;
   display: inline-block;
   font-weight: 700;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
 }
 
 .item-char-category {
@@ -639,7 +639,7 @@ const goToHome = () => {
   font-size: 0.8rem;
   color: #8B7355;
   margin: 0.15rem 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
 }
 
 .item-price {
@@ -647,7 +647,7 @@ const goToHome = () => {
   font-weight: 700;
   color: #4A3728;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
 }
 
 .empty-cart {
@@ -667,7 +667,7 @@ const goToHome = () => {
   padding: 0.5rem 0;
   font-size: 0.9rem;
   color: #8B7355;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
 }
 
 .total-final {
@@ -677,7 +677,7 @@ const goToHome = () => {
   font-size: 1.15rem;
   font-weight: 700;
   color: #4A3728;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
 }
 
 .continue-shopping {
@@ -693,7 +693,7 @@ const goToHome = () => {
   border-radius: 12px;
   font-size: 0.9rem;
   font-weight: 600;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
   cursor: pointer;
   transition: all 0.2s ease;
   width: 100%;
@@ -722,7 +722,7 @@ const goToHome = () => {
   font-size: 1.25rem;
   margin-bottom: 1.25rem;
   color: #4A3728;
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Callisto MT', 'Roundo', 'Nunito', sans-serif;
   font-weight: 700;
   padding-bottom: 0.75rem;
   border-bottom: 2px solid #f5edd8;
@@ -738,7 +738,7 @@ const goToHome = () => {
   font-weight: 600;
   color: #4A3728;
   font-size: 0.85rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
 }
 
 .form-group input[type="text"],
@@ -749,7 +749,7 @@ const goToHome = () => {
   border: 2px solid #f5edd8;
   border-radius: 12px;
   font-size: 0.9rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
   transition: all 0.2s ease;
   background: #FFF8E8;
   color: #4A3728;
@@ -778,7 +778,7 @@ const goToHome = () => {
   font-size: 0.8rem;
   margin-top: 0.3rem;
   display: block;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
 }
 
 .form-row {
@@ -795,7 +795,7 @@ const goToHome = () => {
   font-weight: normal;
   color: #4A3728;
   font-size: 0.85rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
 }
 
 .checkbox-label input[type="checkbox"] {
@@ -823,7 +823,7 @@ const goToHome = () => {
   text-decoration: none;
   font-weight: 600;
   font-size: 0.9rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -863,7 +863,7 @@ const goToHome = () => {
   font-size: 0.85rem;
   color: #8B7355;
   margin-bottom: 1.25rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
 }
 
 .address-section {
@@ -880,7 +880,7 @@ const goToHome = () => {
   color: #E88D92;
   font-weight: 600;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
   font-size: 0.9rem;
 }
 
@@ -894,7 +894,7 @@ const goToHome = () => {
   border-radius: 14px;
   font-size: 1.05rem;
   font-weight: 700;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
   cursor: pointer;
   transition: all 0.2s ease;
   margin-top: 1.5rem;
@@ -920,7 +920,7 @@ const goToHome = () => {
   border-radius: 12px;
   font-size: 0.95rem;
   font-weight: 700;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roundo', 'Nunito', sans-serif;
   cursor: pointer;
   transition: all 0.2s ease;
 }

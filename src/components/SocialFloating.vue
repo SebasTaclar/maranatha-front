@@ -1,71 +1,70 @@
 <template>
-  <!-- WhatsApp flotante a la derecha -->
+  <!-- WhatsApp flotante a la izquierda -->
   <div class="floating-whatsapp">
     <a
       :href="whatsappLink"
       target="_blank"
       rel="noopener"
       class="social-btn whatsapp"
+      aria-label="Contactar por WhatsApp"
     >
-      <img
-        src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
-        alt="WhatsApp"
-        class="social-icon"
-      >
-      <span class="social-tooltip left">Compra aquí</span>
+      <i class="fa-brands fa-whatsapp social-icon" aria-hidden="true"></i>
     </a>
   </div>
+
+  <!-- Flecha hacia arriba (volver al banner) -->
+  <button type="button" class="floating-top" aria-label="Volver al inicio" @click="scrollToTop">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { SOCIALS } from '@/config/brand'
 
-// Numero de WhatsApp de Pikiitos Store
-const rawNumber = '3206770595'
-// Normaliza a formato internacional (prepend 57 para Colombia)
-const whatsappNumber = '57' + rawNumber.replace(/[^\d]/g, '')
+const whatsappNumber = SOCIALS.whatsappNumber
 
-// Validación mínima: debe empezar por 57 y tener al menos 12 dígitos (57 + 10)
 const isValidWhatsAppNumber = /^57\d{10}$/.test(whatsappNumber)
 
 const { t } = useI18n()
 const defaultMessage = computed(() => t('whatsapp.defaultMessage'))
-// Endpoint WhatsApp
 const whatsappLink = isValidWhatsAppNumber
   ? `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(defaultMessage.value)}`
   : '#'
 
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
 
 defineOptions({ name: 'SocialFloating' })
 </script>
 
 <style scoped>
-/* === WHATSAPP FLOTANTE DERECHA === */
+/* === WHATSAPP FLOTANTE IZQUIERDA === */
 .floating-whatsapp {
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  left: 20px;
   z-index: 1000;
 }
 
 .floating-whatsapp .social-btn.whatsapp {
-  background: #25d366;
-  border: 2px solid #25d366;
+  background: #003d1f;
+  border: 2px solid #003d1f;
   opacity: 1 !important;
-  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+  box-shadow: 0 8px 24px rgba(0, 61, 31, 0.4);
 }
 
-.floating-whatsapp .social-btn.whatsapp:hover {
-  background: #20b858;
-  border-color: #20b858;
-  box-shadow: 0 12px 35px rgba(37, 211, 102, 0.6);
-  transform: scale(1.15);
-}
+
 
 .floating-whatsapp .social-icon {
   opacity: 1 !important;
   filter: none !important;
+  color: #ffffff;
+  font-size: 32px;
+  width: auto;
+  height: auto;
 }
 
 .social-btn {
@@ -122,20 +121,20 @@ defineOptions({ name: 'SocialFloating' })
   pointer-events: none;
 }
 
-.floating-whatsapp .social-tooltip.left {
-  right: 70px;
+.floating-whatsapp .social-tooltip.right {
+  left: 70px;
 }
 
-.floating-whatsapp .social-tooltip.left::after {
+.floating-whatsapp .social-tooltip.right::after {
   content: '';
   position: absolute;
-  left: 100%;
-  right: auto;
+  right: 100%;
+  left: auto;
   top: 50%;
   transform: translateY(-50%);
   border: 6px solid transparent;
-  border-left-color: rgba(0, 0, 0, 0.9);
-  border-right-color: transparent;
+  border-right-color: rgba(0, 0, 0, 0.9);
+  border-left-color: transparent;
 }
 
 .social-btn:hover .social-tooltip {
@@ -165,23 +164,56 @@ defineOptions({ name: 'SocialFloating' })
 
 /* Efecto de pulso sutil en WhatsApp */
 @keyframes pulse {
-  0%, 100% {
-    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+  0%,
+  100% {
+    box-shadow: 0 8px 24px rgba(0, 61, 31, 0.4);
   }
   50% {
-    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+    box-shadow: 0 8px 30px rgba(0, 61, 31, 0.6);
   }
 }
 
 .floating-whatsapp .social-btn.whatsapp {
-  animation: slideInLeft 0.6s ease, pulse 2s ease-in-out infinite;
+  animation:
+    slideInLeft 0.6s ease,
+    pulse 2s ease-in-out infinite;
+}
+
+/* === FLECHA VOLVER AL BANNER === */
+.floating-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: #d3a868;
+  color: #ffffff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(211, 168, 104, 0.45);
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.floating-top:hover {
+  background: #003d1f;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 61, 31, 0.4);
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
   .floating-whatsapp {
     bottom: 15px;
-    right: 15px;
+    left: 15px;
   }
 
   .social-btn {
@@ -192,6 +224,7 @@ defineOptions({ name: 'SocialFloating' })
   .social-icon {
     width: 28px;
     height: 28px;
+    font-size: 28px;
   }
 
   .social-tooltip {
@@ -199,15 +232,22 @@ defineOptions({ name: 'SocialFloating' })
     padding: 6px 10px;
   }
 
-  .floating-whatsapp .social-tooltip.left {
-    right: 62px;
+  .floating-whatsapp .social-tooltip.right {
+    left: 62px;
+  }
+
+  .floating-top {
+    bottom: 15px;
+    right: 15px;
+    width: 44px;
+    height: 44px;
   }
 }
 
 @media (max-width: 480px) {
   .floating-whatsapp {
     bottom: 20px;
-    right: 16px;
+    left: 16px;
     z-index: 9999;
   }
 
@@ -219,10 +259,15 @@ defineOptions({ name: 'SocialFloating' })
   .social-icon {
     width: 26px;
     height: 26px;
+    font-size: 26px;
   }
 
   .social-tooltip {
     display: none;
+  }
+
+  .floating-top {
+    z-index: 9999;
   }
 }
 </style>
