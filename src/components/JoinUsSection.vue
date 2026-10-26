@@ -7,7 +7,7 @@
           Hazte voluntario, únete a nosotros para llevar<br />esperanza y salvación a muchas
           familias
         </h2>
-        <RouterLink to="/#contacto" class="join-us-button">Quiero servir</RouterLink>
+        <RouterLink to="/contacto" class="join-us-button">Quiero servir</RouterLink>
       </div>
       <div class="join-us-hero-shape" aria-hidden="true"></div>
     </div>
@@ -26,8 +26,8 @@
       <div class="join-us-event-list">
         <article v-for="event in events" :key="event.title" class="join-us-event">
           <p class="join-us-event-type">Bogotá, Colombia</p>
-          <a href="#contacto" class="join-us-event-title">{{ event.title }}</a>
-          <a href="#contacto" class="join-us-event-link">→ Más información</a>
+          <RouterLink to="/contacto" class="join-us-event-title">{{ event.title }}</RouterLink>
+          <RouterLink to="/contacto" class="join-us-event-link">→ Más información</RouterLink>
         </article>
       </div>
     </div>

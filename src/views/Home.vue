@@ -20,10 +20,6 @@
     </div>
 
     <NoticiasYArticulos />
-
-    <div id="contacto">
-      <Newsletter />
-    </div>
   </main>
 </template>
 
@@ -37,7 +33,6 @@ import StorySection from '@/components/StorySection.vue'
 import Benefits from '@/components/Benefits.vue'
 import Testimonials from '@/components/Testimonials.vue'
 import NoticiasYArticulos from '@/components/NoticiasYArticulos.vue'
-import Newsletter from '@/components/Newsletter.vue'
 
 defineOptions({ name: 'HomeView' })
 </script>

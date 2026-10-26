@@ -15,7 +15,7 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   scrollBehavior(to) {
     if (to.hash) {
-      return new Promise(resolve => {
+      return new Promise((resolve) => {
         requestAnimationFrame(() => {
           const el = document.querySelector(to.hash)
           if (el) {
@@ -62,7 +62,17 @@ const router = createRouter({
     {
       path: '/nosotros',
       name: 'nosotros',
-      component: () => import('../components/StorySection.vue'),
+      component: () => import('../views/About.vue'),
+    },
+    {
+      path: '/contacto',
+      name: 'contacto',
+      component: () => import('../views/Contact.vue'),
+    },
+    {
+      path: '/donaciones',
+      name: 'donaciones',
+      component: () => import('../views/Donations.vue'),
     },
 
     {

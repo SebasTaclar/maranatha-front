@@ -79,8 +79,8 @@
           </div>
 
           <div class="welcome-actions">
-            <RouterLink to="/#nosotros" class="welcome-btn welcome-btn--gold">Conócenos</RouterLink>
-            <RouterLink to="/#donaciones" class="welcome-btn welcome-btn--green">
+            <RouterLink to="/nosotros" class="welcome-btn welcome-btn--gold">Conócenos</RouterLink>
+            <RouterLink to="/donaciones" class="welcome-btn welcome-btn--green">
               <i class="fa-solid fa-heart"></i>
               Quiero Donar
             </RouterLink>

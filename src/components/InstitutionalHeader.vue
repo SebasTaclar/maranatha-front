@@ -22,7 +22,7 @@
         </RouterLink>
 
         <div class="flex min-w-0 flex-1 items-center justify-start gap-6 text-[#003d1f]">
-          <a href="#voluntariado" class="flex items-center gap-2.5 hover:opacity-75">
+          <RouterLink to="/contacto" class="flex items-center gap-2.5 hover:opacity-75">
             <span
               class="flex h-10 w-10 items-center justify-center rounded-full bg-[#d7aa67] text-xl"
               >♥</span
@@ -30,8 +30,13 @@
             <span>
               <strong class="block text-sm font-semibold">Hazte voluntario</strong>
             </span>
-          </a>
-          <a href="tel:+573213691619" class="flex items-center gap-2.5 hover:opacity-75">
+          </RouterLink>
+          <a
+            href="https://wa.me/573213691619?text=Hola%2C%20Fundaci%C3%B3n%20Maranatha%20PHES.%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-2.5 hover:opacity-75"
+          >
             <svg
               viewBox="0 0 24 24"
               fill="none"
@@ -52,7 +57,9 @@
             </span>
           </a>
           <a
-            href="mailto:maranathaphes@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=maranathaphes@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
             class="flex items-center gap-2.5 hover:opacity-75"
           >
             <svg
@@ -72,7 +79,12 @@
               <strong class="block text-sm font-semibold">maranathaphes@gmail.com</strong>
             </span>
           </a>
-          <div class="flex items-center gap-2.5">
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Carrera+7+%232-16+interior+3%2C+Bogot%C3%A1%2C+Colombia"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-2.5 hover:opacity-75"
+          >
             <svg
               viewBox="0 0 24 24"
               fill="none"
@@ -91,7 +103,7 @@
               <small class="block text-xs text-slate-500">Sede principal</small>
               <strong class="block text-sm font-semibold">Carrera 7 # 2 - 16 interior 3</strong>
             </span>
-          </div>
+          </a>
           <div class="hidden items-center gap-3 ml-auto xl:flex">
             <a
               :href="SOCIALS.instagramUrl"
@@ -166,7 +178,7 @@
             </span>
           </button>
           <RouterLink
-            to="/#donaciones"
+            to="/donaciones"
             class="hidden h-16 items-center gap-2 bg-[#d7aa67] px-5 text-sm font-bold text-[#003d1f] transition hover:bg-[#c89a56] sm:px-12 lg:flex"
           >
             <i class="fa-solid fa-heart"></i>
@@ -211,7 +223,7 @@
             Carrito de compras
           </button>
           <RouterLink
-            to="/#donaciones"
+            to="/donaciones"
             class="flex items-center gap-2 rounded-lg bg-[#d7aa67] px-3 py-2 text-sm font-bold text-[#003d1f] hover:bg-[#c89a56]"
             @click="menuOpen = false"
           >
@@ -284,9 +296,9 @@ const { totalItems, openDrawer } = useQuotation()
 const menuOpen = ref(false)
 const links = [
   { label: 'Inicio', to: '/' },
-  { label: 'Conócenos', to: '/#nosotros' },
-  { label: 'Donaciones', to: '/#donaciones' },
-  { label: 'Contacto', to: '/#contacto' },
+  { label: 'Conócenos', to: '/nosotros' },
+  { label: 'Donaciones', to: '/donaciones' },
+  { label: 'Contacto', to: '/contacto' },
 ]
 
 const openMobileCart = () => {

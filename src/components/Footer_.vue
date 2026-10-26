@@ -10,11 +10,12 @@
             class="mb-6 h-[130px] w-auto object-contain"
           />
           <p class="mb-8 max-w-xs text-sm leading-relaxed text-white/70">
-            Maranatha PHES es una organización sin ánimo de lucro que, desde la fe cristiana, impulsa
-            proyectos sociales y comunitarios para transformar vidas con amor, dignidad y esperanza.
+            Maranatha PHES es una organización sin ánimo de lucro que, desde la fe cristiana,
+            impulsa proyectos sociales y comunitarios para transformar vidas con amor, dignidad y
+            esperanza.
           </p>
           <RouterLink
-            to="/#donaciones"
+            to="/donaciones"
             class="inline-flex items-center gap-2 rounded-full bg-[#d7aa67] px-8 py-3.5 text-sm font-bold text-[#003d1f] transition hover:bg-[#c89a56]"
           >
             <i class="fa-solid fa-heart"></i>
@@ -92,9 +93,9 @@ const currentYear = new Date().getFullYear()
 
 const links = [
   { label: 'Inicio', to: '/' },
-  { label: 'Conócenos', to: '/#nosotros' },
-  { label: 'Donaciones', to: '/#donaciones' },
-  { label: 'Contacto', to: '/#contacto' },
+  { label: 'Conócenos', to: '/nosotros' },
+  { label: 'Donaciones', to: '/donaciones' },
+  { label: 'Contacto', to: '/contacto' },
 ]
 
 defineOptions({ name: 'FooterSection' })
