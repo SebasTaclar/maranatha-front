@@ -127,7 +127,7 @@ const slides: BannerSlide[] = [
     imageLeft: true,
     eyebrow: 'Somos Fundación Maranatha PHES',
     title: 'Un mensaje <br> de Salvación',
-    cta: { label: 'Dona hoy', to: '/#donaciones' },
+    cta: { label: 'Dona hoy', to: '/donaciones' },
   },
   {
     image: 'https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes32.webp',
@@ -136,7 +136,7 @@ const slides: BannerSlide[] = [
     eyebrow: 'Juntos servimos a Jesús ayudando',
     title: 'Ayuda social <br> que lleva alimento, <br> abrigo y esperanza',
     titleSmall: true,
-    cta: { label: 'ver cómo ayudar', to: '/#donaciones' },
+    cta: { label: 'ver cómo ayudar', to: '/donaciones' },
   },
   {
     image: 'https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes05.webp',
@@ -146,7 +146,7 @@ const slides: BannerSlide[] = [
     title: 'Tu apoyo nos permite compartir a Jesús y cambiar vidas',
     titleSmall: true,
     subtitle: 'Cada gesto de generosidad multiplica el impacto en las familias que servimos.',
-    cta: { label: 'unirme a la obra', to: '/#donaciones' },
+    cta: { label: 'unirme a la obra', to: '/donaciones' },
   },
 ]
 

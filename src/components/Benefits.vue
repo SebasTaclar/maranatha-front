@@ -54,7 +54,7 @@ const benefits = [
       'Participa en actividades con niños, familias y comunidades vulnerables.',
       'Acompáñanos en campañas de evangelización y jornadas de ayuda social.',
     ],
-    href: '#voluntariado',
+    href: '/contacto',
   },
   {
     theme: 'gold',
@@ -67,7 +67,7 @@ const benefits = [
       'Puedes apoyar con una donación única o hacerlo de manera frecuente.',
       'Juntos hacemos que más niños conozcan a Jesús y se sientan amados.',
     ],
-    href: '/#donaciones',
+    href: '/donaciones',
   },
 ]
 

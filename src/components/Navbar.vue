@@ -423,9 +423,9 @@ const showSearch = computed(
 const navLinks = [
   { to: '/', label: 'Inicio', section: 'inicio' },
   { to: '/#categorias', label: 'Colecciones', section: 'categorias' },
-  { to: '/#nosotros', label: 'Nosotros', section: 'nosotros' },
+  { to: '/nosotros', label: 'Nosotros', section: 'nosotros' },
   { to: '/productos', label: 'Tienda', hasDropdown: true },
-  { to: '/#contacto', label: 'Contacto', section: 'contacto' },
+  { to: '/contacto', label: 'Contacto', section: 'contacto' },
 ]
 
 const sectionIds = ['inicio', 'categorias', 'nosotros', 'contacto']

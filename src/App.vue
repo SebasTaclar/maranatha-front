@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen overflow-x-hidden bg-pikiitos-cream">
+  <div class="min-h-screen overflow-x-clip bg-pikiitos-cream">
     <InstitutionalHeader v-if="!isAdminRoute" />
 
     <RouterView />

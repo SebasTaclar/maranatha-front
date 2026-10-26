@@ -13,7 +13,9 @@
             el mensaje de salvación. Estos son algunos de los testimonios de lo que Él está haciendo
             por medio de la fundación.
           </p>
-          <a href="#contacto" class="testimonials-button">Ver todos los testimonios</a>
+          <RouterLink to="/contacto" class="testimonials-button"
+            >Ver todos los testimonios</RouterLink
+          >
         </div>
 
         <div class="testimonials-slider">
