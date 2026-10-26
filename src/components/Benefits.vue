@@ -80,7 +80,10 @@ onMounted(() => {
 
   benefitsObserver = new IntersectionObserver(
     ([entry]) => {
-      benefitsVisible.value = entry.isIntersecting
+      if (entry.isIntersecting) {
+        benefitsVisible.value = true
+        benefitsObserver?.disconnect()
+      }
     },
     { threshold: 0.2 },
   )

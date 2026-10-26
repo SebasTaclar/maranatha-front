@@ -42,7 +42,11 @@
 
           <div class="welcome-features">
             <div class="welcome-feature">
-              <i class="fa-solid fa-people-group welcome-feature-icon"></i>
+              <img
+                :src="volunteerIcon"
+                alt=""
+                class="welcome-feature-icon welcome-feature-icon-image"
+              />
               <div>
                 <h3 class="welcome-feature-title">
                   Únete como <br />
@@ -56,7 +60,11 @@
             </div>
 
             <div class="welcome-feature">
-              <i class="fa-solid fa-hand-holding-heart welcome-feature-icon"></i>
+              <img
+                :src="donationIcon"
+                alt=""
+                class="welcome-feature-icon welcome-feature-icon-image"
+              />
               <div>
                 <h3 class="welcome-feature-title">
                   Comienza a donar <br />
@@ -85,6 +93,9 @@
 
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
+
+import donationIcon from '@/assets/welcome-donation-icon.png'
+import volunteerIcon from '@/assets/welcome-volunteer-icon.png'
 
 defineOptions({ name: 'WelcomeSection' })
 </script>
@@ -194,6 +205,13 @@ defineOptions({ name: 'WelcomeSection' })
 .welcome-feature-icon {
   color: #003d1f;
   font-size: 1.75rem;
+}
+
+.welcome-feature-icon-image {
+  flex: 0 0 2.35rem;
+  width: 4.15rem;
+  height: 4.15rem;
+  object-fit: contain;
 }
 
 .welcome-feature-title {
@@ -342,7 +360,6 @@ defineOptions({ name: 'WelcomeSection' })
     line-height: 1.55;
   }
 
-
   .welcome-features {
     order: 6;
     gap: 0.9rem;
@@ -354,8 +371,14 @@ defineOptions({ name: 'WelcomeSection' })
   }
 
   .welcome-feature-icon {
-    flex: 0 0 1.35rem;
-    font-size: 1.65rem;
+    flex: 0 0 1.85rem;
+    font-size: 1.95rem;
+  }
+
+  .welcome-feature-icon-image {
+    flex-basis: 2.45rem;
+    width: 3.45rem;
+    height: 3.45rem;
   }
 
   .welcome-feature-title {
@@ -404,8 +427,9 @@ defineOptions({ name: 'WelcomeSection' })
   }
 
   .welcome-features {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: max-content max-content;
     gap: 2rem;
+    justify-content: start;
   }
 }
 </style>

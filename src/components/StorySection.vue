@@ -76,11 +76,6 @@ const toggleFaq = (index: number) => {
   openFaq.value = openFaq.value === index ? -1 : index
 }
 
-const resetStats = () => {
-  cancelAnimationFrame(animationFrame)
-  animatedValues.value = stats.map(() => 0)
-}
-
 const animateStats = () => {
   cancelAnimationFrame(animationFrame)
   const startTime = performance.now()
@@ -107,8 +102,7 @@ onMounted(() => {
     ([entry]) => {
       if (entry.isIntersecting) {
         animateStats()
-      } else {
-        resetStats()
+        statsObserver?.disconnect()
       }
     },
     { threshold: 0.35 },

@@ -198,7 +198,10 @@ onMounted(() => {
 
   galleryObserver = new IntersectionObserver(
     ([entry]) => {
-      galleryVisible.value = entry.isIntersecting
+      if (entry.isIntersecting) {
+        galleryVisible.value = true
+        galleryObserver?.disconnect()
+      }
     },
     { threshold: 0.1 },
   )
