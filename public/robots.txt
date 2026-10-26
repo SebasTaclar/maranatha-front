@@ -27,7 +27,7 @@ Allow: /terms-and-conditions
 Crawl-delay: 1
 
 # Sitemap
-Sitemap: https://maranathaphes.org/sitemap.xml
+Sitemap: https://www.maranathaphes.com/sitemap.xml
 
 # Motores de busqueda especificos
 User-agent: Googlebot

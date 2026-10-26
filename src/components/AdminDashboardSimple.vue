@@ -10,7 +10,7 @@
             class="logo-pollito"
           />
           <img
-            src="https://maranathaphes.org/wp-content/uploads/2024/01/Logo-fundacion-maranatha-phes-con-R.png"
+            src="https://www.maranathaphes.com/wp-content/uploads/2024/01/Logo-fundacion-maranatha-phes-con-R.png"
             alt="Fundación Maranatha PHES"
             class="logo-img"
           />

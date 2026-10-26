@@ -349,7 +349,7 @@ const categoryImage = computed(() => {
     return currentCategory.value.imageUrls[0]
   }
   if (isShowAll.value) {
-    return 'https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes06.webp'
+    return 'https://www.maranathaphes.com/wp-content/uploads/2026/06/Maranatha_phes06.webp'
   }
   if (isOfertas.value) {
     return 'https://res.cloudinary.com/dlwzazojt/image/upload/v1787456615/Gemini_Generated_Image_k4dtm7k4dtm7k4dt_dlylxe.jpg'
