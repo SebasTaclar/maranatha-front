@@ -1,7 +1,7 @@
 <template>
   <div class="flex items-center gap-2 select-none" role="img" :aria-label="ariaLabel">
     <img
-      src="https://maranathaphes.org/wp-content/uploads/2024/01/Logo-fundacion-maranatha-phes-con-R.png"
+      src="https://res.cloudinary.com/dlwzazojt/image/upload/v1793035985/Logo-fundacion-maranatha-phes-con-R_fajqqh.png"
       :style="{ height: `${size}px`, width: 'auto' }"
       alt="Fundación Maranatha PHES"
       class="flex-shrink-0 object-contain"

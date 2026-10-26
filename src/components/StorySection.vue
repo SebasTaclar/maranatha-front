@@ -254,7 +254,7 @@ defineOptions({ name: 'StorySection' })
   transform: translateY(50%);
   background:
     linear-gradient(rgba(0, 61, 31, 0.94), rgba(0, 61, 31, 0.94)),
-    url('https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes17.webp') center / cover
+    url('https://www.maranathaphes.com/wp-content/uploads/2026/06/Maranatha_phes17.webp') center / cover
       no-repeat;
 }
 
