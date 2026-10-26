@@ -136,19 +136,19 @@ const avatars = [
 ]
 
 const galleryPhotos = [
-  'https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes05.webp',
-  'https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes06.webp',
-  'https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes15.webp',
-  'https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes16.webp',
-  'https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes17.webp',
-  'https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes32.webp',
-  'https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes36.webp',
-  'https://maranathaphes.org/wp-content/uploads/2026/05/Screenshot_20260112_205706_Gallery-1-e1778512929709.png',
-  'https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes34.webp',
-  'https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes10.webp',
-  'https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes13.webp',
-  'https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes12.webp',
-  'https://maranathaphes.org/wp-content/uploads/2026/06/Maranatha_phes25.webp',
+  'https://res.cloudinary.com/dlwzazojt/image/upload/v1793029237/Maranatha_phes05_tthfbk.webp',
+  'https://res.cloudinary.com/dlwzazojt/image/upload/v1793029237/Maranatha_phes06_rt3ybl.webp',
+  'https://res.cloudinary.com/dlwzazojt/image/upload/v1793029232/Maranatha_phes17_xktvhw.webp',
+  'https://res.cloudinary.com/dlwzazojt/image/upload/v1793029230/Maranatha_phes27_ssmcta.webp',
+  'https://res.cloudinary.com/dlwzazojt/image/upload/v1793029232/Maranatha_phes15_tj0vgr.webp',
+  'https://res.cloudinary.com/dlwzazojt/image/upload/v1793029231/Maranatha_phes11_epqwlo.webp',
+  'https://res.cloudinary.com/dlwzazojt/image/upload/v1793029230/Maranatha_phes08_jkmdn9.webp',
+  'https://res.cloudinary.com/dlwzazojt/image/upload/v1793029230/Maranatha_phes03_ssk9az.webp',
+  'https://res.cloudinary.com/dlwzazojt/image/upload/v1793029230/Maranatha_phes35_sfrd9i.webp',
+  'https://res.cloudinary.com/dlwzazojt/image/upload/v1793029230/Maranatha_phes28_yeh2rz.webp',
+  'https://res.cloudinary.com/dlwzazojt/image/upload/v1793029230/Maranatha_phes09_n1vwvv.webp',
+  'https://res.cloudinary.com/dlwzazojt/image/upload/v1793029231/Maranatha_phes25_loidjh.webp',
+  'https://res.cloudinary.com/dlwzazojt/image/upload/v1793029231/Maranatha_phes29_ifj201.webp'
 ]
 
 const currentIndex = ref(0)
@@ -365,7 +365,7 @@ defineOptions({ name: 'TestimonialsSection' })
   z-index: 50;
   display: grid;
   place-items: center;
-  padding: 3rem 5rem;
+  padding: 10rem 5rem 3rem;
   background: rgba(15, 27, 24, 0.92);
 }
 
@@ -732,7 +732,7 @@ defineOptions({ name: 'TestimonialsSection' })
   }
 
   .gallery-modal {
-    padding: 3rem 1rem;
+    padding: 6rem 1rem 3rem;
   }
 
   .gallery-modal-control--previous {
